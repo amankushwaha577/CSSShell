@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility vs Opacity</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 60px;
+            font-size: 16px;
+            border: 2px solid darkblue;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .transparent {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box hidden">Visibility Hidden (Can't see, no interaction)</div>
+    <div class="box transparent">Opacity 0 (Can't see, but clickable)</div>
+    <div class="box">Visible Element (Normal)</div>
+</body>
+</html>
+
+
+<!-- 
+1. visibility: hidden:
+The element is hidden (invisible) but still occupies space in the layout.
+The element is not interactive (e.g., cannot be clicked). 
+-->
+
+
+<!-- 
+2. opacity: 0:
+The element is transparent (invisible), but still occupies space in the layout.
+The element is still interactive (e.g., can be clicked, focused, etc.). 
+-->
