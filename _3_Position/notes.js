@@ -8,7 +8,7 @@
 // |                    | document flow.                 | (non-static).                  | scrolling.                     | becomes fixed.                 |
 // +--------------------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+
 // | Document Flow      | Affects layout; retains space. | Removed from normal flow; does | Removed from normal flow; does | Affects layout until it becomes|
-// |                    |                                | not affect surrounding         | not affect surrounding         | sticky; retains space after    |
+// |                    |                                | not affect surrounding         | not affect surrounding         | sticky; retains space even after    |
 // |                    |                                | elements.                      | elements.                      | sticking.                      |
 // +--------------------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+
 // | Common Use Cases   | Adjusting element position     | Creating dropdown menus,       | Persistent navigation bars or  | Headers or nav bars that should|
