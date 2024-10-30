@@ -13,3 +13,9 @@ __________________________________________________________________
 
 
 
+// Priority of External, Internal, and Inline CSS:-
+__________________________________________________________________
+// Inline CSS: Has the highest priority (style attribute directly on the element). Specificity: (1, 0, 0, 0)
+// Internal CSS: Styles written within the <style> tag in the HTML <head> section. Specificity depends on the type of selectors (IDs, classes, elements).
+// External CSS: Styles written in an external file and linked to the HTML document via a <link> tag. Specificity also depends on the selectors(IDs, classes, elements), but it has lower priority compared to inline and internal styles.
+
