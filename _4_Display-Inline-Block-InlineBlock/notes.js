@@ -11,9 +11,10 @@
 // │ Can set width/height          │   No   │  Yes  │     Yes       │
 // ├───────────────────────────────┼────────┼───────┼───────────────┤
 // │ Respects padding/margin       │ Padding│  Yes  │     Yes       │
+// │                               │ /Margin│       │               │
 // │                               │  only  │       │               │
 // │                               │ affects│       │               │
-// │                               │horizontally│    │               │
+// │                               │horizontally│   │               │
 // ├───────────────────────────────┼────────┼───────┼───────────────┤
 // │ Stays in flow of text         │  Yes   │  No   │     Yes       │
 // └───────────────────────────────┴────────┴───────┴───────────────┘
