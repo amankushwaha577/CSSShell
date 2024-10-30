@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Position Example</title>
+    <style>
+        .fixed-box {
+            position: fixed;  /* Fixed positioning */
+            top: 10px;        /* Stays 10px from the top of the viewport */
+            right: 20px;      /* Stays 20px from the right of the viewport */
+            width: 150px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 2px solid green;
+            padding: 10px;
+        }
+
+        .content {
+            height: 2000px;  /* To enable scrolling */
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-box">I am fixed</div>
+    <div class="content">
+        Scroll to see the fixed box stay in place.<br>
+        <br>Content...
+        <br>More content...
+        <br>Keep scrolling...
+    </div>
+</body>
+</html>
+
+<!-- 
+3. Fixed Positioning
+The element is positioned relative to the viewport (browser window). 
+It stays fixed in that position even when the user scrolls the page. 
+**It is removed from the normal document flow**.
+ -->
