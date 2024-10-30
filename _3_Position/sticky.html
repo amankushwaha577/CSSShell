@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position Example</title>
+    <style>
+        .sticky-box {
+            position: sticky;  /* Sticky positioning */
+            top: 0px;            /* Sticks to the top of the page when top will become 0px after scrolling */
+            background-color: lightblue;
+            padding: 10px;
+            border: 2px solid blue;
+            width: 100%;
+        }
+
+        .content {
+            height: 1500px;  /* To enable scrolling */
+            background-color: lightgray;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>More Above</div>
+    <div>More Above</div>
+    <div class="sticky-box">I am sticky</div>
+    <div class="content">
+        Scroll down, and this box will stick to the top.<br>
+        <br>Content...
+        <br>More content...
+        <br>Keep scrolling...
+    </div>
+</body>
+</html>
+
+
+<!-- 
+4. Sticky Positioning
+The element toggles between relative and fixed positioning based on the user's scroll position. 
+It behaves like a relative element until a specific scroll position is reached, after which it behaves like a fixed element.
+ -->
