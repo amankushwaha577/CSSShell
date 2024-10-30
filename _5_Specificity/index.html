@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 { color: blue; }              /* Specificity: (0, 0, 0, 1) */
+        .header { color: green; }         /* Specificity: (0, 0, 1, 0) */
+        #main-header { color: orange; }   /* Specificity: (0, 1, 0, 0) */
+    </style>
+</head>
+<body>
+    <h1 class="header" id="main-header" style="color: red;">   
+        Hello, World!
+    </h1>
+
+    <!-- Inline Style (style="color: red;"): Specificity = (1, 0, 0, 0) -->
+</body>
+</html>
+
+
+<!-- 
+Specificity is a set of rules that browsers use to determine which CSS rule should be applied to an element 
+when there are multiple, potentially conflicting, rules. 
+It is calculated based on the types of selectors used in the rule.
+ -->
+
+<!-- 
+CSS specificity can be broken down into different categories:
+
+Inline styles: Added directly to an element (e.g., style="color: red;").
+IDs: Selectors based on the element's id attribute (e.g., #header).
+Classes, attributes, and pseudo-classes: Selectors like .nav, [type="text"], or :hover.
+Elements and pseudo-elements: Selectors that target elements (e.g., div, h1, or ::before).
+ -->
+
+
+<!-- 
+Specificity Calculation: Specificity is usually represented as four values: (a, b, c, d).
+a: Inline styles (either 0 or 1).
+b: Number of id selectors.
+c: Number of class selectors, attributes selectors, and pseudo-classes.
+d: Number of element selectors and pseudo-elements.
+
+In this example we are gaving 
++-------------------------------+------------------------------+
+|  Rule                         |       Specificity            |
++-------------------------------+------------------------------+
+| h1 { color: blue; }            | (0, 0, 0, 1)                |
+| .header { color: green; }      | (0, 0, 1, 0)                |
+| #main-header { color: orange; }| (0, 1, 0, 0)                |
+| style="color: red;"            | (1, 0, 0, 0) (highest)      |
++-------------------------------+------------------------------+   The inline style has the highest specificity (1, 0, 0, 0) and will be applied (i.e., the text will be red).
+ -->
