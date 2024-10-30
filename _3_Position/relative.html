@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relative Position Example</title>
+    <style>
+      .normal-box {
+        width: 200px;
+        height: 100px;
+        background-color: lightgreen;
+        border: 2px solid darkgreen;
+        padding: 10px;
+      }
+      .relative-box {
+        position: relative; /* This makes the element positioned relative to its normal flow */
+        top: 20px; /* Moves the element 20px down from its normal position */
+        left: 30px; /* Moves the element 30px to the right from its normal position */
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        border: 2px solid darkblue;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="normal-box">Normal Box (Static positioning)</div>
+    <div class="relative-box">Relative Box (Moved by 20px down, 30px right)</div>
+  </body>
+</html>
+
+<!-- 
+1. Relative Positioning :
+The element is positioned relative to its normal position in the document flow. 
+If you add offsets (top, left, right, bottom), it will move relative to where it would normally be, 
+but the space it originally occupies is preserved. 
+-->
