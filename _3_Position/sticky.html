@@ -39,4 +39,13 @@
 4. Sticky Positioning
 The element toggles between relative and fixed positioning based on the user's scroll position. 
 It behaves like a relative element until a specific scroll position is reached, after which it behaves like a fixed element.
+
+** It Affects layout until it becomes sticky.
+ -->
+
+<!-- 
+**No, a sticky positioned element is not removed from the normal document flow:**.
+A.Relative State when it is relatve - It occupies space in the layout.
+B.Sticky state when it is sticky - It will not remove itself from layout document it will just float above elements its space 
+                                   will be preserved. Which means other element will not occupy this space.
  -->
