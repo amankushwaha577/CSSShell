@@ -19,3 +19,6 @@ __________________________________________________________________
 // Internal CSS: Styles written within the <style> tag in the HTML <head> section. Specificity depends on the type of selectors (IDs, classes, elements).
 // External CSS: Styles written in an external file and linked to the HTML document via a <link> tag. Specificity also depends on the selectors(IDs, classes, elements), but it has lower priority compared to inline and internal styles.
 
+
+__________________________________________________________________
+// First Priority of CSS Is taken than specificity
