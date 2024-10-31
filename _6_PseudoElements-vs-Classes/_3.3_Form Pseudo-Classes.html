@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Pseudo-Classes</title>
+    <style>
+      input:focus {
+        border: 2px solid blue; /* Focus border color */
+        outline: none; /* Remove default outline */
+      }
+    </style>
+  </head>
+  <body>
+    <label>Required field:</label>
+    <input type="text" required placeholder="Required" />
+  </body>
+</html>
+
+<!-- 
+The input:focus style should work to change the border color of an input field when it is focused
+(i.e., when a user clicks into the input field). If it's not working, it could be due to various reasons,
+such as browser default styles or conflicting styles.
+ -->
+
+<!-- 
+The input:focus rule changes the border of the input field to blue when it is focused.
+The outline: none; removes the default browser focus outline, making the blue border more prominent.
+
+Mean whatever you see outside input actually is outline not border.
+So  you can also write lik this :
+
+input:focus {
+    outline: 2px solid blue; /* Blue outline when input is focused */
+}
+
+It will work !
+
+  -->
