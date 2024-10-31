@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-of-Type and First-Child Example</title>
+    <style>
+        p:first-child {
+            color: blue;
+            font-weight: bold;
+        }
+        p:nth-of-type(1) {
+            color: green;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>This is a span</span> <!-- Prevents p:first-child from applying to <p> -->
+        <p>This paragraph is selected by p:nth-of-type(1)</p>
+        <p>This is another paragraph</p>
+    </div>
+
+    <div>
+        <p>This paragraph is selected by both p:first-child and p:nth-of-type(1)</p>
+        <p>This is another paragraph</p>
+    </div>
+</body>
+</html>
+
+<!-- p:nth-of-type(1) overrides p:first-child  
+ final CSS become combination of both but overlapped by p:nth-of-type-->
