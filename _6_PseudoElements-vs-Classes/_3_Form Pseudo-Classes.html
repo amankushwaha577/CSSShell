@@ -11,7 +11,10 @@
         background-color: rgb(0, 255, 34);
       }
       input:checked {
-        background-color: yellow;
+        /* The styles you have defined for the checkbox input will not apply as you expect because
+        the background-color property does not affect checkbox inputs in the same way it affects text inputs.
+        Instead, you can style checkboxes using the appearance property to remove the default styling and apply custom styles. */
+        border: 50px solid yellow;
       }
       input:required {
         border: 2px solid red;
@@ -26,3 +29,14 @@
     <input type="text" disabled placeholder="Disabled input" />
   </body>
 </html>
+
+<!-- 
+3. Form Pseudo-Classes
+Form pseudo-classes help in styling form elements based on their state.
+
+:checked: Applies to checked input elements like checkboxes or radio buttons.
+:disabled: Applies to disabled form elements.
+:enabled: Applies to enabled form elements.
+:placeholder-shown: Applies when an input element is showing placeholder text.
+:required: Applies to form fields with the required attribute.
+-->
