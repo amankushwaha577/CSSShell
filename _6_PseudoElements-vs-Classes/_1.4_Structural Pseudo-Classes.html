@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Child Example</title>
+    <style>
+        p:only-child {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            border: 2px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This paragraph is NOT an only child.</p>
+        <p>This paragraph is NOT an only child either.</p>
+    </div>
+
+    <div>
+        <p>This paragraph is the ONLY child!</p>  
+        <!-- Its is the only child of Parent. -->
+    </div>
+
+    <div>
+        <span>Not a paragraph, but this div has a single child:</span>
+        <p>This paragraph is the ONLY child!</p>
+    </div>
+</body>
+</html>
+
+<!-- 
+The :only-child pseudo-class in CSS is used to select an element that is the only child of its parent. 
+This means that the element must be the sole child within its parent container, without any siblings (regardless of type).
+
+Key Points:
+Selector: element:only-child (e.g., p:only-child).
+Condition: The element is the only child of its parent, meaning there are no other elements present (including text nodes).
+Use Case: It’s useful when you want to apply styles to an element only if it is the only child, allowing for more specific styling based on the element's context within the document structure. -->
