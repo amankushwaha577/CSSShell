@@ -2,24 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Structural Pseudo-Classes</title>
+    <title>Structural Pseudo-Classes Example</title>
     <style>
+        /* Styles the first child paragraph of the div */
         p:first-child {
-            color: red;
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 90px;
         }
+        
+        /* Styles the last child paragraph of the div */
         p:last-child {
-            color: blue;
+            background-color: lightblue;
+            color: white;
+            padding: 10px;
         }
+        
+        /* Styles the second child of any type within the div */
         p:nth-child(2) {
-            color: green;
+            background-color: lightgreen;
+            color: white;
+            padding: 10px;
+        }
+        
+        
+        /* Styles the first paragraph element specifically (ignores other types) + it will ignore p:first-child { } */
+        p:nth-of-type(1) {
+            background-color: lightgoldenrodyellow;
+            color: black;
+            padding: 10px;
+        }
+        
+        /* Styles the paragraph if it is the only child */
+        .single p:only-child {
+            background-color: lightpink;
+            color: black;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
+
     <div>
-        <p>First paragraph</p>
-        <p>Second paragraph</p>
-        <p>Last paragraph</p>
+        <p>First paragraph (first-child and nth-of-type(1))</p>
+        <p>Second paragraph (nth-child(2))</p>
+        <p>Third paragraph</p>
+        <p>Last paragraph (last-child)</p>
     </div>
+    
+    <!-- Only-child example -->
+    <div class="single">
+        <p>This is the only child paragraph in this div</p>
+    </div>
+
 </body>
 </html>
+
+
+<!-- 
+1. Structural Pseudo-Classes
+These pseudo-classes target specific positions within a parent or structure.
+
+:first-child: Styles the first child element of a parent.
+:last-child: Styles the last child element of a parent.
+:nth-child(n): Styles the nth child based on a formula.
+:nth-of-type(n): Styles the nth child of a specific type within a parent.
+:only-child: Styles an element if it’s the only child of a parent.
+
+ -->
