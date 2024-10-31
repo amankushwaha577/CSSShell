@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Pseudo-Classes</title>
+    <style>
+        /* Styles for the button with class "styled-button" */
+        .styled-button:hover {
+            background-color: lightblue;
+        }
+        .styled-button:active {
+            background-color: navy;
+            color: white;
+        }
+        input:focus {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button with the styling applied -->
+    <button class="styled-button">Hover and Click me!</button>
+
+    <!-- Second button without the styling -->
+    <button>I'm a plain button</button>
+    <br><br>
+    <input type="text" placeholder="Focus on me">
+</body>
+</html>

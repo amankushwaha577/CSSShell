@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements Example</title>
+    <style>
+        /* Style first letter of the paragraph */
+        p::first-letter {
+            font-size: 20px;
+            color: crimson;
+            font-weight: bold;
+             border: 1px solid black;   /* Now Bulb will be fist letter because we used before property with content- bulb */
+        }
+
+        /* Style first line of the paragraph */
+        p::first-line {
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        /* Style inserted content before and after the paragraph */
+        p::before {
+            content: "🔥 ";
+            font-size: 20px;
+            color: orange;
+        }
+
+        p::after {
+            content: " 💡";
+            font-size: 20px;
+            color: yellow;
+        }
+
+        /* Style selected text */
+        ::selection {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        This paragraph demonstrates various CSS pseudo-elements, allowing us to apply styles to specific parts of text or insert content without modifying the HTML structure. Notice how the first letter, first line, and surrounding content are styled differently!
+    </p>
+
+</body>
+</html>
