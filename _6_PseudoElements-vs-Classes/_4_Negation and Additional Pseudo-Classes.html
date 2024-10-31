@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional Pseudo-Classes</title>
+    <style>
+        div:not(.excluded) {
+            background-color: lightgreen;
+        }
+        p:empty {
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>Included div</div>
+    <div class="excluded">Excluded div</div>
+    <p></p> <!-- This empty paragraph will be styled -->
+</body>
+</html>
