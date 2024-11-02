@@ -30,7 +30,7 @@
       <div>7</div>
       <div>8</div>
       <div>9</div>
-      <div>10</div>
+      <div style="flex-shrink: 5">10</div>
     </div>
   </body>
 </html>
@@ -42,8 +42,14 @@ This property is crucial for managing how elements behave when the container is 
 
 flex-shrink: <number>;
 <number>: A non-negative integer that serves as the shrink factor.
-    
+
 0: The item will not shrink at all, regardless of the available space.
 1 (default): The item will shrink proportionally to other items with a positive flex-shrink value when space is limited.
 Greater than 1: The item will shrink more than an item with a flex-shrink value of 1.
+ -->
+
+ <!-- 
+ Note: 
+ You might observed that every flex item shrinks when we change screen size, 
+ It is just because every flex item have flex-shrink: 1 by default
  -->
