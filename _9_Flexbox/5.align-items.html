@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        height: 200px;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: baseline; */
+        align-items: stretch;
+        background-color: DodgerBlue;
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+The align-items property in CSS is used to align flex items along the cross axis of a flex container. 
+In a flexbox layout, the cross axis is perpendicular to the main axis defined by flex-direction. 
+So, if the main axis is horizontal (row or row-reverse), the cross axis is vertical; 
+if the main axis is vertical (column or column-reverse), the cross axis is horizontal. 
+align-items helps control how items align relative to each other across this axis.
+
+align-items: flex-start | flex-end | center | baseline | stretch;
+1.flex-start: Items are aligned at the start of the cross axis.
+2.flex-end: Items are aligned at the end of the cross axis.
+3.center: Items are centered along the cross axis.
+4.baseline: Items are aligned along their text baselines.
+5.stretch (default): Items stretch to fill the flex container along the cross axis (if no fixed height is set for flex items).
+ -->
