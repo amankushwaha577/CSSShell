@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        height: 200px;
+        background-color: #f1f1f1;
+      }
+
+      .flex-container > div {
+        background-color: DodgerBlue;
+        color: white;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The align-self Property</h1>
+
+    <p>
+      The "align-self: center;" aligns the selected flex item in the middle of
+      the container:
+    </p>
+
+    <div class="flex-container">
+      <div>1 Default (Stretch)</div>
+      <div style="align-self: flex-start">2 Flex Start</div>
+      <div style="align-self: flex-end">3 Flex End</div>
+      <div style="align-self: center">4 Center</div>
+      
+    </div>
+
+    <p>
+      The align-self property overrides the align-items property of the
+      container.
+    </p>
+  </body>
+</html>
+
+<!-- 
+The align-self property in CSS is used in a flex or grid container to override the default alignment of an individual flex or grid item.
+It allows you to specify how a single item is aligned along the cross axis, independently of other items in the container. 
+This can be particularly useful for making specific items stand out or fit a unique layout within a flex or grid context.
+
+align-self: <align-self-value>;
+
+ -->
+
+<!-- 
+Possible Values :
+The values for align-self are the same as those for the align-items property:
+
+1.auto: The default value. The item inherits the align-items value of the container.
+2.flex-start: The item is aligned at the start of the cross axis.
+3.flex-end: The item is aligned at the end of the cross axis.
+4.center: The item is centered along the cross axis.
+5.baseline: The item is aligned such that its baseline aligns with the baseline of the other items.
+6.stretch: The item is stretched to fill the container (this is the default behavior in a flex container).
+ -->
+
+
+ <!-- Note : Container with display:flex always have default align-item: stretch(default) so 
+  align-self:auto(default) becomes stretch by default. -->
