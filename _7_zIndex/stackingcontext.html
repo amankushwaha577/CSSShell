@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacking Context Example</title>
+  <style>
+    /* Container */
+    .container {
+      width: 300px;
+      height: 200px;
+      background-color: lightgray;
+      position: relative; /* Establishes a positioning context, but not a stacking context */
+    }
+
+    /* No z-index, so no stacking context created */
+    .box1 {
+      position: relative; /* No stacking context created */
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+    }
+
+    /* No z-index, so no stacking context created */
+    .box2 {
+      position: absolute; /* No stacking context created */
+      top: 30px;
+      left: 30px;
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+  </div>
+
+</body>
+</html>
+
+<!-- 
+In this example:
+
+.box1 with position: relative and no z-index does not create a stacking context.
+.box2 with position: absolute and no z-index does not create a stacking context either.
+Since neither element has a stacking context, their stacking order is determined by their order in the DOM, 
+and they are still part of the stacking context created by the root element (or a parent with z-index if it existed). 
+-->
+
+<!-- 
+Key Takeaway
+To create a stacking context:
+
+Use a z-index other than auto on an element with position: relative, absolute, fixed, or sticky.
+Use certain properties like opacity, transform, or filter, which independently create stacking contexts regardless of position. 
+-->
