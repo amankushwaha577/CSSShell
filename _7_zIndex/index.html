@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index Example</title>
+  <style>
+    /* Container for overlapping elements */
+    .container {
+      position: relative; /* Defines a positioning context */
+      width: 400px;
+      height: 300px;
+      margin: 50px auto; /* Center the container on the page */
+      border: 2px solid #333;
+    }
+
+    /* Common styles for each box */
+    .box {
+      position: absolute; /* Allows overlapping with control via z-index */
+      width: 200px;
+      height: 200px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      opacity: 0.9; /* Slight transparency to see overlaps */
+    }
+
+    /* Box 1 styling: Lowest z-index */
+    .box1 {
+      background-color: lightblue;
+      top: 20px;
+      left: 20px;
+      z-index: 1; /* Lowest stacking level - appears behind other boxes */
+    }
+
+    /* Box 2 styling: Middle z-index */
+    .box2 {
+      background-color: lightcoral;
+      top: 50px;
+      left: 50px;
+      z-index: 3; /* Highest stacking level - appears above other boxes */
+    }
+
+    /* Box 3 styling: Highest z-index */
+    .box3 {
+      background-color: lightgreen;
+      top: 80px;
+      left: 80px;
+      z-index: 2; /* Middle stacking level - appears between Box 1 and Box 2 */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container for the layered boxes -->
+  <div class="container">
+    <!-- Box 1: Lowest layer -->
+    <div class="box box1">Box 1 (z-index: 1)</div>
+    <!-- Box 2: Top layer -->
+    <div class="box box2">Box 2 (z-index: 3)</div>
+    <!-- Box 3: Middle layer -->
+    <div class="box box3">Box 3 (z-index: 2)</div>
+  </div>
+
+</body>
+</html>
+
+
+<!-- 
+6. What is the z-index property, and how does stacking context work in CSS?
+z-index: Controls the vertical stacking order of elements. 
+Elements with higher z-index values appear in front of those with lower values.
+
+Stacking context: Formed by positioned elements (position: relative/absolute/fixed) or elements with a z-index other than auto. 
+Each stacking context is treated independently of others. 
+-->
