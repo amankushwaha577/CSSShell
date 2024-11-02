@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        background-color: #f1f1f1;
+      }
+
+      .flex-container > div {
+        background-color: DodgerBlue;
+        color: white;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div style="flex-grow: 1">1 Box 1 grows at a normal rate</div>  
+      <div style="flex-grow: 2">2 Box 2 grows twice as much</div>
+      <div style="flex-grow: 8">3 Box 3 grows 8 times as much</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+The flex-grow property in CSS is used to control how much a flex item will grow relative to other items within the same flex container.
+If there's extra space in the flex container, flex-grow determines how that space is distributed among the flex items.
+
+flex-grow: <number>;
+
+ -->
+
+ <!-- 
+<number>: Any non-negative number. It specifies the "flex growth factor" or the relative proportion of space an item should take.
+0 (default): The item will not grow to fill the remaining space.
+1 or higher: The item will grow to fill the container. If multiple items have different flex-grow values, they will grow relative to each other based on their flex-grow factors.
+
+For instance:
+flex-grow: 1: The item will grow to take up space relative to other items also set to grow.
+flex-grow: 2: The item will grow twice as much as an item with flex-grow: 1.
+ -->
