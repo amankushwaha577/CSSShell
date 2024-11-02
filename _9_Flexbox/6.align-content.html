@@ -6,7 +6,13 @@
         display: flex;
         height: 600px;
         flex-wrap: wrap;
-        align-content: space-between;
+        /* align-content: flex-start; */
+        /* align-content: flex-end; */
+        /* align-content: center; */
+        /* align-content: space-between; */
+        /* align-content: space-around; */
+        /* align-content: space-evenly; */
+        align-content: stretch;
         background-color: DodgerBlue;
       }
 
@@ -37,5 +43,14 @@ but only if there is extra space on that axis.
 It helps control the spacing between and around rows or columns of flex items in a flex container.
 
 align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch;
+ -->
 
+ <!-- 
+1.flex-start: Lines are packed toward the start of the container’s cross axis.
+2.flex-end: Lines are packed toward the end of the container’s cross axis.
+3.center: Lines are packed toward the center of the cross axis.
+4.space-between: Lines are evenly distributed along the cross axis, with no extra space at the edges.
+5.space-around: Lines are evenly distributed with equal space around them, adding extra space on the edges of the container.
+6.space-evenly: Lines are distributed with equal space between and around each line, creating balanced spacing within the container.
+7.stretch (default): Lines are stretched to fill the container along the cross axis, provided the container has extra space.
  -->
