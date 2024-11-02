@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-basis Property</h1>
+
+<p>Set the initial length of the third flex item to 200 pixels:</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis:200px">3</div>
+  <div>4</div>
+</div>
+
+</body>
+</html>
+
+
+<!-- 
+The flex-basis property in CSS is used to specify the initial size of a flex item before any available space 
+is distributed according to the flex-grow and flex-shrink properties. This property is a crucial part of the flexbox model, 
+allowing for fine control over the dimensions of flex items within a flex container.
+
+flex-basis: <length> | auto;
+
+1. <length>: Specifies a fixed size for the flex item (e.g., 20px, 50%, 10em, etc.). 
+    This value sets the ideal size of the item before space distribution.
+
+2. auto: This is the default value. It means the size of the flex item will be determined by its content, 
+    or by its width and height properties if they are set.
+ -->
+
+<!-- 
+ How It Works
+flex-basis defines the starting size of a flex item within the flex container.
+It acts as the base size from which the item will grow or shrink based on the container's 
+available space and the values of flex-grow and flex-shrink.
+
+By default Every flex item have - ( flex-grow: 0 + flex-shrink:1 ) + flex-basis : You need to give 
+ -->
