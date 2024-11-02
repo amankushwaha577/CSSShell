@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        height: 600px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        overflow: scroll;
+        background-color: DodgerBlue;
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+The align-content property in CSS is used to align flex lines within a flex container along the cross axis, 
+but only if there is extra space on that axis. 
+
+***This property applies only when there are multiple lines of flex items (e.g., when flex-wrap is set to wrap or wrap-reverse)***. 
+It helps control the spacing between and around rows or columns of flex items in a flex container.
+
+align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch;
+
+ -->
