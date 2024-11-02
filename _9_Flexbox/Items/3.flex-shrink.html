@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        align-items: stretch;
+        background-color: #f1f1f1;
+      }
+
+      .flex-container > div {
+        background-color: DodgerBlue;
+        color: white;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-shrink: 0">3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+The flex-shrink property in CSS is used to control how a flex item will shrink relative to other items in the flex container 
+when the **space** is insufficient to accommodate all items at their defined sizes. 
+This property is crucial for managing how elements behave when the container is resized or when there is limited space.
+
+flex-shrink: <number>;
+<number>: A non-negative integer that serves as the shrink factor.
+    
+0: The item will not shrink at all, regardless of the available space.
+1 (default): The item will shrink proportionally to other items with a positive flex-shrink value when space is limited.
+Greater than 1: The item will shrink more than an item with a flex-shrink value of 1.
+ -->
