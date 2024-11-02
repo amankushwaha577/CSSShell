@@ -74,6 +74,16 @@
 z-index: Controls the vertical stacking order of elements. 
 Elements with higher z-index values appear in front of those with lower values.
 
-Stacking context: Formed by positioned elements (position: relative/absolute/fixed) or elements with a z-index other than auto. 
+Stacking context: Formed by positioned elements (position: relative/absolute/fixed/sticky) or elements with a z-index other than auto. 
 Each stacking context is treated independently of others. 
 -->
+
+<!-- 
+.whoWantToBeIndexed {
+  position: absolute; /* or relative, fixed, or sticky */
+  z-index: 10;
+}
+-->
+
+
+ 
