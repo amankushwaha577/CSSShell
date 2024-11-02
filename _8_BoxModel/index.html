@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model Example</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      padding: 20px;      /* Adds 20px of space inside the box */
+      border: 5px solid blue;  /* Adds a 5px border around the box */
+      margin: 15px;       /* Adds 15px of space outside the box */
+      background-color: lightgray; 
+      /* Total Box Width and Height Calculation---->
+         The total width and height of an element is calculated by adding the content, padding, and border dimensions. For the example above:
+
+        Width: 200px (content) + 20px * 2 (padding) + 5px * 2 (border) = 250px
+        Height: 100px (content) + 20px * 2 (padding) + 5px * 2 (border) = 150px 
+
+        So the visible box area is 250px x 150px, even though the width and height of the content are set to 200px and 100px.
+
+        Note : The left and right margins would add 15px on each side, but they would not alter the total width and height of the box itself.
+      */
+    }
+    .bbox{
+        box-sizing: border-box;
+        /*
+        box-sizing Property
+        To make layout sizing easier, you can use the box-sizing property. The two main values are:
+
+        content-box (default): Width and height apply only to the content, so padding and border are added on top.
+        border-box: Width and height include padding and border, simplifying layout calculations. 
+
+        With border-box, you get a more predictable layout, as width and height represent the total dimensions, 
+        including padding and border.
+         */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">This is a box model example.</div>
+  <div class="box bbox">This is a box model example.</div>
+
+</body>
+</html>
+
+
+<!-- 
++---------------------------------------+
+|              Margin                   |
+|                                       |
+|   +-------------------------------+   |
+|   |           Border              |   |
+|   |   +-----------------------+   |   |
+|   |   |       Padding         |   |   |
+|   |   |   +---------------+   |   |   |
+|   |   |   |   Content     |   |   |   |
+|   |   |   +---------------+   |   |   |
+|   |   |                       |   |   |
+|   |   +-----------------------+   |   |
+|   +-------------------------------+   |
++---------------------------------------+
+ -->
