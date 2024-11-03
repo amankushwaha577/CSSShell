@@ -63,7 +63,7 @@
 
 
 
-// 4. Grid Lines -
+// 6. Grid Lines -
 // The lines between columns are called column lines.
 // The lines between rows are called row lines.
 // +---|---|---+
@@ -76,7 +76,7 @@
 // Grid Lines
 
 
-// 5. Grid Tracks: The rows and columns formed by grid lines.
+// 7. Grid Tracks: The rows and columns formed by grid lines.
 // +---+---+---+
 // | R1| R1| R1| <- Row Track 1
 // |---|---|---|
@@ -87,13 +87,13 @@
 //   |
 // Column Track 1
 
-// 6. Grid Cell: The single space between four grid lines.
+// 8. Grid Cell: The single space between four grid lines.
 // +---+---+---+
 // | C1|   |   |
 // |---+---+---|
 
 
-// 7.Grid Area: A rectangular area made up of one or more grid cells
+// 9.Grid Area: A rectangular area made up of one or more grid cells
 // +---+---+---+
 // |  Area |   |
 // +---+---+---+
