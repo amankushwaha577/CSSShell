@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Attributes Selector</title>
+  <style>
+    /* Selects input elements with type="text" and placeholder="Search" */
+    input[type="text"][placeholder="Search"] {
+      background-color: yellow;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multiple Attributes Selector</h1>
+  <input type="text" placeholder="Search"><br>
+  <input type="text" placeholder="Username">
+</body>
+</html>
+
+
+
+<!-- This example targets an element based on multiple attributes. 
+ Here, only the input with both type="text" and placeholder="Search" will be styled.
+  -->

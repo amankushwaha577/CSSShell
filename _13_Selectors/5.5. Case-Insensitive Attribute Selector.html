@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case-Insensitive Attribute Selector</title>
+  <style>
+    /* Selects links with href="example.com" (case-insensitive) */
+    a[href="example.com" i] {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>Case-Insensitive Attribute Selector</h1>
+  <a href="EXAMPLE.com">Example Link</a><br>
+  <a href="example.com">Another Example Link</a><br>
+  <a href="https://different.com">Different Link</a>
+</body>
+</html>
+
+
+<!-- This example targets all links with href="example.com", regardless of case. -->
