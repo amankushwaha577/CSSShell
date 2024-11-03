@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Center with Positioning and Transform</title>
+  <style>
+    .container {
+      position: relative;
+      height: 100vh;
+    }
+    .centered-div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 100px;
+      background-color: lightgreen;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="centered-div">Centered with Position & Transform</div>
+  </div>
+</body>
+</html>
