@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators Example</title>
+    <style>
+        /* Descendant Combinator */
+        .container .text {
+            color: blue;
+        }
+
+        /* Child Combinator */
+        .list > .item {
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Adjacent Sibling Combinator */
+        .title + .description {
+            color: green;
+        }
+
+        /* General Sibling Combinator */
+        .title ~ .description {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Combinators Example</h1>
+
+    <h2 class="title">Descendant Combinator</h2>
+    <div class="container">
+        <p class="text">This is a paragraph within the container.</p>
+        <div class="inner">
+            <p class="text">This is another paragraph within the inner div.</p>
+        </div>
+    </div>
+
+    <h2 class="title">Child Combinator</h2>
+    <ul class="list">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2
+            <ul>
+                <li class="sub-item">Sub Item 1</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 class="title">Adjacent Sibling Combinator</h2>
+    <p class="description">This description is not affected by the combinator.</p>
+    <p class="description">This is the first adjacent description.</p>
+
+    <h2 class="title">General Sibling Combinator</h2>
+    <p class="description">This is the second description.</p>
+    <p class="description">This is the third description.</p>
+
+</body>
+</html>
+
+
+<!-- In CSS, combinators are used to define the relationship between selectors. 
+ There are four main types of combinators: descendant combinator, child combinator, adjacent sibling combinator, 
+ and general sibling combinator.
+
+ +-----------------------------+--------------------------------------+-----------------------------------------------------+
+| Combinator Type             | Syntax                               | Example                                             |
++-----------------------------+--------------------------------------+-----------------------------------------------------+
+| Descendant Combinator       | ancestor descendant                  | .container .text { color: blue; }                  |
+| Child Combinator            | parent > child                       | .list > .item { font-weight: bold; }               |
+| Adjacent Sibling Combinator | previous + current                   | .title + .description { color: green; }            |
+| General Sibling Combinator  | previous ~ sibling                   | .title ~ .description { color: orange; }           |
++-----------------------------+--------------------------------------+-----------------------------------------------------+
+
+1. Descendant Combinator ( )
+The descendant combinator selects elements that are nested within a specified ancestor.
+
+2. Child Combinator (>)
+The child combinator selects elements that are direct children of a specified parent.
+
+3. Adjacent Sibling Combinator (+)
+The adjacent sibling combinator selects an element that is immediately preceded by a specified sibling.
+
+4. General Sibling Combinator (~)
+The general sibling combinator selects all siblings that follow a specified element, not just the first.
+  -->
