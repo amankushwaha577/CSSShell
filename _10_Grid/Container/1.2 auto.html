@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto; /* Two columns */
+            grid-template-rows: 100px; /* Fixed height for rows */
+            width: 600px; /* Fixed width for the container */
+            gap: 10px; /* Space between items */
+            background-color: #513737; /* Light gray background */
+            padding: 10px; /* Padding around the grid */
+        }
+
+        .item {
+            padding: 20px;
+            background-color: lightblue; /* Light blue background for items */
+            border: 1px solid #333; /* Border around items */
+        }
+
+        /* Align items to the start of the grid cell */
+        .grid-container {
+            align-items: start; /* Optional: Prevents vertical stretching */ 
+            justify-items: start; /* Optional: Prevents horizontal stretching */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Grid Stretching Example</h1>
+    <div class="grid-container">
+        <div class="item">Short</div>
+        <div class="item">A bit longer item</div>
+        <div class="item">Item 3</div>
+        <div class="item">Another long item that might stretch the column</div>
+    </div>
+
+</body>
+</html>
+
+
+<!-- 
+In this case:
+Stretching Behavior: Each item will stretch vertically to fill the 100px height of the grid row, despite their content varying in height.
+Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
+ -->
