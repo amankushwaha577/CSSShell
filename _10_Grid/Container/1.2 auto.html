@@ -47,4 +47,11 @@
 In this case:
 Stretching Behavior: Each item will stretch vertically to fill the 100px height of the grid row, despite their content varying in height.
 Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
+1. We have used grid-template-rows: 100px; 
+   So here every row will have maximum height of 100px;
+   total width of container is 600px.
+
+2. Here we are using 
+   align-items: start; /* To Prevent vertical stretching : Now item will not take complete row height they will take only whatever needed for content*/ 
+   justify-items: start; /* To Prevent horizontal stretching : Now item will not take complete column width they will take only whatever needed for content*/
  -->
