@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Sibling Selector</title>
+  <style>
+    /* General Sibling Selector */
+    h1 ~ p {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  
+  <p>This paragraph is also selected.</p>
+  <h1>General Sibling Selector</h1>
+  <p>This paragraph is a sibling of the h1 and is selected.</p>
+  <p>This paragraph is a sibling of the h1 and is selected.</p>
+  <h2><p>This paragraph is not affected.</p></h2>
+</body>
+</html>
+
+
+<!-- The general sibling selector selects all elements that are siblings of a specified element, using the ~ symbol. -->
+
+<!-- This example selects all <p> elements that are siblings of an <h1>. -->

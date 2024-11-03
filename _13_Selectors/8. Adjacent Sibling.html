@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adjacent Sibling Selector</title>
+  <style>
+    /* Adjacent Sibling Selector */
+    h1 + p {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <p>This paragraph is also selected.</p>
+
+  <h1>Adjacent Sibling Selector</h1>
+  <p>This paragraph is styled because it immediately follows the h1.</p>
+  <p>This paragraph is not affected.</p>
+</body>
+</html>
+
+
+<!-- The adjacent sibling selector selects an element immediately following another specified element. 
+ It’s indicated by a + symbol. -->
+
+ <!-- This example targets a <p> element that comes immediately after an <h1> element. -->
