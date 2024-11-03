@@ -87,6 +87,15 @@
 //   |
 // Column Track 1
 
-// Grid Cell: The single space between four grid lines.
-// Grid Area: A rectangular area made up of one or more grid cells
+// 6. Grid Cell: The single space between four grid lines.
+// +---+---+---+
+// | C1|   |   |
+// |---+---+---|
+
+
+// 7.Grid Area: A rectangular area made up of one or more grid cells
+// +---+---+---+
+// |  Area |   |
+// +---+---+---+
+
 
