@@ -37,6 +37,14 @@
       <div>8</div>
       <div>9</div>
     </div>
+
+    <hr/>
+    <div class="grid-container">
+      <div class="item">Short</div>
+      <div class="item">A bit longer item</div>
+      <div class="item">Item 3</div>
+      <div class="item">Another long item that might stretch the column. </div>
+    </div>
   </body>
 </html>
 
@@ -60,4 +68,27 @@ Understanding **auto** in Grid Layout :
     the columns can also stretch to fill the available width of the container.
   B. If the total width of the columns (based on content size) is less than the width of the container, 
     the columns will stretch to fill that space, often leading to an appearance of equal distribution across the container.
+ -->
+
+
+
+<!-- 
+Grid items stretch in a CSS Grid layout primarily due to the default behavior of the grid itself, 
+which is designed to create a flexible and responsive layout. 
+Here’s a detailed explanation of why grid items stretch and how you can control their behavior:
+
+Reasons for Grid Items Stretching
+Default Behavior:
+
+By default, grid items are set to stretch to fill the entire height of their grid area. 
+***This is controlled by the align-items and justify-items properties***.
+***The default value for both align-items and justify-items is stretch***, which means grid items will expand to fill the available space in their grid cell.
+
+Auto Height:
+
+If you do not specify a height for grid items, they will stretch to fill the height of the grid container. 
+This is particularly evident when the container has a fixed height or when the grid has multiple rows.
+Available Space:
+
+When there is extra space within a grid container (either vertically or horizontally), grid items will fill that space based on their alignment settings. If no specific sizes are set, the browser will stretch items to utilize the available space.
  -->
