@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The grid-template-columns Property</h1>
+
+    <p>
+      You can use the <em>grid-template-columns</em> property to specify the
+      number of columns in your grid layout.
+    </p>
+
+    <div class="grid-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>
+
+
+<!-- 
+grid-template-columns: auto auto auto auto;
+
+Note: If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.
+
+Understanding auto in Grid Layout :
+1. Expansion to Fill Available Space: 
+   When you set grid-template-columns: auto auto auto auto;
+   the auto value allows each column to take up the space necessary for its content and also to fill the available space
+   in the grid container.
+   If the grid container has extra space, the all columns will indeed expand to occupy that space equally unless they reach the maximum size
+   determined by their content.
+Behavior in a Flexible Container:
+
+2. The auto keyword tells the browser to size the columns based on the content, but in a grid layout, 
+the columns can also stretch to fill the available width of the container.
+If the total width of the columns (based on content size) is less than the width of the container, 
+the columns will stretch to fill that space, often leading to an appearance of equal distribution across the container.
+ -->
