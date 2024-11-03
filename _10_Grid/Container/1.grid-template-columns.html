@@ -5,6 +5,12 @@
       .grid-container {
         display: grid;
         grid-template-columns: auto auto auto auto;
+        /* grid-template-columns: 200px 150px 100px; */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        /* grid-template-columns: repeat(3, 1fr); */
+        /* grid-template-columns: 100px minmax(150px, 1fr) 200px; */
+        /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+        /* grid-template-columns: auto 1fr 1fr 1fr; */
         gap: 10px;
         background-color: #2196f3;
         padding: 10px;
@@ -56,3 +62,100 @@ grid-template-columns: <track-size> <track-size> ...;
 Each <track-size> defines the width of a column and can be specified in units such as pixels (px), percentages (%), 
 fractions (fr), or any CSS length unit.
   -->
+
+<!-- 
+Example 1:
+.container {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+}
+
+This creates three columns:
+
+The first column is 200px wide.
+The second column is 150px wide.
+The third column is 100px wide.
+-->
+
+
+<!-- 
+Example 2:
+Fractional Units (fr)
+The fr unit is useful for responsive layouts, as it divides available space proportionally.
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+This creates three columns:
+
+The first and third columns each take up one fraction of the space.
+The middle column takes up two fractions of the space.
+
+-->
+
+
+
+<!-- 
+Example 3:
+Repeat Notation
+The repeat() function is a shorthand for creating repeating columns.
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+This creates three equal-width columns, each taking up 1fr of the space.
+-->
+
+
+
+<!-- 
+Example 4 :
+Minmax Function
+The minmax() function allows you to set a minimum and maximum width for responsive columns.
+
+.container {
+  display: grid;
+  grid-template-columns: 100px minmax(150px, 1fr) 200px;
+}
+
+This creates three columns:
+
+The first column is fixed at 100px.
+The second column is at least 150px wide and grows to fill available space up to 1fr.
+The third column is fixed at 200px.
+-->
+
+
+
+
+<!-- 
+Example 5 :
+Auto-fill and Auto-fit
+Using auto-fill or auto-fit with repeat() makes the grid more flexible.
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+auto-fill will add as many 150px minimum columns as can fit in the container.
+auto-fit will adjust column sizes to fill any remaining space, which can help with responsive layouts.
+-->
+
+
+<!-- 
+Example Main :
+grid-template-columns: auto auto auto auto;
+When you use grid-template-columns: auto auto auto auto; in CSS Grid, you’re creating four columns with each column width set to auto.
+
+The auto value in a CSS Grid context allows each column to be sized according to its content. This means:
+Auto-Sizing Behavior:
+  A. Each column will expand to fit its content, but no larger than the available space in the grid container.
+  B. If there's more content than the container can accommodate, columns will wrap or overflow (based on the container's overflow property).
+Equal Columns (If Content is Similar): 
+If the content in each column is similar in width, the columns will visually appear as equal-sized. However, if some columns have more content, they will be wider than columns with less content.
+-->
