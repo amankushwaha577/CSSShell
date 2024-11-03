@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partial Value Attribute Selector</title>
+  <style>
+    /* Selects links that start with 'https' */
+    a[href^="https"] {
+      color: green;
+    }
+
+    /* Selects images that end with '.jpg' */
+    img[src$=".jpg"] {
+      border: 2px solid blue;
+    }
+
+    /* Selects links that contain 'example' */
+    a[href*="example"] {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Attribute Selector with Partial Value</h1>
+  <a href="https://example.com">Secure Example Link</a><br>
+  <a href="http://example.com">Non-Secure Example Link</a><br>
+  <a href="https://another-link.com">Another Link</a><br>
+  <img src="photo.jpg" alt="Photo">
+  <img src="image.png" alt="Image">
+</body>
+</html>
+
+
+<!-- This example demonstrates three partial value selectors: ^= (starts with), $= (ends with), and *= (contains). -->
