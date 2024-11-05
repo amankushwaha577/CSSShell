@@ -9,19 +9,27 @@
         display: grid;
         grid-template-columns: auto auto; /* Two columns */
 
-        grid-template-rows: 100px;
-        /* Fixed height for rows : if somehow 2nd row came out in picture because of too many items than hieght of that 
-            row will be "auto" means it will only occuly height of content inside it only.*/
+        grid-template-rows: 100px; /* The first row is set to 100px.*/
+        /* if somehow 2nd row came out in picture because of too many items than height of that 
+            row will be "auto" means it will only occupy height of content inside it 
+                                     + if additional space there in container height it will be distributed to this auto.
+            */
 
         /* To Control the Second Row Height :====
             If you want to specify a height for all potential rows, you could use grid-auto-rows to define the height for any rows that CSS Grid creates automatically: */
 
-        grid-auto-rows: 200px; /* Any additional rows will be 100px */
-
+        grid-auto-rows: 200px;
+        /* Any additional rows will be 100px */
         /* This configuration sets:
             The first row to 100px.
             Any additional rows to 200px. 
         */
+
+        /* If you comment    grid-auto-rows: 200px; 
+        it will occupy remaining height of container. This become auto height row. So along with containt height + container distributed remaining
+        height space to row*/
+
+        height: 500px;
 
         width: 600px; /* Fixed width for the container */
         gap: 10px; /* Space between items */
@@ -115,8 +123,6 @@ Example: grid-template-rows: auto auto;
                             }
  -->
 
-
- 
 <!-- _______________________________________________________________________________________________ -->
 
 <!-- 
