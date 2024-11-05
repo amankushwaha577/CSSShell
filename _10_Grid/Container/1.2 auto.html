@@ -59,12 +59,13 @@ Full Use of Space: The items will also expand horizontally to fill their respect
 
 <!-- 
  
- One More thing to note : (here talking about only width same for height)
-   we know auto value ( justify-items: stretch; by default ) allows each column to take up the space necessary for its content and also to fill the available space
-   in the grid container. Mean if some space is remained it will be distributed to all columns equally so all items will get equal width.
+ One More thing to note : 
+  1. When we give auto to columns than
+        column occupies space that is required for its content + container distribute it some available proportional space.
+
+        here thing need to not that if we give align-items: start; to item than
+        it will not stretch to occupy full width of column it will just take that is required for its inner content. 
+        space will remain in column in this case
    
-   when we give justify-items: start; additionally
-   then column width remain as it is as per previous behaviour 
-   but items width will not stretch to fully occupy its column width.
 
  -->
