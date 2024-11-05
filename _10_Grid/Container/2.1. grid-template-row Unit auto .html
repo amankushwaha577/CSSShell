@@ -92,7 +92,8 @@ Example: A). grid-template-rows: 100px 200px;
           B). grid-template-rows: 500px auto;
           ----------------------------------
           The first row remains fixed at 500px. 
-          Second row fits content automatically. The second row adjusts to fit content (auto).
+          Second row fits content automatically + if height of container is fixed and some remainining space of height there than space will
+          be distributed to this auto.
 
           .grid-container {
             display: grid;
@@ -113,9 +114,11 @@ Example: A). grid-template-rows: 100px 200px;
 2.auto
 ------------------------------------------------------------
 Sets the row height based on its content, adjusting dynamically.
+simply = take height of content + if height of container is fixed and some remainining space of height there than space will 
+                                  be distributed to this auto.
 
 Example: grid-template-rows: auto auto; 
-         creates two rows, each automatically adjusting its height to fit its content not to fit empty space.
+         creates two rows, each automatically adjusting its height to fit its (content + distributed space from container).
 
                             .grid-container {
                               display: grid;
