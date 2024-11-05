@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Example</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto; /* Two columns */
+
+        grid-template-rows: 100px;
+        /* Fixed height for rows : if somehow 2nd row came out in picture because of too many items than hieght of that 
+            row will be "auto" means it will only occuly height of content inside it only.*/
+
+        /* To Control the Second Row Height :====
+            If you want to specify a height for all potential rows, you could use grid-auto-rows to define the height for any rows that CSS Grid creates automatically: */
+
+        grid-auto-rows: 200px; /* Any additional rows will be 100px */
+
+        /* This configuration sets:
+            The first row to 500px.
+            Any additional rows to 100px. 
+        */
+
+        width: 600px; /* Fixed width for the container */
+        gap: 10px; /* Space between items */
+        background-color: #513737;
+        padding: 10px;
+      }
+
+      .item {
+        padding: 10px;
+        background-color: lightblue; /* Light blue background for items */
+        border: 1px solid #333; /* Border around items */
+      }
+
+      /* Here lets keep stretch propert to observe rows height */
+      /* .grid-container 
+      {
+        align-items: start;  Optional: Prevents vertical stretching 
+        justify-items: start;  Optional: Prevents horizontal stretching 
+      } 
+         */
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid Stretching Example</h1>
+    <div class="grid-container">
+      <div class="item">Short</div>
+      <div class="item">A bit longer item</div>
+      <div class="item">Item 3</div>
+      <div class="item">Another long item that might stretch the column</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+The grid-template-rows property in CSS is used to define the row structure within a CSS Grid container, 
+setting the number and height of rows. This property gives precise control over the layout and distribution of rows within a grid, 
+enabling the creation of responsive and flexible layouts.
+
+grid-template-rows: row-size1 row-size2 row-size3 ...;
+
+
+1. Fixed Size (e.g., px, em, %)
+-------------------------------
+Defines rows with a fixed height.
+
+Example: A). grid-template-rows: 100px 200px; 
+         -----------------------------------
+         creates two rows, the first with a height of 100px and the second 200px.
+
+         .grid-container {
+                display: grid;
+                grid-template-rows: 100px 200px;
+          }
+
+          B). grid-template-rows: 500px auto;
+          ----------------------------------
+          The first row remains fixed at 500px. 
+          Second row fits content automatically. The second row adjusts to fit content (auto).
+
+          .grid-container {
+            display: grid;
+            grid-template-rows: 500px auto; 
+           }
+        
+          C). First Row: 500px (explicitly defined).
+             Second Row: auto (expands to fit content only).
+             Third Row and Beyond: 100px each (applies to any rows created implicitly by the grid).
+             -------------------------------------------------------------------------------------
+
+          .grid-container {
+            display: grid;
+            grid-template-rows: 500px auto; /* First row: 500px, second row: auto */
+            grid-auto-rows: 100px; /* Any additional rows: 100px */
+          }
+
+
+
+
+
+2. Flexible Size (fr Units)
+---------------------------
+The fr (fractional) unit distributes space proportionally based on available space.
+Example: grid-template-rows: 1fr 2fr; creates two rows, with the second row twice the height of the first.
+
+                .grid-container {
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                }
+
+ -->
+
+<!-- _______________________________________________________________________________________________ -->
+
+<!-- 
+In this case:
+Stretching Behavior: Each item will stretch vertically to fill the 100px height of the grid row, despite their content varying in height.
+Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
+1. We have used grid-template-rows: 100px; 
+   So here every row will have  height of 100px;
+   total width of container is 600px.
+
+2. Here we are using 
+   align-items: start; /* To Prevent vertical stretching : Now item will not take complete row height they will take only whatever needed for content*/ 
+   justify-items: start; /* To Prevent horizontal stretching : Now item will not take complete column width they will take only whatever needed for content*/
+ -->
+
+<!-- 
+ 
+ One More thing to note : 
+  1. When we give auto to columns than
+        column occupies space that is required for its content + container distribute it some available proportional space.
+
+        +  here thing need to not that if we give align-items: start; to item than
+        it will not stretch to occupy full width of column it will just take that is required for its inner content. 
+        space will remain in column in this case
+
+  2. When we give auto to row than
+        row only occupies space that is required for its content..
+
+        +  here thing need to not that if we give justify-items: start; to item than
+        it will not stretch to occupy full height of its row. it will just take height that is required for its inner content. 
+        space will remain in row in this case
+ -->
