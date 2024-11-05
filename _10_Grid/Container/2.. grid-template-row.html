@@ -8,11 +8,16 @@
         .grid-container {
             display: grid;
             grid-template-columns: auto auto; /* Two columns */
-            grid-template-rows: 100px; /* Fixed height for rows */
+
+            grid-template-rows: 500px; 
+            /* Fixed height for rows : if somehow 2nd row came out in picture than hieght of that row will be "auto" means it will
+            only occuly height of content inside it only.*/
+
+            /* grid-template-rows: 1fr 2fr; */
             width: 600px; /* Fixed width for the container */
             gap: 10px; /* Space between items */
-            background-color: #513737; /* Light gray background */
-            padding: 10px; /* Padding around the grid */
+            background-color: #513737;
+            padding: 10px;
         }
 
         .item {
@@ -42,6 +47,42 @@
 </body>
 </html>
 
+<!-- 
+The grid-template-rows property in CSS is used to define the row structure within a CSS Grid container, 
+setting the number and height of rows. This property gives precise control over the layout and distribution of rows within a grid, 
+enabling the creation of responsive and flexible layouts.
+
+grid-template-rows: row-size1 row-size2 row-size3 ...;
+
+
+1. Fixed Size (e.g., px, em, %)
+-------------------------------
+Defines rows with a fixed height.
+Example: grid-template-rows: 100px 200px; 
+         creates two rows, the first with a height of 100px and the second 200px.
+
+         .grid-container {
+                display: grid;
+                grid-template-rows: 100px 200px;
+          }
+
+
+2. Flexible Size (fr Units)
+---------------------------
+The fr (fractional) unit distributes space proportionally based on available space.
+Example: grid-template-rows: 1fr 2fr; creates two rows, with the second row twice the height of the first.
+
+                .grid-container {
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                }
+
+ -->
+
+
+
+
+ <!-- _______________________________________________________________________________________________ -->
 
 <!-- 
 In this case:
