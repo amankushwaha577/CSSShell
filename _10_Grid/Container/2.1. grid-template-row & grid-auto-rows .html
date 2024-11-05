@@ -102,7 +102,17 @@ Example: A). grid-template-rows: 100px 200px;
             grid-auto-rows: 100px; /* Any additional rows: 100px */
           }
 
+2.auto
+------------------------------------------------------------
+Sets the row height based on its content, adjusting dynamically.
 
+Example: grid-template-rows: auto auto; 
+         creates two rows, each automatically adjusting its height to fit its content not to fit empty space.
+
+                            .grid-container {
+                              display: grid;
+                              grid-template-rows: auto auto;
+                            }
  -->
 
 

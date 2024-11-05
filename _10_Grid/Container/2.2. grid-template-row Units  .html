@@ -18,9 +18,11 @@
         /* grid-template-rows: 2fr 9fr; */
         /*row1: row2 =  ratio 2:9 [yes without defining container height it's happening]*/
 
-        grid-template-rows: 1fr 2fr;
+        /* grid-template-rows: 1fr 2fr; */
         height: 600px;   /* Yes With fixed height */
         /* First row is 200px, second row is 400px    */
+
+        grid-template-rows: auto auto;
 
         width: 600px; /* Fixed width for the container */
         gap: 10px; /* Space between items */
@@ -100,8 +102,20 @@ Example: A). grid-template-rows: 100px 200px;
             grid-auto-rows: 100px; /* Any additional rows: 100px */
           }
 
+2.auto
+------------------------------------------------------------
+Sets the row height based on its content, adjusting dynamically.
 
-2. Flexible Size (fr Units)
+Example: grid-template-rows: auto auto; 
+         creates two rows, each automatically adjusting its height to fit its content not to fit empty space.
+
+                            .grid-container {
+                              display: grid;
+                              grid-template-rows: auto auto;
+                            }
+
+
+3. Flexible Size (fr Units)
 ---------------------------
 The fr (fractional) unit distributes space in proportion to the total available space within the grid container.
 
@@ -130,7 +144,7 @@ Example: A). grid-template-rows: 1fr 2fr; + Without container height
         ║ Behavior with Undefined Container Height   │ Adjusts each row height to fit content only                           │                                                                       ║
         ║                                            │                                                                       │  maintains proportional ratios                                        ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
-        ║ Behavior with Defined Container Height     │ Each row fits content height and ignores any extra container space    │ Distributes container height based on ratios (`1fr`, `2fr`, etc.)     ║
+        ║ Behavior with Defined Container Height     │ Each row fits content height + takes distributed container height     │ Distributes container height based on ratios (`1fr`, `2fr`, etc.)     ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
         ║ Example (2 Rows)                           │ `grid-template-rows: auto auto;`                                      │ `grid-template-rows: 1fr 2fr;`                                       ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
@@ -143,6 +157,9 @@ Example: A). grid-template-rows: 1fr 2fr; + Without container height
         ║ Example Layout with Explicit Height        │ `.grid-container { height: 600px; grid-template-rows: auto auto; }`   │ `.grid-container { height: 600px; grid-template-rows: 1fr 2fr; }`    ║
         ║                                            │ — Both rows fit their content within 600px container height           │ — First row is 200px, second row is 400px                            ║
         ╚════════════════════════════════════════════╧═══════════════════════════════════════════════════════════════════════╧═══════════════════════════════════════════════════════════════════════╝
+
+
+
 
 -->
 
