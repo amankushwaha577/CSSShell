@@ -9,9 +9,6 @@
         display: grid;
         grid-template-columns: auto auto; /* Two columns */
 
-        /* grid-template-rows: 100px;
-        grid-auto-rows: 200px;  Any additional rows will be 100px  */
-
         /* grid-template-rows: 1fr 3fr; */
         /* 2nd row height = 3 X height of first row (ratio 1:3) [yes without defining container height it's happening]*/
 
@@ -72,42 +69,14 @@ _________________________________________________
 -------------------------------
 Defines rows with a fixed height.
 
-Example: A). grid-template-rows: 100px 200px; 
-         -----------------------------------
-         creates two rows, the first with a height of 100px and the second 200px.
-
-         .grid-container {
-                display: grid;
-                grid-template-rows: 100px 200px;
-          }
-
-          B). grid-template-rows: 500px auto;
-          ----------------------------------
-          The first row remains fixed at 500px. 
-          Second row fits content automatically. The second row adjusts to fit content (auto).
-
-          .grid-container {
-            display: grid;
-            grid-template-rows: 500px auto; 
-           }
-        
-          C). First Row: 500px (explicitly defined).
-             Second Row: auto (expands to fit content only).
-             Third Row and Beyond: 100px each (applies to any rows created implicitly by the grid).
-             -------------------------------------------------------------------------------------
-
-          .grid-container {
-            display: grid;
-            grid-template-rows: 500px auto; /* First row: 500px, second row: auto */
-            grid-auto-rows: 100px; /* Any additional rows: 100px */
-          }
-
 2.auto
 ------------------------------------------------------------
 Sets the row height based on its content, adjusting dynamically.
+simply = take height of content + if height of container is fixed and some remainining space of height there than space will 
+                                  be distributed to this auto.
 
 Example: grid-template-rows: auto auto; 
-         creates two rows, each automatically adjusting its height to fit its content not to fit empty space.
+         creates two rows, each automatically adjusting its height to fit its (content + distributed space from container).
 
                             .grid-container {
                               display: grid;
@@ -147,8 +116,6 @@ Example: A). grid-template-rows: 1fr 2fr; + Without container height
         ║ Behavior with Defined Container Height     │ Each row fits content height + takes distributed container height     │ Distributes container height based on ratios (`1fr`, `2fr`, etc.)     ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
         ║ Example (2 Rows)                           │ `grid-template-rows: auto auto;`                                      │ `grid-template-rows: 1fr 2fr;`                                       ║
-        ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
-        ║ Effect of Extra Space                      │ Does not expand rows to fill extra space                              │ Expands rows based on ratio to fill any extra space                  ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
         ║ Common Use Cases                           │ Use when rows should match content height exactly                     │ Use when rows should take up proportional heights based on space     ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
