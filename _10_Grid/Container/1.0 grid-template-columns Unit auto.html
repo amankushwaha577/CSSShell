@@ -54,6 +54,10 @@ grid-template-columns: auto auto auto auto;
 
 Note: If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.
 
+Note 2: ignore grid-auto-columns for now. columns dont create automatically generally
+        so using grid-template-columns: auto auto auto auto; there will always only 4 columns
+        no chance of creating 5th in normal UI cases. so no need of grid-auto-columns
+
 Understanding **auto** in Grid Layout :
 1. Expansion to Fill Available Space: 
    When you set grid-template-columns: auto auto auto auto;
