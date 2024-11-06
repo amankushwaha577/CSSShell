@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid - align-content Example</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-rows: 100px 100px; /* Two rows, each 100px tall */
+        grid-template-columns: 1fr; /* One column */
+        gap: 10px;
+        height: 500px; /* Container height 500px is larger than the grid (100px row1 + 100px row2) */
+
+        /* align-content: start;   */
+        /* align-content: end;   */
+        /* align-content: center;      */
+
+        align-content: stretch;
+        /* If row height is already defined than it will not work. it act as align-content: start; */
+
+        /* align-content: space-between;   */
+        /* align-content: space-around;   */
+        align-content: space-evenly;
+
+        background-color: #cec3c3;
+        border: 1px solid #ddd;
+      }
+
+      .item {
+        background-color: #feb47b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+    </div>
+  </body>
+</html>
+
+<!-- In CSS Grid, align-content controls the vertical alignment of the entire grid within the grid container 
+ when the grid’s total height is smaller than the container’s height. 
+ It’s similar to justify-content, but it works along the vertical axis instead of the horizontal axis.
+
+  align-content: <alignment>;
+
+Possible Values:
+1. start: Aligns the grid to the top of the container.
+2. end: Aligns the grid to the bottom of the container.
+3. center: Centers the grid vertically within the container.
+4. stretch: Stretches the grid to fill the container’s height.
+5. space-between: Distributes extra space evenly between grid rows, with no space at the top or bottom.
+6. space-around: Distributes extra space evenly around each row, with half-size space at the top and bottom.
+7. space-evenly: Distributes extra space evenly, including at the top and bottom.
+  -->
+
+<!-- 
+When to Use align-content :
+1. align-content only affects the entire grid, not individual grid items / (same for justify-content).
+2. It only works when the grid’s height (the combined height of rows and gaps) is less than the container’s height. 
+   If the grid fills or exceeds the container’s height, align-content has no effect.
+ -->
