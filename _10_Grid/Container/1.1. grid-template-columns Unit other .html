@@ -147,7 +147,9 @@ Using auto-fill or auto-fit with repeat() makes the grid more flexible.
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-auto-fill will add as many 150px minimum columns as can fit in the container.
+auto-fill will add as many 150px minimum columns as can fit in the container 
++ using 1fr width every column will occupy same distibuted space proportion.
+
 auto-fit will adjust column sizes to fill any remaining space, which can help with responsive layouts.
 -->
 
