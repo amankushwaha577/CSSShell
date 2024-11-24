@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Row Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-rows: 100px 200px auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .item1 {
+            grid-row: 1 / 2; /* Starts at line 1, ends at line 2 */
+        }
+
+        .item2 {
+            grid-row: 2 / span 2; /* Starts at line 2 and spans 2 rows */
+        }
+
+        .item3 {
+            grid-row: 1 / -1; /* Spans all rows */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1" style="background-color: lightblue;">Item 1</div>
+        <div class="item2" style="background-color: lightcoral;">Item 2</div>
+        <div class="item3" style="background-color: lightgreen;">Item 3</div>
+    </div>
+</body>
+</html>
