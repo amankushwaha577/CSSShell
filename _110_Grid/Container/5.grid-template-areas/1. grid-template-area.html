@@ -44,3 +44,63 @@
     </div>
   </body>
 </html>
+
+
+<!-- The grid-template-areas property is used in CSS Grid to define named grid areas for a more semantic 
+ and visually structured layout. It works by assigning names to different parts of the grid layout, allowing you 
+ to position items easily using the grid-area property. -->
+
+ <!-- How grid-template-areas Works 
+  -----------------------------------
+  
+  1. Assign Grid Items to Named Areas: -
+     Use the grid-area property in individual items to assign area name.
+     Example : 
+                    .header {
+                    grid-area: header;
+                     }
+
+                      .sidebar {
+                          grid-area: sidebar;
+                      }
+
+  2. Area Names Must Match :-
+     Each named area in grid-template-areas must reference a item.
+
+     Example :    
+                    grid-template-areas: 
+                            "header header"
+                            "sidebar main";
+
+    A. Each string defines a row.
+    B. Words in quotes represent named areas.
+    C. (.) can be used for empty spaces.
+
+  3. No of columns in in string === No of columns in grid (Must).
+
+     Example :  grid-template-areas:
+                          "header header"
+                          "sidebar";
+
+                Op: Error
+  
+  4. Named Areas Must Be Rectangular :
+     Grid areas must form a contiguous rectangular block; otherwise, you’ll get a syntax error.
+
+     Example :    grid-template-areas:
+                            "header header"
+                            "header header";         (No issue)
+
+
+                  grid-template-areas:
+                            "header main"
+                            "sidebar header";         (Syntax Error) Here, the header area is disjointed, which isn’t allowed.
+
+  5. grid-template-areas Does Not Control Sizing:
+     The property defines the layout structure, but row and column sizes are still managed by grid-template-rows and grid-template-columns.
+
+     Example : grid-template-rows: 100px auto;
+               grid-template-columns: 200px 1fr;
+
+
+  -->
