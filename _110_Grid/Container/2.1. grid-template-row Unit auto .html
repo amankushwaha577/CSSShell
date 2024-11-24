@@ -19,7 +19,7 @@
             If you want to specify a height for all potential rows, you could use grid-auto-rows to define the height for any rows that CSS Grid creates automatically: */
 
         grid-auto-rows: 200px;
-        /* Any additional rows will be 100px */
+        /* Any additional rows will be 200px */
         /* This configuration sets:
             The first row to 100px.
             Any additional rows to 200px. 
@@ -133,8 +133,15 @@ In this case:
 Stretching Behavior: Each item will stretch vertically to fill the 100px height of the grid row, despite their content varying in height.
 Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
 1. We have used grid-template-rows: 100px; 
-   So here every row will have  height of 100px;
+   So here 1st row will have  height of 100px;
+
+   grid-auto-rows: 200px;
+   2nd Row, and other rows will be of 200px.
    total width of container is 600px.
+
+   Note : if suppose 1st Row (100Px) + 3 More Row(3 x 200px = 600px)
+          than Rows will break container height (ie 600px) 
+          container will remain 600px but addional rows look like they broken outside container.
 
 2. Here we are using 
    align-items: start; /* To Prevent vertical stretching : Now item will not take complete row height they will take only whatever needed for content*/ 
