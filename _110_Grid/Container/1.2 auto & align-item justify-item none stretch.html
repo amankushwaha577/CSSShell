@@ -8,7 +8,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: auto auto; /* Two columns */
-            grid-template-rows: 400px; /* Fixed height for rows */
+            grid-template-rows: 400px; /* Fixed height for 1st row */
             width: 600px; /* Fixed width for the container */
             gap: 10px; /* Space between items */
             background-color: #513737; /* Light gray background */
@@ -48,7 +48,8 @@ In this case:
 Stretching Behavior: Each item will stretch vertically to fill the 400px height of the grid row, despite their content varying in height.
 Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
 1. We have used grid-template-rows: 400px; 
-   So here every row will have  height of 400px;
+   So here 1st row will have  height of 400px;
+   2nd row will remain auto will take height of its content only
 
    total width of container is 600px.
    + every column have "auto" width => so every column will get width according to its content + some distributed space by container 600px
