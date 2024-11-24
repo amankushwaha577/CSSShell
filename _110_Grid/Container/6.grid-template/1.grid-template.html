@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Small Grid Template Example</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template:
+          "header" 50px /* "header": This defines a row called header with a height of 50px. */
+          "main" 500px /* "main": This defines a row called main with a height of 500px. */
+          "footer" 30px /* "footer": This defines a row called footer with a height of 30px. */
+          / 200px; /* Single column with 200px width */
+        gap: 5px;
+      }
+
+      /* 
+        |-----------------|
+        |     header      |  50px height
+        |-----------------|
+        |      main       |  500px height
+        |-----------------|
+        |     footer      |  30px height
+        |-----------------|
+      */
+      .header {
+        grid-area: header;
+        background-color: lightblue;
+      }
+
+      .main {
+        grid-area: main;
+        background-color: lightgreen;
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">Header</div>
+      <div class="main">Main Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
+
+<!-- The grid-template property is a shorthand property in CSS Grid used to define both the rows and columns of the grid layout,
+  as well as the named grid areas (if applicable)
+
+  1. grid-template: <grid-template-areas> / <grid-template-columns>;
+  2. grid-template: <grid-template-rows> / <grid-template-columns>;
+ -->
+
+<!-- 
+ 1. Using grid-template with Rows and Columns :
+            .grid-container {
+                display: grid;
+                grid-template: 100px 200px auto / 1fr 2fr; 
+            }
+    Rows: 100px 200px auto
+        Defines three rows:
+        First row: 100px.
+        Second row: 200px.
+        Third row: Adjusts to available space automatically.
+
+    Columns: 1fr 2fr
+        Defines two columns:
+        First column: 1 fraction of the available space.
+        Second column: 2 fractions of the available space.
+ 
+
+ 2. Using grid-template with Named Areas :
+            .grid-container {
+                display: grid;
+                grid-template:
+                    "header header"
+                    "sidebar main"
+                    "footer footer"
+                    / 1fr 2fr; /* Columns: 1 fraction and 2 fractions */
+            }
+    Grid Areas:
+        Row 1: "header header" (header spans two columns).
+        Row 2: "sidebar main" (sidebar takes the first column, main takes the second).
+        Row 3: "footer footer" (footer spans two columns).
+
+    Columns: 1fr 2fr
+        Two columns with the first column 1 fraction and the second column 2 fractions of the available space.
+ -->
