@@ -8,7 +8,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: auto auto; /* Two columns */
-            grid-template-rows: 100px; /* Fixed height for rows */
+            grid-template-rows: 400px; /* Fixed height for rows */
             width: 600px; /* Fixed width for the container */
             gap: 10px; /* Space between items */
             background-color: #513737; /* Light gray background */
@@ -45,10 +45,10 @@
 
 <!-- 
 In this case:
-Stretching Behavior: Each item will stretch vertically to fill the 100px height of the grid row, despite their content varying in height.
+Stretching Behavior: Each item will stretch vertically to fill the 400px height of the grid row, despite their content varying in height.
 Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
-1. We have used grid-template-rows: 100px; 
-   So here every row will have  height of 100px;
+1. We have used grid-template-rows: 400px; 
+   So here every row will have  height of 400px;
 
    total width of container is 600px.
    + every column have "auto" width => so every column will get width according to its content + some distributed space by container 600px
@@ -65,7 +65,7 @@ Full Use of Space: The items will also expand horizontally to fill their respect
   1. When we give auto to columns than
         column occupies space that is required for its content + container distribute it some available proportional space.
 
-        +  here thing need to not that if we give align-items: start; to item than
+        +  here thing need to not that if we give  justify-items: start; to item than
         it will not stretch to occupy full width of column it will just take that is required for its inner content. 
         some space will remain in column in this case
 
