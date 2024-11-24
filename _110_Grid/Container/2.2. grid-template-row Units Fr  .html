@@ -15,11 +15,11 @@
         /* grid-template-rows: 2fr 9fr; */
         /*row1: row2 =  ratio 2:9 [yes without defining container height it's happening]*/
 
-        /* grid-template-rows: 1fr 2fr; */
+        grid-template-rows: 1fr 2fr;
         height: 600px;   /* Yes With fixed height */
         /* First row is 200px, second row is 400px    */
 
-        grid-template-rows: auto auto;
+        /* grid-template-rows: auto auto; */
 
         width: 600px; /* Fixed width for the container */
         gap: 10px; /* Space between items */
@@ -131,43 +131,6 @@ Example: A). grid-template-rows: 1fr 2fr; + Without container height
 -->
 
 
-        
 
 
 
-
-
-
-
-<!-- _______________________________________________________________________________________________ -->
-
-<!-- 
-In this case:
-Stretching Behavior: Each item will stretch vertically to fill the 100px height of the grid row, despite their content varying in height.
-Full Use of Space: The items will also expand horizontally to fill their respective grid columns if the auto value allows it.
-1. We have used grid-template-rows: 100px; 
-   So here every row will have  height of 100px;
-   total width of container is 600px.
-
-2. Here we are using 
-   align-items: start; /* To Prevent vertical stretching : Now item will not take complete row height they will take only whatever needed for content*/ 
-   justify-items: start; /* To Prevent horizontal stretching : Now item will not take complete column width they will take only whatever needed for content*/
- -->
-
-<!-- 
- 
- One More thing to note : 
-  1. When we give auto to columns than
-        column occupies space that is required for its content + container distribute it some available proportional space.
-
-        +  here thing need to not that if we give align-items: start; to item than
-        it will not stretch to occupy full width of column it will just take that is required for its inner content. 
-        space will remain in column in this case
-
-  2. When we give auto to row than
-        row only occupies space that is required for its content..
-
-        +  here thing need to not that if we give justify-items: start; to item than
-        it will not stretch to occupy full height of its row. it will just take height that is required for its inner content. 
-        space will remain in row in this case
- -->
