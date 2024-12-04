@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        /* align-items: start;  */
+        align-items: end; 
+        /* align-items: center;  */
+        /* align-items: stretch;  */
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(2, 200px);
+        gap: 10px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 10px 10px;
+        font-size: 20px;
+        height: 50px; /* To better visualize vertical alignment */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid: Align Items</h1>
+ 
+
+    <div class="grid-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>
