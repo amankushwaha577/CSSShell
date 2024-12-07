@@ -1,0 +1,35 @@
+.container {
+    background-color: #3498db;
+    color: #2c3e50;
+    padding: 20px;
+  }
+  
+  .container h1 {
+    font-size: 2em;
+  }
+  
+  .container p {
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .container p a {
+    color: #2b7fc0;
+    text-decoration: none;
+  }
+  
+  .container p a:hover {
+    color: #55a8e6;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: #5dade2;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+  }
+  
