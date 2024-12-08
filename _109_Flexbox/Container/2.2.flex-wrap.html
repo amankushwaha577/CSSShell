@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: nowrap; */
+        flex-wrap: wrap;
+        height: 400px;
+        /* flex-wrap: wrap-reverse; */
+        background-color: DodgerBlue;
+       
+      }
+
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+
+        line-height: 75px;
+
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+    </div>
+
+    <p>Try resizing the browser window.</p>
+  </body>
+</html>
+
+<!-- 
+The flex-wrap property specifies whether the flex items should wrap or not.
+flex-wrap: nowrap | wrap | wrap-reverse;
+
+1. nowrap (default): All flex items will be in a single line, even if they overflow the container.
+2. wrap: Flex items will wrap onto multiple lines if needed. New lines will be added below (in row direction) or 
+        to the right (in column direction).
+3. wrap-reverse: Flex items will wrap onto multiple lines, but in the opposite order. 
+        New lines will appear above (in row direction) or to the left (in column direction).
+ -->
