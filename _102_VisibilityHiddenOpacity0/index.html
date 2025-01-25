@@ -35,14 +35,23 @@
 
 
 <!-- 
-1. visibility: hidden:
-The element is hidden (invisible) but still occupies space in the layout.
-The element is not interactive (e.g., cannot be clicked). 
--->
+1. display: none;
+-----------------
+a. This removes the element entirely from the document's layout,
+b. so it doesn't take up any space.  
+c. so it is not interactive(e.g., cannot be clicked).
 
 
-<!-- 
-2. opacity: 0:
-The element is transparent (invisible), but still occupies space in the layout.
-The element is still interactive (e.g., can be clicked, focused, etc.). 
+2. visibility: hidden; 
+------------------------
+a. This hides the element(invisible) but still leaves the space where the element would normally be. 
+b. It is invisible but occupies its space. 
+c. so it is not interactive(e.g., cannot be clicked).
+ 
+
+3. opacity: 0:
+------------------------
+a. The element is transparent (invisible), 
+b. It is invisible but still occupies space in the layout.
+c. The element is still interactive (e.g., can be clicked, focused, etc.). 
 -->
