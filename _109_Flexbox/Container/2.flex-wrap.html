@@ -53,8 +53,10 @@ The flex-wrap property specifies whether the flex items should wrap or not.
 flex-wrap: nowrap | wrap | wrap-reverse;
 
 1. nowrap (default): All flex items will be in a single line, even if they overflow the container.
-2. wrap: Flex items will wrap onto multiple lines if needed. New lines will be added below (in row direction) or 
-        to the right (in column direction).
+2. wrap: Flex items will wrap onto multiple lines if needed. 
+         a. (if flex-direction: row)  : New lines will be added below or 
+         b. (if flex-direction: column):New lines will be added to the right.
 3. wrap-reverse: Flex items will wrap onto multiple lines, but in the opposite order. 
-        New lines will appear above (in row direction) or to the left (in column direction).
+         a. (if flex-direction: row)  : New lines will be added above or 
+         b. (if flex-direction: column):New lines will be added to the left.
  -->
