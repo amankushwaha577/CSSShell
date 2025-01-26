@@ -6,10 +6,10 @@
         display: flex;
         height: 200px;
         /* align-items: flex-start; */
-        /* align-items: flex-end; */
+        align-items: flex-end;
         /* align-items: center; */
         /* align-items: baseline; */
-        align-items: stretch;
+        /* align-items: stretch; */
         background-color: DodgerBlue;
       }
 
@@ -43,10 +43,26 @@ b. if the main axis is vertical (column or column-reverse), -> the cross axis is
 align-items: flex-start | flex-end | center | baseline | stretch;
 ------------------------------------------------------------------------------------------------
 1.flex-start: Items are aligned at the start of the cross axis.
+              🟨🟨🟨
+              ⬜⬜⬜ (empty space below)
+              ⬜⬜⬜ (empty space below)
+              ⬜⬜⬜ (empty space below)
+
 2.flex-end:   Items are aligned at the end of the cross axis.
+              ⬜⬜⬜ (empty space below)
+              ⬜⬜⬜ (empty space below)
+              ⬜⬜⬜ (empty space below)
+              🟨🟨🟨 
+
 3.center:     Items are centered along the cross axis.
+              ⬜⬜⬜ (empty space below)
+              🟨🟨🟨 
+              ⬜⬜⬜ (empty space below)
+
 4.baseline: Items are aligned along their text baselines.
 5.stretch (default): Items stretch to fill the flex container along the cross axis (if no fixed height is set for flex items).
+              🟨🟨🟨
+              🟨🟨🟨
 
  
 Summary:
