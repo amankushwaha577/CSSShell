@@ -60,3 +60,13 @@ flex-wrap: nowrap | wrap | wrap-reverse;
          a. (if flex-direction: row)  : New lines will be added above or 
          b. (if flex-direction: column):New lines will be added to the left.
  -->
+
+<!--  
+Interaction with flex-wrap: wrap-reverse:
+-----------------------------------------
+1. When you use flex-wrap: wrap-reverse, the rows are wrapped in reverse order (from bottom to top).
+2. Since the flex container has a defined height (height: 600px), 
+   the default align-content: stretch stretches the lines +
+   the default align-item: stretch    stretches the items,+ but items already have height fixed so they occupy the available height of their respective row.
+3. As a result, the items are visually aligned to the end of the container (because wrapping starts at the bottom due to wrap-reverse).
+  -->
