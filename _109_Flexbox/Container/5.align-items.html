@@ -7,9 +7,9 @@
         height: 200px;
         /* align-items: flex-start; */
         /* align-items: flex-end; */
-        align-items: center;
+        /* align-items: center; */
         /* align-items: baseline; */
-        /* align-items: stretch; */
+        align-items: stretch;
         background-color: DodgerBlue;
       }
 
@@ -18,7 +18,7 @@
         width: 100px;
         margin: 10px;
         text-align: center;
-        line-height: 75px;
+        height: 50px;
         font-size: 30px;
       }
     </style>
@@ -35,14 +35,23 @@
 <!-- 
 The align-items property in CSS is used to align flex items along the cross axis of a flex container. 
 In a flexbox layout, the cross axis is perpendicular to the main axis defined by flex-direction. 
-So, if the main axis is horizontal (row or row-reverse), the cross axis is vertical; 
-if the main axis is vertical (column or column-reverse), the cross axis is horizontal. 
-align-items helps control how items align relative to each other across this axis.
+So, 
+a. if the main axis is horizontal (row or row-reverse),     -> the cross axis is vertical; 
+b. if the main axis is vertical (column or column-reverse), -> the cross axis is horizontal. 
+
 
 align-items: flex-start | flex-end | center | baseline | stretch;
+------------------------------------------------------------------------------------------------
 1.flex-start: Items are aligned at the start of the cross axis.
-2.flex-end: Items are aligned at the end of the cross axis.
-3.center: Items are centered along the cross axis.
+2.flex-end:   Items are aligned at the end of the cross axis.
+3.center:     Items are centered along the cross axis.
 4.baseline: Items are aligned along their text baselines.
 5.stretch (default): Items stretch to fill the flex container along the cross axis (if no fixed height is set for flex items).
+
+ 
+Summary:
+------------------------------------------------------------------------------------------------
+1. Container height > Item height: Alignment (flex-start, flex-end, center) works as expected.
+2. Container height = Item height: No extra space for alignment, so alignment effects are not visible.
+3. stretch:  stretch (the default value for align-items) only works when the height of the flex items is not explicitly set. else work as flex-start
  -->
