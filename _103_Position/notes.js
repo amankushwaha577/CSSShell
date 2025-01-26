@@ -11,15 +11,6 @@
 // |                    |                                | not affect surrounding         | not affect surrounding         | sticky; retains space even after    |
 // |                    |                                | elements.                      | elements.                      | sticking.                      |
 // +--------------------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+
-// | Common Use Cases   | Adjusting element position     | Creating dropdown menus,       | Persistent navigation bars or  | Headers or nav bars that should|
-// |                    | slightly without affecting     | tooltips, or modals.           | sidebars that remain visible   | stick to the viewport while    |
-// |                    | layout.                        |                                | at all times.                  | scrolling within a section.    |
-// +--------------------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+
-// | Behavior on Scroll | Moves with the scroll but stays| Stays at its defined position  | Remains fixed in the viewport  | Sticks to the specified        |
-// |                    | in its relative position.      | regardless of scrolling; does  | and does not scroll with the   | position when scrolled to that |
-// |                    |                                | not scroll with the content.   | content.                       | point; remains until scrolling |
-// |                    |                                |                                |                                | out of its container.          |
-// +--------------------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+
 // | Z-index Context    | Default stacking context.      | Creates a new stacking context.| Creates a new stacking context.| Respects the stacking context; |
 // |                    |                                |                                |                                | does not create a new one.     |
 // +--------------------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+
