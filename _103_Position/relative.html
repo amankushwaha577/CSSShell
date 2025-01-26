@@ -56,7 +56,7 @@ Stacking Context:
    Elements with transform, filter, perspective, or clip-path create a stacking context
 
    transform: scale(1); /* New stacking context */
-   filter: blur(5px); /* New stacking context */
+   filter: blur(5px);   /* New stacking context */
 
 4. Overflow Hidden/Scroll Creates Stacking Context 🚧:
    Elements with overflow set to hidden/ scroll/ or auto and a position other than static create a stacking context.
@@ -64,11 +64,14 @@ Stacking Context:
    position: relative;
    overflow: hidden; /* New stacking context */
 
+5. Flex and Grid Contexts 🧩
+   If the parent has 'display: flex' or 'display: grid' and a z-index other than auto, it creates a stacking context.
+   even if it isn't positioned.
+-->
 
 
 
-
-
+<!-- 
 When two elements are in the same stacking context, their stacking order is determined by their source order in the HTML.
-The box2 appears later in the document, so it is painted on top of the box1.
+The box2 appears later in the document, so it is painted on top of the box1. 
 -->
