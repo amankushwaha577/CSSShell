@@ -35,15 +35,22 @@
 
 <!-- 
 The justify-content property in CSS is used to **align** flex items along the main axis of a flex container. 
-In a flexbox layout, the main axis is determined by the flex-direction (e.g., left to right in row or top to bottom in column). 
 justify-content is often used to control spacing between items, distribute them evenly, or align them in a specific way within the container.
+
+In a flexbox layout, the main axis is determined by the flex-direction (e.g., left to right in row or top to bottom in column). 
+
 
 justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
 1.flex-start (default): Items are aligned at the start of the container along the main axis.
-2.flex-end: Items are aligned at the end of the container along the main axis.
-3.center: Items are centered along the main axis.
-4.space-between: Items are evenly distributed along the main axis, with the first item at the start and the last item at the end of the container. There is equal space between each item.
-5.space-around: Items are evenly distributed with equal space on both sides of each item. This results in extra space on the outer edges of the container.
-6.space-evenly: Items are evenly distributed with equal space between and around each item, so there’s even spacing on the edges of the container and between items.
+2.flex-end:             Items are aligned at the end of the container along the main axis.
+3.center:               Items are aligned at the center of the container along the main axis.
+4.space-between: Each Item will have equal space between them ( on the main axis ).
+                 No space on the outer edges of the container.
+                 |🔵----🔵----🔵|
+5.space-around:  Each Item will have equal space on both sides, but the space between items will be double the space at the edges.
+                 |--🔵----🔵----🔵--|
+6.space-evenly:  Items are spread out with equal space everywhere: Between items and on the edges.
+                 |---🔵---🔵---🔵---|
+
 
  -->
