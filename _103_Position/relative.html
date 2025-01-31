@@ -38,38 +38,44 @@ If you add offsets (top, left, right, bottom), it will move relative to where it
 but the space it originally occupies is preserved. 
 
 
-Stacking Context: When ?
------------------------
-1. For position: relative | absolute | fixed | sticky 🌳.
+
+1. Root element (<html>) always creates a stacking context. 🏠
+
+2. For position: relative | absolute | fixed | sticky 🌳.
    ---------------------------------------------------- 
-1.A. An Element with a position value absolute/relative + z-index value other than auto creates a new stacking context .
-     position: relative; z-index: 10; /* New stacking context */
+    2.A. An Element with a position value absolute/relative + z-index value other than auto creates a new stacking context .
+        position: relative; z-index: 10; /* New stacking context */
 
-1.C. An Element with a position value    fixed/sticky always creates a new stacking context .
-     An element with position: fixed always creates a stacking context, regardless of the z-index value. This means even if z-index: auto, it will create a stacking context.
-     For position: sticky, the behavior depends on the browser. In modern browsers, it creates a stacking context only if z-index is set to a value other than auto. In some mobile browsers, position: sticky may always create a stacking context.
+    2.C. An Element with a position value    fixed/sticky always creates a new stacking context .
+        An element with position: fixed always creates a stacking context, regardless of the z-index value. This means even if z-index: auto, it will create a stacking context.
+        For position: sticky, the behavior depends on the browser. In modern browsers, it creates a stacking context only if z-index is set to a value other than auto. In some mobile browsers, position: sticky may always create a stacking context.
 
 
-2. Opacity < 1 Creates Stacking Context 🌀:
+3. Opacity < 1 Creates Stacking Context 🌀:
    Elements with opacity less than 1 automatically create a new stacking context
 
    opacity: 0.9; /* New stacking context */
 
-3. CSS Transforms, Filters, and Effects Create Stacking Context 🎨:
-   Elements with transform, filter, perspective, or clip-path create a stacking context
+
+4. Elements with these properties create a stacking context
+   a. transform, filter, perspective, clip-path.
+   b. translate, rotate, scale
+   c. mask
 
    transform: scale(1); /* New stacking context */
    filter: blur(5px);   /* New stacking context */
 
-4. Overflow Hidden/Scroll Creates Stacking Context 🚧:
+
+5. Overflow Hidden/Scroll/auto + position: othan than static Creates Stacking Context 🚧:
    Elements with overflow set to hidden/ scroll/ or auto and a position other than static create a stacking context.
 
    position: relative;
    overflow: hidden; /* New stacking context */
 
-5. Flex and Grid Contexts 🧩
-   If the parent has 'display: flex' or 'display: grid' and a z-index other than auto, it creates a stacking context.
-   even if it isn't positioned.
+
+6.  Flex/Grid items with z-index (not auto) create a stacking context. 📦
+
+
 -->
 
 
