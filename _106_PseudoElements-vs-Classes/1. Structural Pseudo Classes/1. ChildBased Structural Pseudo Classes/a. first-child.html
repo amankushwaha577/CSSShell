@@ -40,10 +40,22 @@
 ----------------------------
 These pseudo-classes target specific positions within a parent or structure. 
 
-1. Select the first child of its parent */
-2. Select the last child of its parent */
-3. Select the nth child of its parent (e.g., the 2nd child) */
-4. Select the nth child of its parent, counting from the end */
-5. Select an element if it is the only child of its parent */
-
+1. Select the first child of its parent 
+2. Select the last child of its parent 
+3. Select the nth child of its parent (e.g., the 2nd child) 
+4. Select the nth child of its parent, counting from the end
+5. Select an element if it is the only child of its parent
 -->
+
+
+<!-- 
+┌─────────────────────┬───────────────────────────────────────────────────────────────────────────────┬───────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────┐
+| Selector            | Description                                                                   | Example Usage     | Example Result                                                                                 |
+├─────────────────────┼───────────────────────────────────────────────────────────────────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+| p:nth-of-type(1)    | Selects the first <p> element within a parent,                                | p:nth-of-type(1)  | Will style the first <p> in a parent container, even if other elements like <span> come       |
+|                     | regardless of other element types.                                            |                   | before it.                                                                                     |
+├─────────────────────┼───────────────────────────────────────────────────────────────────────────────┼───────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+| p:first-child       | Selects a <p> only if it is the very first child in its parent.               | p:first-child     | Will style a <p> only if it is the first child of the parent. If any other element (e.g.,     |
+|                     |                                                                               |                   | <span>) is first, it won't apply.                                                              |
+└─────────────────────┴───────────────────────────────────────────────────────────────────────────────┴───────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────┘
+ -->
