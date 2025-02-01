@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child-based Pseudo-classes</title>
+    <style>
+      /* === CHILD-BASED PSEUDO-CLASSES === */
+
+      /* Select div onlyif its the only child of parent*/
+      div:only-child {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Child-based Pseudo-classes</h1>
+
+    <!-- Too many children in this section so div will'nt be styled -->
+    <section>
+      <h2>:This is the first child of section</h2>
+      <!-- This is the first child of <section> -->
+      <div>This is another child.</div>
+      <!-- This is the 2nd child  -->
+      <p>This is another child.</p>
+      <!-- This is the last child -->
+    </section>
+
+    <hr />
+
+    <!-- There is only child <p> in this section available so will't be styled -->
+    <section>
+      <p>: ❌This is the only child of section</p>
+      <!-- This is the only child but its <p> so will'nt be styled -->
+    </section>
+
+    <hr />
+    <!-- There is only child <div> in this section available so will be styled -->
+    <section>
+      <div>: ✅This is the only child of section</div>
+      <!-- This is the only child and its div so will be styled -->
+    </section>
+  </body>
+</html>
