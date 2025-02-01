@@ -14,7 +14,10 @@
       }
       .relative-box {
         position: relative; /* This makes the element positioned relative to its normal flow */
-        top: -20px; /* Moves the element 20px down from its normal position */
+        /* top: -20px;  */
+        /* Moves the element 20px down from its normal position */
+        bottom: -20px;
+
         left: 30px; /* Moves the element 30px to the right from its normal position */
         width: 200px;
         height: 100px;
@@ -25,8 +28,11 @@
     </style>
   </head>
   <body>
+    
     <div class="normal-box">Box1 Normal Box (Static positioning)</div>
+    Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content 
     <div class="relative-box">Box2 Relative Box (Moved by 20px down, 30px right)</div>
+    Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content 
   </body>
 </html>
 
@@ -38,7 +44,15 @@ If you add offsets (top, left, right, bottom), it will move relative to where it
 but the space it originally occupies is preserved. 
 
 
+🔍 Why is the relative Box Still Above the Text ( TEXT chahe pahle AYE YA BAAD MEI )?
+-------------------------------------------------
+By default, positioned elements (relative, absolute, fixed) appear above non-positioned content, 
+even without a specific z-index, causing the .relative-box to visually appear above the text.
+( TEXT chahe pahle AYE YA BAAD MEI )
+-->
 
+
+<!-- 
 1. Root element (<html>) always creates a stacking context. 🏠
 
 2. For position: relative | absolute | fixed | sticky 🌳.
@@ -74,8 +88,6 @@ but the space it originally occupies is preserved.
 
 
 6.  Flex/Grid items with z-index (not auto) create a stacking context. 📦
-
-
 -->
 
 

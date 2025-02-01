@@ -28,8 +28,9 @@
 </head>
 <body>
     <div class="parent">
-        Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content 
+        
         <div class="absolute-box">Absolute Box</div>
+        Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content 
     </div>
 </body>
 </html>
@@ -37,10 +38,31 @@
 
 <!-- 
 2. Absolute Positioning:
-This element is positioned relative to the nearest non-static positioned ancestor.
-(i.e., the closest parent element with position: relative, absolute, fixed, or sticky) [ These all are none static Positions].
+------------------------
+   This element is positioned relative to the nearest non-static positioned ancestor.
+   (i.e., the closest parent element with position: relative, absolute, fixed, or sticky) [ These all are none static Positions].
 
-If no positioned ancestor is found, it is positioned relative to the document (browser window). 
+Note : If no positioned ancestor is found, it is positioned relative to the document (browser window). 
 
-**The element is removed from the normal document flow**.
+Space : Never takes space. The element is removed from the normal document flow.
  -->
+
+<!-- 
+🔍 Why is the Absolute Box Still Above the Text ( TEXT chahe pahle AYE YA BAAD MEI )?
+-------------------------------------------------
+By default, positioned elements (relative, absolute, fixed) appear above non-positioned content, 
+even without a specific z-index, causing the .relative-box to visually appear above the text.
+( TEXT chahe pahle AYE YA BAAD MEI )
+
+ <body>
+    <div class="parent">
+        <div class="absolute-box">Absolute Box</div>
+        Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content Main Content 
+    </div>
+</body>
+
+ Even though you placed text after <div class="absolute-box"> inside .parent, 
+ .absolute-box  appears above the text because of absolute positioning ruled (THAT I WRRITTEN IN CAPS).
+ To place text above an absolute element, use z-index, background color, or restructure elements properly.
+-->
+
