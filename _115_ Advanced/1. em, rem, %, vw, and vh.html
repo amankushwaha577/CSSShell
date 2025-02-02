@@ -1,50 +1,62 @@
-What is the difference between em, rem, %, vw, and vh in CSS? 
---------------------------------------------------------------
+<!--  
+  🌟 CSS Units Explained 🌟
 
-🔹 1. em (Relative to Parent Font Size) :
------------------------------------------
-1em is equal to the font size of the parent element.
-If the parent has font-size: 16px;, then 1em = 16px, 2em = 32px, etc.
-em is multiplicative, meaning it compounds if nested.
+  📌 1. em (Relative to Parent)  
+  ───────────────────────────  
+  🔹 `em` is relative to the font size of its **parent element**.  
+  🔹 Example:  
+      .parent { font-size: 20px; }  
+      .child { font-size: 1.5em; }  /* 1.5 * 20px = 30px */  
+  🔹 Changes in the parent’s font size affect child elements using `em`.  
 
-🛑 Problem: Can cause issues if deeply nested, as it multiplies.
-<!-- 
-.parent {
-    font-size: 20px;
-}
-.child {
-    font-size: 2em; /* 2 * 20px = 40px */
-} 
--->
+  📌 2. rem (Relative to Root)  
+  ───────────────────────────  
+  🔹 `rem` is relative to the **root element** (`<html>`).  
+  🔹 Default browser font size is **16px**, so `1rem = 16px` (unless changed).  
+  🔹 Example:  
+      html { font-size: 20px; }  
+      p { font-size: 2rem; }  /* 2 * 20px = 40px */  
+  🔹 `rem` is NOT affected by parent elements.  
 
+  📌 3. % (Relative to Parent)  
+  ───────────────────────────  
+  🔹 `%` is relative to the **size of the parent element**.  
+  🔹 Example:  
+      .container { width: 500px; }  
+      .child { width: 50%; }  /* 50% of 500px = 250px */  
+  🔹 Works for width, height, padding, margin, etc.  
 
-🔹 2. rem (Relative to Root Font Size) :
-----------------------------------------
-1rem is based on the root <html> element's font size.
-The default root size in most browsers is 16px, so 1rem = 16px.
+  📌 4. vw (Viewport Width)  
+  ───────────────────────────  
+  🔹 `vw` is relative to the **width of the viewport** (browser window).  
+  🔹 `1vw = 1% of the viewport width`.  
+  🔹 Example:  
+      .box { width: 50vw; }  /* 50% of viewport width */  
+  🔹 Useful for making elements responsive to screen width.  
 
-✅ Advantage: No nesting issues like em, as it always refers to the root.
-<!-- 
-html {
-    font-size: 10px; /* Setting root font size */
-}
-h1 {
-    font-size: 2rem; /* 2 * 10px = 20px */
-}
--->
+  📌 5. vh (Viewport Height)  
+  ───────────────────────────  
+  🔹 `vh` is relative to the **height of the viewport**.  
+  🔹 `1vh = 1% of the viewport height`.  
+  🔹 Example:  
+      .full-screen { height: 100vh; }  /* Full height of the screen */  
+  🔹 Great for fullscreen sections.  
 
+  📊 Comparison Table  
+  ───────────────────────────  
+  | Unit  | Relative To                |  
+  |-------|----------------------------|  
+  | em    | Parent element’s font size  |  
+  | rem   | Root (`<html>`) font size  |  
+  | %     | Parent element’s size      |  
+  | vw    | Viewport width             |  
+  | vh    | Viewport height            |  
 
-🔹 3. % (Relative to Parent Element):
---------------------------------------
-100% means the same size as the parent.
-Commonly used for width, height, and font-size.
+  ✅ When to Use:  
+  - Use `rem` for consistent font sizing across the project.  
+  - Use `em` when you want elements to scale relative to their parent.  
+  - Use `%` for width/height when it should be relative to the parent.  
+  - Use `vw` and `vh` for full-screen or responsive layouts.  
 
-🛑 Problem: Can behave unexpectedly depending on the parent.
-<!-- 
-.container {
-    width: 500px;
-}
-.child {
-    width: 50%; /* 50% of 500px = 250px */
-}
+  🚀 Happy Coding! 🎨  
 -->
