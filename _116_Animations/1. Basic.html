@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations and Transitions</title>
+    <style>
+        /* 📌 CSS Transition Example */
+        /* When you hover over the button, it will transition its background color */
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color    1s           ease;                  /* Change background color smoothly */
+         /* transition:    property      duration  timing-function     delay; */
+        }
+
+        button:hover {
+            background-color: red; /* Change to red when hovered */
+        }
+
+        /* 📌 CSS Animation Example */
+        /* This div will move from left to right continuously using keyframes */
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(200px);
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation: move 3s linear infinite; /* Move div 200px every 3 seconds */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Button with transition effect on hover -->
+    <button>Hover me!</button>
+
+    <br><br>
+
+    <!-- Div with animation effect -->
+    <div></div>
+
+</body>
+</html>
+
+
+<!-- 
+📌 Understanding CSS Animations and Transitions:
+
+CSS **animations** and **transitions** allow you to add dynamic effects and changes to your website’s elements, creating engaging user experiences.
+
+🔹 **CSS Transitions**:  
+- 🛠️ A **transition** allows you to change an element's property value **over a specified duration** when a triggering event occurs (like hover, focus, or active states). 
+- ⏳ It’s like a **smooth change** between two states when an action occurs.
+- 🎨 Transitions are **easier to set up** than animations, but they are limited to **two states** (starting and ending).
+  
+  **Syntax**:
+  ```css
+  selector {
+    transition: property duration timing-function delay;
+  }
