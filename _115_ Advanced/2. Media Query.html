@@ -1,0 +1,58 @@
+<!--  
+  🌍📱💻 CSS Media Queries - Responsive Design 🚀
+
+  📌 What are Media Queries?  
+  ───────────────────────────  
+  🔹 Media queries allow CSS to apply styles based on different **screen sizes, resolutions, or device capabilities**.  
+  🔹 They help make websites **responsive** and ensure they look great on **mobiles, tablets, and desktops**.  
+
+  🎯 How Do Media Queries Help?  
+  ───────────────────────────  
+  ✅ **Adapt Layouts** – Dynamically adjust styles based on screen width.  
+  ✅ **Improve UX** – Ensure content is readable and usable on all devices.  
+  ✅ **Reduce the Need for Separate Sites** – One design works everywhere.  
+
+  ✍️ Basic Syntax  
+  ───────────────────────────  
+  @media (max-width: 768px) {  
+      body { background-color: lightblue; }  
+  }  
+  🔹 This applies the `lightblue` background **only** when the screen width is **768px or smaller** (tablet/mobile).  
+
+  📏 Common Media Query Breakpoints  
+  ───────────────────────────  
+  | Device Type          | Breakpoint |
+  |----------------------|-----------|
+  | 📱 Extra Small (Phones) | max-width: 576px  |
+  | 📱 Small (Tablets)  | max-width: 768px  |
+  | 💻 Medium (Laptops)  | max-width: 1024px |
+  | 🖥️ Large (Desktops)  | max-width: 1200px |
+
+  🛠 Example: Responsive Navbar  
+  ───────────────────────────  
+  .navbar { background-color: #333; padding: 20px; }  
+
+  /* 📱 On small screens, stack navbar items */
+  @media (max-width: 600px) {  
+      .navbar { flex-direction: column; }  
+  }  
+
+  ⚡ Advanced Media Queries  
+  ───────────────────────────  
+  1️⃣ **Based on Device Orientation** 📱↔️  
+  @media (orientation: landscape) {  
+      body { background-color: lightgreen; }  
+  }  
+
+  2️⃣ **For High-Resolution Screens (Retina Displays)** 🖥️  
+  @media (min-resolution: 2dppx) {  
+      img { width: 200px; }  
+  }  
+
+  🚀 Conclusion  
+  ───────────────────────────  
+  ✅ Media queries **enhance responsive design** by adapting styles based on **screen width, resolution, and orientation**.  
+  ✅ They are **essential** for modern web development to ensure a seamless experience across all devices.  
+
+  🎨 Happy Coding! 🚀😃  
+-->
