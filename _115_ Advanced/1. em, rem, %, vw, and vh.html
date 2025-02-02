@@ -1,0 +1,50 @@
+What is the difference between em, rem, %, vw, and vh in CSS? 
+--------------------------------------------------------------
+
+🔹 1. em (Relative to Parent Font Size) :
+-----------------------------------------
+1em is equal to the font size of the parent element.
+If the parent has font-size: 16px;, then 1em = 16px, 2em = 32px, etc.
+em is multiplicative, meaning it compounds if nested.
+
+🛑 Problem: Can cause issues if deeply nested, as it multiplies.
+<!-- 
+.parent {
+    font-size: 20px;
+}
+.child {
+    font-size: 2em; /* 2 * 20px = 40px */
+} 
+-->
+
+
+🔹 2. rem (Relative to Root Font Size) :
+----------------------------------------
+1rem is based on the root <html> element's font size.
+The default root size in most browsers is 16px, so 1rem = 16px.
+
+✅ Advantage: No nesting issues like em, as it always refers to the root.
+<!-- 
+html {
+    font-size: 10px; /* Setting root font size */
+}
+h1 {
+    font-size: 2rem; /* 2 * 10px = 20px */
+}
+-->
+
+
+🔹 3. % (Relative to Parent Element):
+--------------------------------------
+100% means the same size as the parent.
+Commonly used for width, height, and font-size.
+
+🛑 Problem: Can behave unexpectedly depending on the parent.
+<!-- 
+.container {
+    width: 500px;
+}
+.child {
+    width: 50%; /* 50% of 500px = 250px */
+}
+-->
