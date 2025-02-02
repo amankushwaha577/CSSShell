@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child-based Pseudo-classes</title>
+    <style>
+      /* === CHILD-BASED PSEUDO-CLASSES === */
+
+      /* Selects the 2nd last <div> element within a parent, ignore other element types. */
+      div:nth-last-of-type(2) {
+        color: red; 
+        font-weight: bold; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Child-based Pseudo-classes</h1>
+
+    <!-- No 2nd last div in parent. -->
+    <section>
+    <p>:This is the first child of section</p> 
+      <div>This is another child.</div>
+      <p>  This is another child.</p>  
+    </section>
+
+    <hr />
+
+    <!-- The 1st child <div> is the 2nd last div and will be styled -->
+    <section>
+    <div>:✅ This is the first child of section</div>   <!-- This is the 2nd last div child  -->
+      <h2>This is another child.</h2>
+      <div> This is another child.</div> 
+    </section>
+  </body>
+</html>
+
