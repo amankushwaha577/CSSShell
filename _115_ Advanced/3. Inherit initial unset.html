@@ -1,0 +1,54 @@
+<!--  
+  🎨 CSS Property Values: inherit, initial, and unset 🚀
+
+  📌 What Are These Keywords?  
+  ───────────────────────────  
+  These CSS keywords control how an element’s property is applied based on its parent or default behavior.  
+
+  🎯 1️⃣ `inherit` 📥 (Takes from Parent)  
+  ───────────────────────────  
+  🔹 Forces an element to **inherit** the property value from its **parent element**.  
+  🔹 Useful when you want child elements to follow the same styles as their parent.  
+  🔹 Example:  
+      ```css
+      div { color: red; }  
+      p { color: inherit; } /* Takes 'red' from div */
+      ```  
+
+  🎯 2️⃣ `initial` 🎛️ (Resets to Default)  
+  ───────────────────────────  
+  🔹 Resets the property to its **default browser-defined value**.  
+  🔹 Useful when you need to override styles and start fresh.  
+  🔹 Example:  
+      ```css
+      p { color: initial; } /* Resets to default (usually black) */
+      ```  
+
+  🎯 3️⃣ `unset` ⚖️ (Acts Like inherit OR initial)  
+  ───────────────────────────  
+  🔹 If the property **is normally inherited** (like `color`), `unset` acts like `inherit`.  
+  🔹 If the property **is NOT inherited** (like `width`), `unset` acts like `initial`.  
+  🔹 Example:  
+      ```css
+      div { color: red; width: 100px; }  
+      p { color: unset; width: unset; }  
+      ```
+      - `color: unset;` → Becomes **inherited** (`red`).  
+      - `width: unset;` → Becomes **initial** (default auto).  
+
+  📊 Comparison Table  
+  ───────────────────────────  
+  | Keyword   | Inherited Properties (e.g., `color`) | Non-Inherited Properties (e.g., `width`) |
+  |-----------|------------------------------------|-------------------------------------|
+  | inherit   | Takes from parent                 | Takes from parent                 |
+  | initial   | Resets to default                 | Resets to default                 |
+  | unset     | Acts like inherit                 | Acts like initial                 |
+
+  🚀 Conclusion  
+  ───────────────────────────  
+  ✅ Use **`inherit`** when you want child elements to match the parent.  
+  ✅ Use **`initial`** to reset a property to its default behavior.  
+  ✅ Use **`unset`** when you want flexible behavior depending on the property type.  
+
+  🎨 Happy Styling! 🚀😃  
+-->
