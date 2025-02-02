@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pseudo-classes Example</title>
+    <style>
+        /* Focus: Highlight input when selected */
+        input:focus, textarea:focus {
+            border: 2px solid blue;
+            outline: none;
+            background-color: lightyellow;
+        }
+
+        /* Hover: Change color on hover */
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        /* Checked: Style selected checkboxes/radio buttons */
+        input:checked {
+            outline: 2px solid red;
+        }
+
+        /* Disabled: Style disabled fields */
+        input:disabled {
+            background-color: lightgray;
+            color: darkgray;
+        }
+
+        /* Required: Style required fields */
+        input:required {
+            border: 2px solid orange;
+        }
+
+        /* Valid: Green border when input is valid */
+        input:valid {
+            border: 2px solid green;
+        }
+
+        /* Invalid: Red border when input is invalid */
+        input:invalid {
+            border: 2px solid red;
+        }
+
+        /* Placeholder-shown: Style when placeholder is visible */
+        input:placeholder-shown {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Pseudo-classes Example</h2>
+    <form>
+        <label for="name">Name (Required & Validates):</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <br><br>
+
+        <label for="email">Email (Validates @ format):</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com">
+        <br><br>
+
+        <label for="password">Password (Required):</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label><input type="checkbox"> Accept Terms</label>
+        <br><br>
+
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <br><br>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" placeholder="Leave a comment..."></textarea>
+        <br><br>
+
+        <input type="text" value="Disabled field" disabled>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+
+<!-- 
+Form pseudo-classes help in styling form elements based on their state.
+
+Common Form Pseudo-classes
+:focus → Styles an element when it is focused (clicked or selected).
+:hover → Styles an element when the mouse hovers over it.
+:checked → Styles checkboxes or radio buttons when checked.
+:disabled → Styles disabled input fields.
+:enabled → Styles enabled input fields.
+:required → Styles required fields.
+:valid → Styles fields with valid input.
+:invalid → Styles fields with invalid input.
+:placeholder-shown → Styles inputs where the placeholder is visible.
+-->
