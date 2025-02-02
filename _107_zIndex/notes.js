@@ -3,30 +3,48 @@
 // elements independently from outside elements. This can help manage complex layouts and control the appearance of layered 
 // elements more predictably.
 
-// 1. The Root Element <html>
-    // The root element of the document (<html> in HTML) always creates a stacking context.
+
+// <!-- 
+// 1. Root element (<html>) always creates a stacking context. 🏠
+
+// 2. For position: relative | absolute | fixed | sticky 🌳.
+//    ---------------------------------------------------- 
+//     2.A. An Element with a position value absolute/relative + z-index value other than auto creates a new stacking context .
+//         position: relative; z-index: 10; /* New stacking context */
+
+//     2.C. An Element with a position value    fixed/sticky always creates a new stacking context .
+//         An element with position: fixed always creates a stacking context, regardless of the z-index value. This means even if z-index: auto, it will create a stacking context.
+//         For position: sticky, the behavior depends on the browser. In modern browsers, it creates a stacking context only if z-index is set to a value other than auto. In some mobile browsers, position: sticky may always create a stacking context.
 
 
-// 2. Positioned Elements (position: relative, absolute, fixed, or sticky) with z-index
-    // Any element with a position of relative, absolute, fixed, or sticky and a z-index value other than 'auto' creates 
-    // a new stacking context. 
+// 3. Opacity < 1 Creates Stacking Context 🌀:
+//    Elements with opacity less than 1 automatically create a new stacking context
 
-    // .example {
-    //     position: relative; /* or absolute, fixed, sticky */
-    //     z-index: 1; /* This non-auto z-index creates a stacking context */
-    //   }
+//    opacity: 0.9; /* New stacking context */
 
-// 2. Positioned Elements (position: relative, absolute, fixed, or sticky) without z-index
-    // elements with position: relative, absolute, fixed, or sticky without a specified z-index do not create a stacking context 
-    // on their own.
 
-    
-// 3. Other Properties That Create Stacking Contexts Regardless of position :
-    // opacity: Any value less than 1 (e.g., opacity: 0.9).
-    // transform: Using any transformation (e.g., transform: scale(1)).
-    // filter: Applying a filter (e.g., filter: blur(5px)).
-    // perspective: Setting perspective (e.g., perspective: 500px).
-    // clip-path: Applying a clip path (e.g., clip-path: circle(50%)).
-    // mask or mask-image: Adding a mask.
-    // mix-blend-mode: Using a blend mode (e.g., mix-blend-mode: multiply).
-    // isolation: isolate: Explicitly creating a stacking context.
+// 4. Elements with these properties create a stacking context
+//    a. transform, filter, perspective, clip-path.
+//    b. translate, rotate, scale
+//    c. mask
+
+//    transform: scale(1); /* New stacking context */
+//    filter: blur(5px);   /* New stacking context */
+
+
+// 5. Overflow Hidden/Scroll/auto + position: othan than static Creates Stacking Context 🚧:
+//    Elements with overflow set to hidden/ scroll/ or auto and a position other than static create a stacking context.
+
+//    position: relative;
+//    overflow: hidden; /* New stacking context */
+
+
+// 6.  Flex/Grid items with z-index (not auto) create a stacking context. 📦
+// -->
+
+
+
+// <!-- 
+// When two elements are in the same stacking context, their stacking order is determined by their source order in the HTML.
+// The box2 appears later in the document, so it is painted on top of the box1. 
+// -->
