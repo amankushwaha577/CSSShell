@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:not() Pseudo-class</title>
+    <style>
+      /* Select all elements except the first div child */
+      div:not(:first-child) {
+        background-color: lightgray;
+        border: 1px dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Fist Child</h1><!-- Its already not div + its first child-->
+      <div>✅Second Child</div>
+      <div>✅Third Child</div>
+      <div>✅ Fourth Child</div>
+    </section><hr/>
+
+
+    <section>
+        <div>Fist Child</div><!-- its first child-->
+        <div>✅Second Child</div>
+        <div>✅Third Child</div>
+        <div>✅ Fourth Child</div>
+      </section>
+  </body>
+</html>
