@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location-based Pseudo-Classes</title>
+
+    <style>
+        /* Style for unvisited links */
+        a:link {
+            color: blue;
+        }
+
+        /* Style for visited links */
+        a:visited {
+            color: purple;
+        }
+
+        /* Style for the element when it is targeted using a URL fragment (#target) */
+        #target:target {
+            background-color: yellow; /* Changes background color when the element is targeted */
+            padding: 10px; /* Adds padding to make it more visible */
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Anchor link that targets the div with id="target" -->
+    <a href="#target">Go to Target</a>
+
+    <!-- The div that will be highlighted when targeted -->
+    <div id="target">This is the target element!</div>
+
+</body>
+</html>
+
+
+
+<!--
+5. Interaction Pseudo-Classes
+----------------------------
+These pseudo-classes target elements based on their position relative to siblings. 
+
+:link: Styles unvisited links.
+:visited: Styles visited links.
+:target: Styles the element targeted by the current URL. 
+-->
