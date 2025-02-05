@@ -242,3 +242,63 @@ Ans.✅ **HTML5** introduced several new tags that enhance the functionality of 
          These elements support various formats and offer multiple attributes, improving both accessibility and user experience.  
 
     -->
+
+
+
+<!-- 
+Q6. What are Web Workers?  
+Ans. ✅ **Web Workers** are a mechanism in HTML5 that allows web content to run scripts in the background, in separate threads from the main UI thread.  
+        - This means tasks can run without affecting the **user interface** or interrupting the user’s interaction with the page.  
+        - Web Workers are especially useful for performing long-running or CPU-intensive tasks without freezing or slowing down the UI.  
+        
+    ✅ **Key Features of Web Workers:**
+        - **Background Thread Execution:** Web Workers run on a background thread, allowing the main thread (UI) to remain responsive.  
+        - **Message Passing:** Workers can post messages to the main thread and vice versa using **postMessage()**. This allows communication between the worker and the main UI thread.  
+        - **Network Requests:** Workers have access to the **XMLHttpRequest** and **fetch()** APIs, enabling them to perform network requests in the background.  
+        - **Event Handlers:** Workers can send messages using event handlers, enabling the main thread to handle messages asynchronously.
+
+    ✨ **Example:**
+    ```javascript
+    // Main Thread (UI)
+    const worker = new Worker('worker.js');  // Create a Web Worker
+    worker.onmessage = function(event) {
+        console.log("Message from worker:", event.data);  // Handle message from worker
+    };
+    worker.postMessage("Start");  // Send message to worker
+
+    // worker.js (Web Worker)
+    onmessage = function(event) {
+        // Do some heavy task here
+        postMessage("Task completed");  // Send message back to main thread
+    };
+    ```  
+
+    🔥 **Benefits of Web Workers:**
+        - **Improved User Experience:** Web Workers allow heavy computation tasks to be offloaded, keeping the UI smooth and responsive.  
+        - **Non-blocking Operations:** They can handle intensive tasks like data processing, calculations, and file operations without blocking the user interface.
+
+    -->
+
+
+
+<!-- 
+Q6. What are raster images and vector images?  
+Ans.✅ **Raster Images** are made up of **pixels**, which are tiny dots that together form an image.  
+        - These images have fixed resolutions, and when zoomed in, individual pixels become visible as tiny squares.  
+        - The number of pixels in a raster image determines its resolution. Higher pixel counts lead to **better quality** but also result in **larger file sizes**.  
+        - Common raster image formats include **JPEG**, **PNG**, **GIF**, and **BMP**.  
+        
+    ✅ **Vector Images** are made using **mathematical formulas** to create shapes like lines, curves, and polygons.  
+        - Vector images do not rely on pixels, which means they can be **scaled infinitely** without losing quality.  
+        - These images are **ideal for designs** like logos, icons, and illustrations that require scalability.  
+        - Vector images are often used in **printing** and for **web graphics** that need to adjust to different screen sizes without degradation.
+        
+    ✨ **Example:**
+    - **Raster Image:** A photograph of a person taken with a camera.
+    - **Vector Image:** A logo made in Adobe Illustrator or a simple icon designed in SVG format.
+    
+    🔥 **Key Differences:**
+        - **Raster Images:** Great for complex images (photos) but lose quality when resized.
+        - **Vector Images:** Perfect for simple designs and can be scaled up or down without loss of quality.
+
+    -->
