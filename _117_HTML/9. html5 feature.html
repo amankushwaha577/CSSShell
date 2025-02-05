@@ -1,0 +1,121 @@
+<!-- 
+Q1. What is the difference between HTML and HTML5?  || What are the significant goals of the HTML5 specification?
+Ans. ✅ **HTML5** is the latest version of HTML and includes new features and improvements over previous versions.  
+     ✅ **Key Differences Between HTML and HTML5:**  
+
+     ✅ **1️⃣ Multimedia Support**  
+        - **HTML**: Requires third-party plugins (like Flash) for audio and video.  
+        - **HTML5**: Supports native multimedia elements: `<audio>` and `<video>`.  
+
+    ✨ **Example:**  
+    ```html
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    ```  
+
+    ✅ **2️⃣ Improved Semantics**  
+        - **HTML**: Uses `<div>` for structuring content.  
+        - **HTML5**: Introduces semantic elements like `<header>`, `<footer>`, `<article>`, `<section>`, etc.  
+
+    ✨ **Example:**  
+    ```html
+    <header>
+      <h1>Welcome to My Website</h1>
+    </header>
+    <article>
+      <p>This is a blog post.</p>
+    </article>
+    ```  
+
+    ✅ **3️⃣ Mobile Optimization & Responsiveness**  
+        - **HTML**: Lacks direct support for mobile-friendly development.  
+        - **HTML5**: Introduces the `<meta viewport>` tag for responsive design.  
+
+    ✨ **Example:**  
+    ```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ```  
+
+    ✅ **4️⃣ Form Enhancements**  
+        - **HTML**: Requires JavaScript for validation and advanced input types.  
+        - **HTML5**: Introduces new input types like `email`, `date`, `number`, etc.  
+
+    ✨ **Example:**  
+    ```html
+    <input type="email" placeholder="Enter your email">
+    ```  
+
+    ✅ **5️⃣ Local Storage & Caching**  
+        - **HTML**: Uses cookies for storing user data.  
+        - **HTML5**: Introduces `localStorage` and `sessionStorage` for better performance.  
+
+    ✨ **Example:**  
+    ```js
+    localStorage.setItem("username", "JohnDoe");
+    console.log(localStorage.getItem("username")); // Output: JohnDoe
+    ```  
+
+    🔥 **Conclusion:**  
+        - **HTML5** enhances web development with built-in multimedia, semantic elements, mobile support, and better storage options.  
+        - It eliminates the need for third-party plugins, making web pages faster and more efficient.  
+ -->
+
+
+
+<!-- 
+Q2 . Explain the concept of web storage in HTML5.  
+Ans. ✅ HTML5 introduced **Web Storage** to store data locally on the user's browser, offering two types of storage:  
+        - **SessionStorage**  
+        - **LocalStorage**  
+
+    ✅ **SessionStorage:**  
+        - Stores data for the duration of the **current session**.  
+        - Data is cleared when the tab or window is closed.  
+        - Data is **not** shared across tabs or windows.  
+
+    ✨ **Example:**
+    ```javascript
+    sessionStorage.setItem("username", "JohnDoe");
+    let username = sessionStorage.getItem("username");
+    console.log(username); // Output: JohnDoe
+    ```  
+
+    ✅ **LocalStorage:**  
+        - Stores data with **no expiration date**.  
+        - Data persists even after the browser is closed and re-opened.  
+        - Data is **shared across tabs and windows** of the same origin.  
+
+    ✨ **Example:**
+    ```javascript
+    localStorage.setItem("theme", "dark");
+    let theme = localStorage.getItem("theme");
+    console.log(theme); // Output: dark
+    ```  
+
+    ✅ **Key Differences:**  
+        - **SessionStorage** is session-based, whereas **LocalStorage** is persistent.  
+        - **SessionStorage** clears automatically when the session ends (browser window/tab is closed).  
+        - **LocalStorage** data stays until it is explicitly deleted or the user clears their browser cache.  
+
+    🔥 **Conclusion:**  
+        - Web Storage provides a simple way to store data on the client-side, improving web application performance and user experience by avoiding repeated requests to the server.  
+    -->
+
+
+<!-- 
+Que. What is Microdata in HTML5?
+Ans. Microdata in HTML5 is used to add structured data to web content to help search engines understand the context of the page better. 
+     It uses special attributes like `itemscope`, `itemprop`, and `itemtype` to mark up information.
+    
+    Example:
+    <div itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">John Doe</span>
+        <span itemprop="jobTitle">Web Developer</span>
+    </div>
+
+    Benefits:
+    - Helps search engines display more relevant information in search results (e.g., rich snippets).
+    - Improves visibility in search results, but does not directly affect SEO ranking.
+-->
