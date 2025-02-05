@@ -105,7 +105,7 @@ Ans. ✅ HTML5 introduced **Web Storage** to store data locally on the user's br
 
 
 <!-- 
-Que. What is Microdata in HTML5?
+Qu3. What is Microdata in HTML5?
 Ans. Microdata in HTML5 is used to add structured data to web content to help search engines understand the context of the page better. 
      It uses special attributes like `itemscope`, `itemprop`, and `itemtype` to mark up information.
     
@@ -119,3 +119,126 @@ Ans. Microdata in HTML5 is used to add structured data to web content to help se
     - Helps search engines display more relevant information in search results (e.g., rich snippets).
     - Improves visibility in search results, but does not directly affect SEO ranking.
 -->
+
+
+
+<!-- 
+Q4. Explain HTML5 Graphics.  
+Ans. ✅ **HTML5 Graphics** enhance user interaction and improve the aesthetics of websites and applications. 
+      Graphics can include visualizations such as maps, charts, flow diagrams, photos, and much more. 
+      Several technologies are used to create graphics, including:
+
+    ✅ **SVG (Scalable Vector Graphics):**  
+        - SVG is a vector-based graphics format that uses XML to define images.  
+        - It supports **rectangles, polygons, circles, lines**, and **curves**.  
+        - Allows for advanced features like **gradients, rotations, animations, filters, blur effects**, and **JavaScript interactivity**.  
+        - It is scalable, meaning images can be resized without losing quality.  
+        
+    ✨ **Example:**
+    ```html
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    ```  
+
+    ✅ **PNG (Portable Network Graphics):**  
+        - A **raster-based** image format.  
+        - It supports **transparent backgrounds** and is widely used for web graphics.  
+        - Suitable for images that require high quality without a loss of transparency.  
+        
+    ✅ **WebCGM (Web Computer Graphics Metafile):**  
+        - A **CGM (Computer Graphics Metafile)** profile for web applications.  
+        - It is used in fields like **technical illustration**, **documentation**, and **geophysical data visualization**.  
+
+    ✅ **Canvas API:**  
+        - The **<canvas>** element allows you to draw graphics dynamically using **JavaScript**.  
+        - The Canvas API enables the drawing of **images, text, circles, paths,** and more directly on the web page.  
+        - It can be used for creating interactive graphics, such as **games, visualizations**, and **animations**.  
+
+    ✨ **Example:**
+    ```html
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 150, 100);
+    </script>
+    ```  
+
+    ✅ **JPG or JPEG (Joint Photographic Experts Group):**  
+        - A **compressed image format** widely used for **digital photography**.  
+        - JPG files use **10:1 compression**, making them smaller in size, suitable for images where quality loss is minimal.  
+
+    ✅ **CSS (Cascading Style Sheets):**  
+        - **CSS** is used to control the presentation of a web page, including its **layout**, **colors**, **fonts**, and **spacing**.  
+        - CSS can also be used to style web graphics (e.g., background images) and to create animations and transitions for interactive visual effects.  
+
+    🔥 **Conclusion:**  
+        - HTML5 Graphics provide a versatile range of tools and formats for creating rich, interactive, and visually appealing web content. Using technologies like **SVG**, **Canvas API**, and **CSS**, developers can enhance user experience through dynamic and scalable graphics.  
+    -->
+
+
+<!-- 
+Q5. What are the New tags in Media Elements in HTML5?  
+Ans.✅ **HTML5** introduced several new tags that enhance the functionality of web pages, making it easier to integrate multimedia and dynamic content. 
+    The new media-related tags provide better support for audio, video, and other media resources. Here are the main tags:
+
+    ✅ **<audio>:**  
+        - Embeds **audio content** directly into a webpage.  
+        - Supports multiple formats like **MP3**, **WAV**, **OGG**.  
+        - Commonly used for adding **background music**, **sound effects**, or **podcasts**.  
+        - Includes controls like **play**, **pause**, **volume**, etc.  
+
+    ✨ **Example:**
+    ```html
+    <audio controls>
+        <source src="audio-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    ```
+
+    ✅ **<video>:**  
+        - Embeds **video content** directly into a webpage.  
+        - Supports multiple formats like **MP4**, **WebM**, **OGG**.  
+        - Attributes like **controls**, **autoplay**, **loop**, and more are available to enhance video functionality.  
+
+    ✨ **Example:**
+    ```html
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video element.
+    </video>
+    ```
+
+    ✅ **<source>:**  
+        - Defines **multiple media resources** for the **<audio>** and **<video>** elements.  
+        - Allows browsers to choose the best-supported format, improving cross-browser compatibility.  
+        - Ensures media content can be played on different devices and platforms.
+
+    ✨ **Example:**
+    ```html
+    <video controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogv" type="video/ogg">
+        Your browser does not support the video element.
+    </video>
+    ```
+\
+
+    ✅ **<embed>:**  
+        - Embeds external content like **multimedia** (audio/video) or **applications** (PDF, Flash) into a webpage.  
+        - It is a **general-purpose** element, unlike **<audio>** and **<video>**, which are specifically for media content.  
+        - Supports a variety of file formats and external content integrations.
+
+    ✨ **Example:**
+    ```html
+    <embed src="movie.swf" width="400" height="300">
+    ```
+
+    🔥 **Conclusion:**  
+        - HTML5 provides powerful tags like **<audio>**, **<video>**, and **<embed>** that allow seamless integration of media into webpages. 
+         These elements support various formats and offer multiple attributes, improving both accessibility and user experience.  
+
+    -->
