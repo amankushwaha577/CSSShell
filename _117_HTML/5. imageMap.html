@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Example</title>
+</head>
+<body>
+
+    <h2>Image Map Example</h2>
+    <p>Click on different areas of the image to navigate to different pages.</p>
+
+    <!-- Image with an associated image map -->
+    <img src="5.png" usemap="#exampleMap" alt="Example Image" width="500">
+
+    <!-- Defining the image map -->
+    <map name="exampleMap">
+        <!-- Rectangular area -->
+        <area shape="rect" coords="50,50,150,150" href="page1.html" alt="Rectangle Area">
+        
+        <!-- Circular area -->
+        <area shape="circle" coords="300,100,50" href="page2.html" alt="Circle Area">
+        
+        <!-- Polygon area -->
+        <area shape="poly" coords="200,200,250,250,150,250" href="page3.html" alt="Triangle Area">
+    </map>
+
+</body>
+</html>
