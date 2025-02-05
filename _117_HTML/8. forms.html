@@ -1,0 +1,83 @@
+<!--
+Q1. What is a form in HTML?
+Ans.✅ An **HTML Form** is a section of a webpage used to collect **user input**.
+    ✅ Forms contain various **input fields, checkboxes, radio buttons, and buttons** to gather data.
+    ✅ Common uses include **login forms, registration forms, and feedback forms**.
+
+✨ Example:
+<form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Submit</button>
+</form>
+
+🔥 Forms help in sending user input to a server for processing!
+-->
+
+<!--
+Q2. What are the different types of form input fields in HTML?
+Ans. ✅ HTML provides **various input fields** to collect different types of data from users.
+
+✅ **Common Input Fields:**
+✔️ **Text Input:** `<input type="text">` – Collects single-line text  
+✔️ **Password Input:** `<input type="password">` – Hides typed characters  
+✔️ **Email Input:** `<input type="email">` – Validates email format  
+✔️ **Checkbox:** `<input type="checkbox">` – Allows multiple selections  
+✔️ **Radio Button:** `<input type="radio">` – Allows **one** selection per group  
+✔️ **Dropdown Select:** `<select>` – Provides multiple options  
+✔️ **Textarea:** `<textarea>` – Collects multi-line text  
+✔️ **File Upload:** `<input type="file">` – Allows users to upload files  
+✔️ **Submit Button:** `<input type="submit">` – Submits the form  
+✔️ **Reset Button:** `<input type="reset">` – Resets the form fields  
+
+✨ Example:
+<form>
+    <label>Name:</label>
+    <input type="text" name="name">
+    
+    <label>Email:</label>
+    <input type="email" name="email">
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    
+    <button type="submit">Submit</button>
+</form>
+-->
+
+<!--
+Q3. What is the role of the action attribute in HTML forms?
+Ans.✅ The **action** attribute specifies **where** the form data should be sent.
+    ✅ It defines the **URL of the script/server** that will process the form data.
+
+✨ Example:
+<form action="https://example.com/process-form" method="POST">
+    <input type="text" name="username">
+    <button type="submit">Submit</button>
+</form>
+
+🔥 If **action** is empty (`action=""`), the form submits to the same page!
+-->
+
+<!--
+Q4. What is the role of the method attribute in HTML forms?
+Ans.✅ The **method** attribute defines **how** the form data is sent to the server.
+    ✅ The two primary methods are:
+
+✔️ **GET Method:** (`method="GET"`)
+    - Appends data in the **URL**
+    - Used for **search queries, filters, and read operations**
+    - Example:
+      `<form action="/search" method="GET">`
+
+✔️ **POST Method:** (`method="POST"`)
+    - Sends data **securely in the request body**
+    - Used for **login, signup, payments, and data submissions**
+    - Example:
+      `<form action="/submit" method="POST">`
+
+🔥 **Rule of Thumb:**  
+    - Use **GET** when retrieving data.  
+    - Use **POST** when submitting sensitive or large amounts of data.
+-->
