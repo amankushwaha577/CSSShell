@@ -39,7 +39,7 @@
 </html>
 
     <!-- 
-    Q. What is SVG in HTML?  
+    Q1. What is SVG in HTML?  
     Ans.✅ **SVG (Scalable Vector Graphics)** is an XML-based markup language for describing two-dimensional vector graphics.  
         ✅ It is used to create images, animations, and interactive graphics without losing quality when resized.  
         ✅ Unlike raster images (JPEG, PNG), **SVG images are resolution-independent** and scale perfectly.  
@@ -63,4 +63,53 @@
     - `stroke`: Outline color, `fill`: Inner color.  
 
     🔥 **Use Case:** SVG is widely used for **icons, charts, infographics, and responsive UI designs**!  
+    -->
+
+
+    <!-- 
+    Q2. What is the difference between SVG and Canvas HTML5 elements?  
+    Ans. ✅ **SVG (Scalable Vector Graphics) and Canvas** are both used to create graphics in HTML5, but they work differently.  
+
+    ✅ **1️⃣ SVG (Scalable Vector Graphics):**  
+        - Uses **XML-based markup** to define graphics.  
+        - **Vector-based**, meaning it scales without losing quality.  
+        - Elements can be **easily manipulated** using CSS and JavaScript.  
+        - Best for **static graphics, logos, and interactive diagrams**.  
+
+    ✨ **Example:**  
+    ```html
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+    ```  
+
+    ✅ **2️⃣ Canvas:**  
+        - Uses **JavaScript** to draw graphics dynamically.  
+        - **Raster-based (pixel-based),** meaning it loses quality when scaled.  
+        - Ideal for **game graphics, image processing, and animations**.  
+        - Once drawn, elements **cannot be modified individually**.  
+
+    ✨ **Example:**  
+    ```html
+    <canvas id="myCanvas" width="100" height="100"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "red";
+      ctx.fillRect(10, 10, 80, 80);
+    </script>
+    ```  
+
+    ✅ **3️⃣ Key Differences:**  
+
+    | Feature        | SVG | Canvas |
+    |---------------|-----|--------|
+    | **Graphics Type** | Vector (scales without quality loss) | Raster (pixel-based) |
+    | **Performance** | Slower for complex graphics | Faster rendering |
+    | **Manipulation** | Can be modified using CSS & JS | No direct element manipulation |
+    | **Best For** | Icons, diagrams, charts | Animations, real-time rendering |
+
+    🔥 **Conclusion:**  
+        - **Use SVG** when working with scalable graphics, icons, or interactive elements.  
+        - **Use Canvas** for performance-heavy tasks like animations, games, and real-time data visualization.  
     -->
