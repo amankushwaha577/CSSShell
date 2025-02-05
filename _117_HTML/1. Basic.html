@@ -656,7 +656,49 @@ Ans. ✅ A **URL (Uniform Resource Locator)** is used to locate resources like w
     ✅ **Conclusion:**  
         - Use **absolute URLs** for linking external websites.  
         - Use **relative URLs** for internal navigation within the same site.  
+
+
+
+
+ 
+Q28. What is the difference between the <link> tag and the <a> tag?  
+Ans. ✅ The `<link>` and `<a>` tags both deal with linking but serve different purposes.  
+
+     ✅ **1️⃣ <link> Tag:**  
+        - Used to link **external resources** (like CSS, favicon, etc.) to an HTML document.  
+        - Placed inside the `<head>` section.  
+        - Does not create clickable links for users.  
+
+    ✨ **Example: Linking an External CSS File**  
+    ```html
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    ```  
+
+    ✅ **2️⃣ <a> Tag (Anchor Tag):**  
+        - Used to create **hyperlinks** to other web pages, files, or sections within the same page.  
+        - Placed inside the `<body>` section.  
+        - Users can **click** on it to navigate.  
+
+    ✨ **Example: Creating a Clickable Link**  
+    ```html
+    <a href="https://www.example.com">Visit Example</a>
+    ```  
+
+    ✅ **Key Differences:**  
+    | Feature          | `<link>` Tag                             | `<a>` Tag                             |  
+    |-----------------|----------------------------------|----------------------------------|  
+    | Purpose        | Links **external resources** like CSS  | Creates **clickable hyperlinks** |  
+    | Placement      | Inside `<head>`                     | Inside `<body>`                   |  
+    | Clickable      | ❌ No (Invisible to users)        | ✅ Yes (Visible & clickable)      |  
+    | Example Usage  | Linking CSS, favicon, fonts      | Navigating between pages/files   |  
+
+    ✅ **Conclusion:**  
+        - Use **`<link>`** to include stylesheets or other external resources.  
+        - Use **`<a>`** to create interactive hyperlinks for navigation.  
     -->
+
 
 
 
