@@ -186,13 +186,13 @@ Ans.    ✅ **Hyperlinks** in HTML are created using the `<a>` (anchor) tag.
     🔥 Hyperlinks are essential for navigation and connecting web pages!  
 
 
-Q26. What would happen without text between the HTML tags?
+Q17. What would happen without text between the HTML tags?
 Ans. There would be nothing to format if there is no text present between the tags. Therefore, nothing will appear on the screen. 
      Some tags, such as those without a closing tag like the <img> tag, do not require any text between them.
 
     
 
-Q27. What are the different types of headings in HTML?  
+Q18. What are the different types of headings in HTML?  
 Ans. ✅ HTML provides **six different heading tags**, ranging from `<h1>` to `<h6>`.  
      ✅ Each heading tag represents a different level of importance and text size.  
 
@@ -215,7 +215,86 @@ Ans. ✅ HTML provides **six different heading tags**, ranging from `<h1>` to `<
     ```  
 
     🔥 **Headings improve accessibility and SEO**, making content well-structured and easy to navigate!  
+  
+
+
+
+Q19. How do you insert an image in an HTML webpage?  
+Ans.✅ You can insert an image in an HTML webpage using the `<img>` tag.  
+    ✅ The `<img>` tag is a **void element**, meaning it does not require a closing tag.  
+    ✅ It requires the `src` (source) attribute to specify the image location.  
+
+    ✨ **Syntax:**  
+    ```html
+    <img src="image.jpg" alt="Description of the image">
+    ```  
+
+    ✅ **Attributes of the `<img>` tag:**  
+        - `src` → Specifies the image URL or file path.  
+        - `alt` → Provides alternative text if the image fails to load (useful for accessibility & SEO).  
+        - `width` and `height` → Define the image dimensions.  
+
+    ✨ **Example:**  
+    ```html
+    <img src="https://example.com/image.jpg" alt="A beautiful scenery" width="300" height="200">
+    ```  
+
+    🔥 **Best Practices:**  
+        - Always use the `alt` attribute for accessibility.  
+        - Optimize images for faster webpage loading.  
+        - Use relative paths for local images and absolute URLs for external images.  
+
+
+
+
+Q34.How do you add CSS styling in HTML?  
+Ans.✅ There are **three ways** to include CSS in an HTML document:  
+
+    ✅ **1️⃣ Inline CSS:** (Used for styling a single element)  
+        - The `style` attribute is applied directly to an HTML element.  
+        - Not recommended for large-scale styling due to poor maintainability.  
+
+    ✨ **Example:**  
+    ```html
+    <p style="color: blue; font-size: 18px;">This is a styled paragraph.</p>
+    ```  
+
+    ✅ **2️⃣ Internal CSS:** (Used for styling a specific HTML document)  
+        - The `<style>` tag is placed inside the `<head>` section.  
+        - Best for single-page applications with unique styles.  
+
+    ✨ **Example:**  
+    ```html
+    <head>
+      <style>
+        body {
+          background-color: lightgray;
+        }
+        h1 {
+          color: darkblue;
+          text-align: center;
+        }
+      </style>
+    </head>
+    ```  
+
+    ✅ **3️⃣ External CSS:** (Best practice for reusability and scalability)  
+        - CSS is written in a separate `.css` file and linked using `<link>` in the `<head>`.  
+        - This keeps HTML clean and improves maintainability.  
+
+    ✨ **Example:**  
+    ```html
+    <head>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    ```  
+
+    🔥 **Best Practices:**  
+        - ✅ Use **external CSS** for large projects.  
+        - ✅ Keep styles **consistent** across multiple pages.  
+        - ✅ Avoid **inline CSS** unless necessary for quick styling.  
     -->
+
 
 
 
