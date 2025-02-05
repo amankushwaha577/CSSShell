@@ -607,7 +607,57 @@ Ans. ✅ The `<meta>` tag provides additional metadata about the webpage, such a
     🔥 **Conclusion:**  
         - The `<meta>` tag is essential for SEO, responsiveness, and page behavior.  
         - It improves **search rankings**, **user experience**, and **webpage accessibility**.  
+
+
+
+
+Q27. What is the difference between an absolute and relative URL?  
+Ans. ✅ A **URL (Uniform Resource Locator)** is used to locate resources like web pages, images, and files on the internet.  
+     ✅ URLs can be categorized as **Absolute URLs** and **Relative URLs** based on how they define the resource location.  
+
+    ✅ **1️⃣ Absolute URL:**  
+        - Contains the **full** web address, including:  
+          ✔️ **Protocol** (`http://` or `https://`)  
+          ✔️ **Domain name** (`www.example.com`)  
+          ✔️ **File path** (`/images/picture.jpg`)  
+        - Can be accessed from anywhere on the internet.  
+
+    ✨ **Example:**  
+    ```html
+    <a href="https://www.example.com/images/picture.jpg">View Image</a>
+    ```  
+
+    ✅ **2️⃣ Relative URL:**  
+        - Defines the location **relative** to the current webpage.  
+        - Does not include the protocol or domain name.  
+        - Easier to maintain within the same website.  
+
+    ✅ **Types of Relative URLs:**  
+    - **Relative to the current directory:**  
+    ```html
+    <a href="images/picture.jpg">View Image</a>
+    ```  
+    - **Relative to the parent directory (`..`):**  
+    ```html
+    <a href="../images/picture.jpg">View Image</a>
+    ```  
+    - **Root-relative (`/` starts from website root):**  
+    ```html
+    <a href="/images/picture.jpg">View Image</a>
+    ```  
+
+    🔥 **Key Differences:**  
+    | Feature          | Absolute URL                           | Relative URL                         |  
+    |-----------------|---------------------------------|--------------------------------|  
+    | Includes Domain | ✅ Yes (`https://example.com`)  | ❌ No (`/images/picture.jpg`)  |  
+    | Works Globally  | ✅ Yes                          | ❌ No (Only within same site) |  
+    | Maintenance     | ❌ Harder (Changes need updates across pages) | ✅ Easier (Follows site structure) |  
+
+    ✅ **Conclusion:**  
+        - Use **absolute URLs** for linking external websites.  
+        - Use **relative URLs** for internal navigation within the same site.  
     -->
+
 
 
 
