@@ -247,7 +247,7 @@ Ans.✅ You can insert an image in an HTML webpage using the `<img>` tag.
 
 
 
-Q34.How do you add CSS styling in HTML?  
+Q20.How do you add CSS styling in HTML?  
 Ans.✅ There are **three ways** to include CSS in an HTML document:  
 
     ✅ **1️⃣ Inline CSS:** (Used for styling a single element)  
@@ -293,7 +293,147 @@ Ans.✅ There are **three ways** to include CSS in an HTML document:
         - ✅ Use **external CSS** for large projects.  
         - ✅ Keep styles **consistent** across multiple pages.  
         - ✅ Avoid **inline CSS** unless necessary for quick styling.  
+
+        
+
+
+Q21. What hierarchy do the style sheets follow?  
+Ans. ✅ The order of **CSS hierarchy** determines which style gets applied when multiple styles are defined for the same element.  
+        - The rule closest to the HTML element takes precedence.  
+
+    ✅ **CSS Hierarchy (Highest to Lowest Priority):**  
+       1️⃣ **Inline CSS** (Highest Priority)  
+          - Defined directly within the HTML element using the `style` attribute.  
+       2️⃣ **Internal CSS (Embedded CSS)**  
+          - Defined within the `<style>` tag inside the `<head>` of the document.  
+       3️⃣ **External CSS**  
+          - Linked via a separate `.css` file using the `<link>` tag.  
+       4️⃣ **Browser Default Styles** (Lowest Priority)  
+          - The styles applied by browsers if no custom CSS is provided.  
+
+
+
+
+Q22. How do you add JavaScript to an HTML webpage?  
+Ans. ✅ JavaScript is used to make HTML web pages interactive and user-friendly.  
+     ✅ There are **three ways** to include JavaScript in HTML:  
+
+    ✅ **1️⃣ Inline JavaScript:** (Used to add JavaScript to specific elements)  
+        - JavaScript is added directly in an HTML element, typically in response to an event like `onclick`.  
+        - This method is useful for small interactions but can clutter the code.  
+
+    ✨ **Example:**  
+    ```html
+    <button onclick="alert('Click the Button!');">
+      Click!
+    </button>
+    ```  
+
+    ✅ **2️⃣ Script Block:** (Used to add JavaScript in the `<script>` tag)  
+        - JavaScript code is placed inside a `<script>` tag, typically near the bottom of the HTML document.  
+        - This ensures the HTML content loads first, improving page load speed.  
+
+    ✨ **Example:**  
+    ```html
+    <html>
+      <script>
+        var x = 1;
+        var y = 2;
+        var result = x + y;
+        alert("X + Y is equal to " + result);
+      </script>
+    </html>
+    ```  
+
+    ✅ **3️⃣ External JavaScript File:** (Recommended for large scripts)  
+        - JavaScript is stored in a separate `.js` file and linked in the HTML document using the `<script src="..."></script>` tag.  
+        - Keeps the HTML file clean and allows code reuse across multiple pages.  
+
+    ✨ **Example:**  
+    ```html
+    <html>
+      <script src="my-script.js"></script>
+    </html>
+    ```  
+
+    🔥 **Best Practices:**  
+        - ✅ Use **external JavaScript files** for cleaner and more maintainable code.  
+        - ✅ Add **script tags at the end** of the document to improve page load time.  
+        - ✅ Avoid excessive inline JavaScript unless necessary for quick interactions.  
+
+
+
+
+
+Q23.What is the ‘class’ attribute in HTML?  
+Ans. ✅ The `class` attribute in HTML defines a **class** for an HTML element.  
+     ✅ It allows multiple elements to share the same class for **consistent styling**.  
+     ✅ Classes are commonly used with **CSS & JavaScript**.  
+
+    ✨ **Example:**  
+    ```html
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <p class="highlight">This is another highlighted paragraph.</p>
+    ```
+    
+    ✅ The `.highlight` class can be styled in CSS:  
+    ```css
+    .highlight {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+    }
+    ```
+    
+    🔥 **Use Case:**  
+        - Reuse styles across multiple elements without duplication.  
     -->
+
+    <!-- 
+    Q39. What is the difference between the ‘id’ and ‘class’ attributes of HTML elements?  
+    Ans. ✅ The `id` and `class` attributes are both used for **identification & styling**, but have key differences:  
+
+    ✅ **1️⃣ `id` Attribute:**  
+        - Defines a **unique identifier** for an element.  
+        - An `id` **must be unique** within the page.  
+        - Used for **JavaScript targeting** and specific styling.  
+
+    ✨ **Example:**  
+    ```html
+    <h1 id="main-title">Welcome to My Website</h1>
+    ```
+    ✅ The `#main-title` can be styled in CSS:  
+    ```css
+    #main-title {
+      color: red;
+      font-size: 24px;
+    }
+    ```
+
+    ✅ **2️⃣ `class` Attribute:**  
+        - Defines a **group of elements** with a common style.  
+        - A `class` **can be reused** multiple times in a document.  
+        - Preferred for **styling multiple elements**.  
+
+    ✨ **Example:**  
+    ```html
+    <p class="note">This is a note.</p>
+    <p class="note">Another note.</p>
+    ```
+    ✅ The `.note` class can be styled in CSS:  
+    ```css
+    .note {
+      background-color: yellow;
+      padding: 10px;
+    }
+    ```
+
+    🔥 **Key Difference:**  
+        - ✅ **Use `id`** when an element is **unique** and needs to be targeted specifically.  
+        - ✅ **Use `class`** when multiple elements need the **same styling**.  
+    -->
+
+
 
 
 
