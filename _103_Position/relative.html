@@ -56,11 +56,12 @@ even without a specific z-index.
 2. For position: relative | absolute | fixed | sticky 🌳.
    ---------------------------------------------------- 
     2.A. An Element with a position value relative/absolute + z-index value other than auto creates a new stacking context .
-        position: relative; z-index: 10; /* New stacking context */
+         position: relative; z-index: 10; /* New stacking context */
 
-    2.C. An Element with a position value    fixed/sticky always creates a new stacking context .
+    2.C. An Element with a position value  fixed/sticky always creates a new stacking context .
         An element with position: fixed always creates a stacking context, regardless of the z-index value. This means even if z-index: auto, it will create a stacking context.
-        For position: sticky, the behavior depends on the browser. In modern browsers, it creates a stacking context only if z-index is set to a value other than auto. In some mobile browsers, position: sticky may always create a stacking context.
+        For position: sticky, the behavior depends on the browser. In some mobile browsers, position: sticky always create a stacking context.
+                                                                   In modern browsers, it creates a stacking context only if z-index is set to a value other than auto. 
 
 
 3. Opacity < 1 Creates Stacking Context 🌀:
