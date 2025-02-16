@@ -39,20 +39,21 @@
 <!-- 
 2. Absolute Positioning:
 ------------------------
-   This element is positioned relative to the nearest non-static positioned ancestor.
-   (i.e., the closest parent element with position: relative, absolute, fixed, or sticky) [ These all are none static Positions].
+   Absolute element is positioned relative to its nearest non-static positioned ancestor.
+   nearest non-static ancestor - "position: relative, absolute, fixed, or sticky"
 
 Note : If no positioned ancestor is found, it is positioned relative to the document (browser window). 
 
-Space : Never takes space. The element is removed from the normal document flow.
+Space : Absolute Never takes space. 
+        Absolute element is removed from the normal document flow.
  -->
 
 <!-- 
 🔍 Why is the Absolute Box Still Above the Text ( TEXT chahe pahle AYE YA BAAD MEI )?
 -------------------------------------------------
-By default, positioned elements (relative, absolute, fixed) appear above non-positioned content, 
-even without a specific z-index, causing the .relative-box to visually appear above the text.
-( TEXT chahe pahle AYE YA BAAD MEI )
+By default, every positioned elements (relative, absolute, fixed) appear above non-positioned content, 
+even without a specific z-index.
+( TEXT chahe pahle AYE YA BAAD MEI, ABSOLUTE BOX KE NEECHE HI RAHEGA )
 
  <body>
     <div class="parent">
