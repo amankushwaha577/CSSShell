@@ -14,11 +14,9 @@
       }
       .relative-box {
         position: relative; /* This makes the element positioned relative to its normal flow */
-        /* top: -20px;  */
-        /* Moves the element 20px down from its normal position */
-        bottom: -20px;
-
+        bottom: -20px;  /* Moves the element 20px down from its normal position */
         left: 30px; /* Moves the element 30px to the right from its normal position */
+
         width: 200px;
         height: 100px;
         background-color: lightblue;
@@ -39,16 +37,16 @@
 <!-- 
 1. position: relative; 
 ----------------------
-The element is positioned relative to its normal position in the document flow. 
-If you add offsets (top, left, right, bottom), it will move relative to where it would normally be, 
-but the space it originally occupies is preserved. 
+The relative element is positioned relative to its normal position in the document flow. 
+If you add offsets (top, left, right, bottom), it will move from its original position, 
+but its original space will be preserved forever. 
 
 
 🔍 Why is the relative Box Still Above the Text ( TEXT chahe pahle AYE YA BAAD MEI )?
 -------------------------------------------------
-By default, positioned elements (relative, absolute, fixed) appear above non-positioned content, 
-even without a specific z-index, causing the .relative-box to visually appear above the text.
-( TEXT chahe pahle AYE YA BAAD MEI )
+By default, every positioned elements (relative, absolute, fixed) appear above non-positioned content, 
+even without a specific z-index.
+( TEXT chahe pahle AYE YA BAAD MEI, RELATIVE BOX KE NEECHE HI RAHEGA )
 -->
 
 
