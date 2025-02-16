@@ -64,7 +64,7 @@ even without a specific z-index.
                                                                    In modern browsers, it creates a stacking context only if z-index is set to a value other than auto. 
 
 
-3. Opacity < 1 Creates Stacking Context 🌀:
+3. Opacity < 1 always Creates a new Stacking Context 🌀:
    Elements with opacity less than 1 automatically create a new stacking context
 
    opacity: 0.9; /* New stacking context */
