@@ -40,13 +40,20 @@
 The Sticky element toggles between relative and fixed positioning on the bases of the user's scroll. 
 It behaves like a relative element until a specific scroll position is reached, after which it behaves like a fixed element.
 
-** It Affects layout until it becomes sticky.
+Space - Its original space will be preserved forever.
  -->
 
+
 <!-- 
-**No, a sticky positioned element is not removed from the normal document flow:**.
-A.Relative State when it is relatve - It occupies space in the layout.
-B.Sticky state when it is sticky - It will not remove itself from layout document it will just float above elements its space 
-                                   will be preserved. Which means other element will not occupy this space.
-                                   It can toggle back on its space.
+Qus. is Sticky element removed from the normal document flow
+Ans. No, a sticky positioned element is not removed from the normal document flow:**.
+     A. Relative State - It occupies space in the layout.
+     B. Sticky state   - It will not remove itself from layout document it will just float above elements. 
+                         its space will be preserved forever. Which means other element will not occupy this space.
+                         It can toggle back on its space.
+
+
+Logic Thinking -
+----------------
+If Its taking space than It's in normal document flow.
  -->
