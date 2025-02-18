@@ -21,24 +21,12 @@
 Specificity is a set of rules that browsers use to determine which CSS rule should be applied to an element 
 when there are multiple, potentially conflicting, rules. 
 It is calculated based on the types of selectors used in the rule.
- -->
 
-<!-- 
-CSS specificity can be broken down into different categories:
-
-Inline styles: Added directly to an element (e.g., style="color: red;").
-IDs: Selectors based on the element's id attribute (e.g., #header).
-Classes, attributes, and pseudo-classes: Selectors like .nav, [type="text"], or :hover.
-Elements and pseudo-elements: Selectors that target elements (e.g., div, h1, or ::before).
- -->
-
-
-<!-- 
 Specificity Calculation: Specificity is usually represented as four values: (a, b, c, d).
-a: Inline styles (either 0 or 1).
-b: Number of id selectors.
-c: Number of class selectors, attributes selectors, and pseudo-classes.
-d: Number of element selectors and pseudo-elements.
+a: Inline styles (either 0 or 1).                                       || Added directly to an element (e.g., style="color: red;")
+b: Number of id selectors.                                              || added based on the element's id attribute (e.g., #header).
+c: Number of class selectors, attributes selectors, and pseudo-classes. || Selectors like .nav, [type="text"], or :hover.
+d: Number of element selectors and pseudo-elements.                     || Selectors like  div, h1, or ::before
 
 In this example we are gaving 
 +-------------------------------+------------------------------+
