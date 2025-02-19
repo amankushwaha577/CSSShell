@@ -7,7 +7,7 @@
     <style>
       /* === CHILD-BASED PSEUDO-CLASSES === */
 
-      /* Select div onlyif its last child of parent*/
+      /* Select div only if it is the very last child of parent*/
       div:last-child {
         color: red; 
         font-weight: bold; 
@@ -17,20 +17,20 @@
   <body>
     <h1>Child-based Pseudo-classes</h1>
 
-    <!-- The last child <p> in this section will'nt be styled -->
+    <!-- <p> is The last child in this section will'nt be styled -->
     <section>
-    <h2>:This is the first child of section</h2> <!-- This is the first child of <section> -->
-      <div>This is another child.</div> <!-- This is the 2nd child  -->
-      <p>❌This is another child.</p> <!-- This is the last child -->
+    <h2>:This is the 3rd last child of section</h2> 
+      <div>This is 2nd last child.</div>
+      <p>❌This is last child.</p> 
     </section>
 
     <hr />
 
-    <!-- The last child <div> in this section will be styled -->
+    <!-- <div> is The last child in this section will be styled -->
     <section>
-    <div>:This is the first child of section</div> <!-- This is the first child  -->
-      <h2>This is another child.</h2> <!-- This is the second child -->
-      <div>✅This is another child.</div> <!-- This is the last child and its div so will be styled -->
+    <div>:This is the 3rd last child of section</div>
+      <h2>This is 2nd last child.</h2> 
+      <div>✅This is last child.</div>
     </section>
   </body>
 </html>

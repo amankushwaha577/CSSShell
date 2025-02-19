@@ -7,30 +7,30 @@
     <style>
       /* === CHILD-BASED PSEUDO-CLASSES === */
 
-      /* Select div onlyif its first child of parent*/
+      /* Select div only if it is very first child of parent*/
       div:first-child {
-        color: red; 
-        font-weight: bold; 
+        color: red;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <h1>Child-based Pseudo-classes</h1>
 
-    <!-- The first <h2> in this section will'nt be styled -->
+    <!-- <h2> is The first child in this section,  will'nt be styled -->
     <section>
-    <h2>❌:This is the first child of section</h2> <!-- This is the first child of <section> -->
-      <div>This is another child.</div> <!-- This is the 2nd child  -->
-      <p>This is another child.</p> <!-- This is the third child -->
+      <h2>❌:This is the 1st child of section</h2>
+      <div>This is 2nd child.</div>
+      <p>This is 3rd child.</p>
     </section>
 
     <hr />
 
-    <!-- The first <div> is the first child here will be styled -->
+    <!-- <div> is The first the first child here, will be styled -->
     <section>
-    <div>✅:This is the first child of section</div> <!-- This is the first child and its div so will be styled -->
-      <h2>This is another child.</h2> <!-- This is the second child -->
-      <p>This is another child.</p> <!-- This is the third child -->
+      <div>✅:This is the 1st child of section</div>
+      <h2>This is 2nd child.</h2>
+      <p>This is 3rd child.</p>
     </section>
   </body>
 </html>
@@ -46,7 +46,6 @@ These pseudo-classes target specific positions within a parent or structure.
 4. Select the nth child of its parent, counting from the end
 5. Select an element if it is the only child of its parent
 -->
-
 
 <!-- 
 ┌─────────────────────┬───────────────────────────────────────────────────────────────────────────────┬───────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────┐
