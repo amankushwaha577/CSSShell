@@ -89,13 +89,26 @@
 Form pseudo-classes help in styling form elements based on their state.
 
 Common Form Pseudo-classes
-:focus → Styles an element when it is focused (clicked or selected).
-:hover → Styles an element when the mouse hovers over it.
-:checked → Styles checkboxes or radio buttons when checked.
-:disabled → Styles disabled input fields.
-:enabled → Styles enabled input fields.
-:required → Styles required fields.
-:valid → Styles fields with valid input.
-:invalid → Styles fields with invalid input.
+1. User Interaction States
+    :hover → When a user hovers over an element.
+    :active → When an element is being clicked.
+    :focus → When an element is focused (clicked or tabbed into).
+
+2. Input Validation States
+    :required → Targets required form fields (<input required>).
+    :optional → Targets form fields that are not required.
+    :valid → Targets fields with valid input (based on pattern, type, etc.).
+    :invalid → Targets fields with invalid input.
+
+3. Checkbox & Radio Button States
+    :checked → Targets checked checkboxes or radio buttons <input type="checkbox"> or <input type="radio">.
+    :indeterminate → Targets checkboxes that are neither checked nor unchecked (often used in JavaScript).
+
+4. Read-Only & Disabled States
+    :disabled → Targets form elements that are disabled.
+    :enabled → Targets form elements that are not disabled.
+    :read-only → Targets elements with the readonly attribute.
+    :read-write → Targets elements that are editable.
+
 :placeholder-shown → Styles inputs where the placeholder is visible.
 -->
