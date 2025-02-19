@@ -3,35 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Child-based Pseudo-classes</title>
+    <title>TYPE-based Pseudo-classes</title>
     <style>
-      /* === CHILD-BASED PSEUDO-CLASSES === */
+      /* === TYPE-BASED PSEUDO-CLASSES === */
 
       /* Selects the last <div> element within a parent, ignore other element types. */
       div:last-of-type {
-        color: red; 
-        font-weight: bold; 
+        color: red;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <h1>Child-based Pseudo-classes</h1>
+    <h1>TYPE-based Pseudo-classes</h1>
 
-    <!-- The 2nd child <div> is the 1st div child and will be styled -->
+    <!-- style last <div> -->
     <section>
-    <p>:This is the first child of section</p> 
-      <div>✅This is another child.</div> <!-- This is the last div child  -->
-      <p> ❌ This is another child.</p>  
+      <p>xxxxxxxxxxxxxx</p>
+      <div>✅This is last child.</div>
+      <p>xxxxxxxxxxx</p>
     </section>
 
     <hr />
 
-    <!-- The 1st child <div> is the 1st div child and will be styled -->
+    <!-- style last <div> -->
     <section>
-    <div>:This is the first child of section</div>  
-      <h2>This is another child.</h2>
-      <div> ✅This is another child.</div> <!-- This is the last div child  -->
+      <div>xxxxxxxxxxxxx</div>
+      <h2>xxxxxxxxxxxxx</h2>
+      <div>✅This is last child.</div>
     </section>
   </body>
 </html>
-
