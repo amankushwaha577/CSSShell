@@ -7,7 +7,7 @@
     <style>
       /* === TYPE-BASED PSEUDO-CLASSES === */
 
-      /* Select div onlyif its the only child of parent, ignore other types*/
+      /* Select div only if its parent have 1 div, ignore other types*/
       div:only-of-type {
         color: red;
         font-weight: bold;
@@ -17,31 +17,23 @@
   <body>
     <h1>TYPE-based Pseudo-classes</h1>
 
-    
-    <!-- There is only child <div> in this section available so will be styled -->
+    <!-- There is only 1 <div> in this section available so will be styled -->
     <section>
-      <div>: ✅This is the only child of section</div>
-      <!-- This is the only child and its div so will be styled -->
+      <div>: ✅This is the only div of section</div>
     </section>
     <hr />
 
-     <!-- The 2nd child <div> is the only div child and will be styled -->
-      <section>
-        <h2>:This is the first child of section</h2>
-        <!-- This is the first child of <section> -->
-        <div>✅ This is another child.</div>
-        <!-- This is the 2nd child  -->
-        <p>This is another child.</p>
-        <!-- This is the last child -->
-      </section>
-
-    <hr />
-    <!-- There is no <div> child in this section available so will't be styled -->
+    <!-- There is only 1 <div> in this section available so will be styled -->
     <section>
-      <p>: ❌This is the only child of section</p>
-      <!-- This is the only child but its <p> so will'nt be styled -->
+      <h2>xxxxxxxxxxxx</h2>
+      <div>✅ This is another child.</div>
+      <p>xxxxxxxxxxxxxx</p>
     </section>
 
-    
+    <hr />
+    <!-- There is no <div> this section -->
+    <section>
+      <p>: xxxxxxxxxxxxxxxxxxxx</p>
+    </section>
   </body>
 </html>
