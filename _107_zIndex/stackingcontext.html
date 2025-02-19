@@ -43,18 +43,11 @@
 </html>
 
 <!-- 
-In this example:
+When their is no z-index on positioned element(relative/absolute). 
+than their stacking order is determined by their order in the DOM.
 
 .box1 with position: relative and no z-index does not create a stacking context.
 .box2 with position: absolute and no z-index does not create a stacking context either.
 Since neither element has a stacking context, their stacking order is determined by their order in the DOM, 
 and they are still part of the stacking context created by the root element (or a parent with z-index if it existed). 
--->
-
-<!-- 
-Key Takeaway
-To create a stacking context:
-
-Use a z-index other than auto on an element with position: relative, absolute, fixed, or sticky.
-Use certain properties like opacity, transform, or filter, which independently create stacking contexts regardless of position. 
 -->
