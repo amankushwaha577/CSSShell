@@ -9,29 +9,28 @@
 
       /* Selects the 2nd last <div> element within a parent, ignore other element types. */
       div:nth-last-of-type(2) {
-        color: red; 
-        font-weight: bold; 
+        color: red;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <h1>TYPE-based Pseudo-classes</h1>
 
-    <!-- No 2nd last div in parent. -->
+    <!-- no 2nd last <div> -->
     <section>
-    <p>:This is the first child of section</p> 
-      <div>This is another child.</div>
-      <p>  This is another child.</p>  
+      <p>xxxxxxxxxx</p>
+      <div>xxxxxxxxxxx</div>
+      <p>xxxxxxxxxxxx</p>
     </section>
 
     <hr />
 
-    <!-- The 1st child <div> is the 2nd last div and will be styled -->
+    <!-- style 2nd last <div> -->
     <section>
-    <div>:✅ This is the first child of section</div>   <!-- This is the 2nd last div child  -->
-      <h2>This is another child.</h2>
-      <div> This is another child.</div> 
+      <div>:✅ This is the 2nd last div of section</div>
+      <h2>xxxxxxxx</h2>
+      <div>xxxxxxxxxxxx</div>
     </section>
   </body>
 </html>
-
