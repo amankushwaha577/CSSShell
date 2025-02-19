@@ -7,7 +7,7 @@
     <style>
       /* === CHILD-BASED PSEUDO-CLASSES === */
 
-      /* Select div onlyif its 2nd last child of parent*/
+      /* Select div only if its 2nd last child of parent*/
       div:nth-last-child(2)  {
         color: red; 
         font-weight: bold; 
@@ -17,20 +17,20 @@
   <body>
     <h1>Child-based Pseudo-classes</h1>
 
-    <!-- The 2nd last child <p> in this section will'nt be styled -->
+    <!--  <p> is The 2nd last child in this section will'nt be styled -->
     <section>
-    <h2>:This is the first child of section</h2> <!-- This is the first child of <section> -->
-   <p> ❌This is another child.</p> <!-- This is the 2nd last child  -->
-      <p>This is another child.</p> <!-- This is the last child -->
+    <h2>:This is 3rd last child of section</h2> 
+   <p> ❌This is 2nd last child.</p> 
+      <p>This is last child.</p>
     </section>
 
     <hr />
 
-    <!-- The 2nd last child <div> in this section will be styled -->
+    <!-- <div> is The 2nd last child in this section will be styled -->
     <section>
-    <div>:This is the first child of section</div> <!-- This is the first child  -->
-    <div>✅This is another child.</div> <!-- This is the 2nd last child  and its div so will be styled-->
-      <div>This is another child.</div> <!-- This is the last child -->
+    <div>:This is the 3rd last child of section</div>
+    <div>✅This is 2nd last child.</div>
+      <div>This is last child.</div> 
     </section>
   </body>
 </html>
