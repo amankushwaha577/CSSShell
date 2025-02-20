@@ -8,19 +8,21 @@
     .box {
       width: 200px;
       height: 100px;
-      padding: 20px;      /* Adds 20px of space inside the box */
+      padding: 20px;             /* Adds 20px of space inside the box */
       border: 5px solid blue;  /* Adds a 5px border around the box */
-      margin: 15px;       /* Adds 15px of space outside the box */
+      margin: 15px;              /* Adds 15px of space outside the box */
       background-color: lightgray; 
-      /* Total Box Width and Height Calculation---->
+      /* Total Box Width and Height Calculation
+         box-sizing: content-box; (By Default) || Width and height include only the content.
+         ------------------------------------------------------------------------------------
+
          The total width and height of an element is calculated by adding the content, padding, and border dimensions. For the example above:
+         Width: 200px (content) + 20px * 2 (padding) + 5px * 2 (border) = 250px
+         Height: 100px (content) + 20px * 2 (padding) + 5px * 2 (border) = 150px 
 
-        Width: 200px (content) + 20px * 2 (padding) + 5px * 2 (border) = 250px
-        Height: 100px (content) + 20px * 2 (padding) + 5px * 2 (border) = 150px 
+         So the visible box area is 250px x 150px, even though the width and height of the content are set to 200px and 100px.
 
-        So the visible box area is 250px x 150px, even though the width and height of the content are set to 200px and 100px.
-
-        Note : The left and right margins would add 15px on each side, but they would not alter the total width and height of the box itself.
+         Note : The left and right margins would add 15px on each side, but they would not alter the total width and height of the box itself.
       */
     }
     .bbox{
@@ -29,7 +31,8 @@
         box-sizing Property
         To make layout sizing easier, you can use the box-sizing property. The two main values are:
 
-        content-box (default): Width and height include only the content; padding, borders, and margins are not included.
+        content-box (default): Width and height include only the content; 
+                               padding, borders, and margins are not included.
         border-box: Width and height include content, padding and border, simplifying layout calculations. 
 
         With border-box, you get a more predictable layout, as width and height represent the total dimensions, 
@@ -66,17 +69,15 @@
 
 
  <!-- 
- The CSS box model is a fundamental concept in web design and layout, as it defines how elements on a web page are sized, spaced, 
- and displayed. 
+The box model treats every HTML element as a rectangular box consisting of content, padding, border, and margin.
 
 1. Content
 This is the actual "content" area where text, images, or other content of the element is displayed.
-The width and height properties in CSS specify the dimensions of this content area by default.
+by default, The width and height applies on this content area. || box-sizing: content-box; (default)
 For example, if you set width: 200px and height: 100px on an element, it only affects the content area.
 
 2. Padding
 Padding is the space between the content and the border of the element.
-It increases the visible size of the element without affecting other elements directly.
 You can set padding on all sides (padding), or each side individually (padding-top, padding-right, padding-bottom, padding-left).
 Padding adds space inside the element but does not change the content area's dimensions.
 
