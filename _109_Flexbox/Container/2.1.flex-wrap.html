@@ -64,9 +64,13 @@ flex-wrap: nowrap | wrap | wrap-reverse;
 <!--  
 Interaction with flex-wrap: wrap-reverse:
 -----------------------------------------
-1. When you use flex-wrap: wrap-reverse, the rows are wrapped in reverse order (from bottom to top).
+1. When you use flex-wrap: wrap-reverse, New rows will be added above.
 2. Since the flex container has a defined height (height: 600px), 
-   the default align-content: stretch stretches the lines +
-   the default align-item: stretch    stretches the items,+ but items already have height fixed so they occupy the available height of their respective row.
+   i.   the default align-content: stretch   stretches the lines +
+   ii.  the default align-items: stretch     stretches the only that 1 row + 
+   iii. the default align-self: auto -> becomes stretch in this case,
+        + but items already have height fixed so items occupy only their given height on their respective row.
+
+3. and it becomes align-content: flex-start | align-items: flex-start |-> align-self: flex-start (auto).
 3. As a result, the items are visually aligned to the end of the container (because wrapping starts at the bottom due to wrap-reverse).
   -->
