@@ -69,11 +69,11 @@ Interaction with flex-wrap: wrap-reverse:
       When you use flex-wrap: wrap-reverse, New rows will be added above.
 2. Imagine cross axis :
       Since the flex container has a defined height (height: 600px), 
-      i.   the default align-content: stretch   stretches the lines +
-      ii.  the default align-items: stretch     stretches the only that 1 row + 
+      i.   the default align-content: stretch   stretches the lines equally +
+      ii.  the default align-items: stretch     stretches the row if only 1 row is their + 
       iii. the default align-self: auto -> becomes stretch in this case,
-            + but items already have height fixed so items occupy only their given height on their respective row.
+            + but items already have height fixed so items occupy only their given height on their respective row. 
+              and items becomes "align-self: flex-start"
 
-3. and it becomes align-content: flex-start | align-items: flex-start |-> align-self: flex-start (auto).
 3. As a result, the items are visually aligned to the end of the container (because wrapping starts at the bottom due to wrap-reverse).
   -->
