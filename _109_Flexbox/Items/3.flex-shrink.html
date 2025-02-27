@@ -36,13 +36,13 @@
 </html>
 
 <!-- 
-The flex-shrink determines how a flex item should shrink (Relative|Proportially) to other items in the flex container in main axis.
-when the **space** is insufficient to accommodate all items at their defined sizes. 
+The flex-shrink property determines how a flex item should shrink *Relative (Proportially)* to other items in the main axis.
+when the *space* is insufficient to accommodate all items at their defined sizes. 
 
 flex-shrink: <number>;
 <number>: A non-negative integer that serves as the shrink factor.
 
-flex-shrink: 0 -> The item will not shrink at all, regardless of the available space.
+flex-shrink: 0 -> The item will not shrink at all.
 flex-shrink: 1 -> (default): The item shrinks proportionally with other items when space is tight.
 Greater than 1:-> The item will shrink more than an item with a flex-shrink value of 1.
 
@@ -52,7 +52,7 @@ Note: Key Points to Remember :
  1. You might observed that every flex item shrinks when we change screen size, 
     It is just because every flex item have flex-shrink: 1 by default
 
- 2. Incompatibility with Flex Basis: If an item has a fixed width or height set (like width: 100px;), 
+ 2. Incompatibility with flex-basis: If an item has a fixed width or height set (like width: 100px;), 
     and flex-shrink is set to a non-zero value, the item can still shrink beyond that fixed size unless its minimum size 
     is enforced with min-width or min-height.
 
