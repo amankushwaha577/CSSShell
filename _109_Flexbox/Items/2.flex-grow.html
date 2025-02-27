@@ -93,7 +93,11 @@ flex-grow only affects the main axis.
 
 Calculation:
 --------------
-Total remaining space = 500px - 150px = 350px || Base width of each item: 50px So, for 3 items: 50px × 3 = 150px
+Total remaining space = 500px - 3 x (each item width )
+                      = 500px - 3 x 50px 
+                      = 500px - 150px 
+                      = 350px
+
 Total flex-grow = 1 + 2 + 0 = 3
 Item 1: 350px x 1/3 = 116.67px (grows by this much)
 Item 2: 350px × 2/3 = 233.33px (grows by this much)
