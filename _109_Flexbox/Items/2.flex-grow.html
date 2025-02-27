@@ -48,15 +48,15 @@
 </html>
 
 <!--
-The flex-grow property determines how flex items should grow (Relative|Proportially) to other items in main axis,
+The flex-grow property determines how much flex items should grow *Relative (Proportially)* to other items in main axis,
 when there’s extra space in the container. 
 
 flex-grow: <number>;
 <number>: Any non-negative number. It specifies the "flex growth factor".
 
-1. flex-grow: 0 ( default )
-   flex items will not grow to take up any extra space in the container. They will only take space that is required for their content or defined size, 
-   So, if all items have flex-grow: 0, they won't stretch to fill any extra space in the container.
+1. flex-grow: 0 ( default ) : flex items will not grow to take up any extra space in the container. 
+                              They will only take space that is required for their content or defined size, 
+   So, if all items have flex-grow: 0, they won't stretch to fill any extra space in the main axis.
 
 2. If all items have flex-grow: 1, they will grow equally.
 
@@ -66,7 +66,7 @@ flex-grow: <number>;
 flex-grow only affects the main axis.
 -------------------------------------
 1. Main Axis: This is the axis defined by flex-direction (default is row, from left to right).
-   If you have extra space along the main axis, flex-grow will cause the items to stretch and grow horizontally (in a row-based layout, for example).
+   If you have extra space along the main axis, flex-grow will cause the items to stretch in main axis.
 
 2.Cross Axis: The cross axis is perpendicular to the main axis (vertical if the main axis is row, and horizontal if the main axis is column).
    Flex items do not grow along the cross axis using flex-grow. They might stretch to fill the cross axis (with the default align-items: stretch property), 
