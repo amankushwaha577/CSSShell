@@ -36,13 +36,15 @@
 
 <!-- 
 The flex property in CSS is a shorthand for three individual properties: flex-grow, flex-shrink, and flex-basis. 
-It allows you to define how a flex item behaves within a flex container in terms of growing, shrinking, and its initial size. 
-This property is essential for creating flexible and responsive layouts using the Flexbox model.
 
 flex: [<flex-grow> <flex-shrink> <flex-basis>];
 
-    1.flex-grow:   A number that defines the ability of a flex item to grow   relative to the rest of the flex items in the container.
-    2.flex-shrink: A number that defines the ability of a flex item to shrink relative to the rest of the flex items in the container.
+1.flex-grow :  The flex-grow property determines how flex items should grow (Relative|Proportially) to other items in main axis,
+               when there’s extra space in the container. 
+2.flex-shrink: The flex-shrink determines how a flex item should shrink (Relative|Proportially) to other items in main axis.
+               when the *space* is insufficient in the container
+    
+    
     3.flex-basis: Defines the initial size of a flex item before space distribution happens (can be a fixed size or auto).
 
     Default Value ;
