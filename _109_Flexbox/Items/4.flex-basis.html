@@ -36,7 +36,7 @@
 
 
 <!-- 
-The flex-basis property in CSS sets the initial size of a flex item before space is distributed according to flex-grow and flex-shrink.
+The flex-basis property is used sets the initial size of a flex item before space is distributed according to flex-grow and flex-shrink in main axis.
 
 flex-basis: <length> | auto;
 
@@ -48,8 +48,8 @@ flex-basis: <length> | auto;
 
 Order of Precedence:
 ---------------------
-If both flex-basis and width/height are set, flex-basis will take precedence for determining the item's initial size, 
-but width and height will be used if flex-basis is auto.
+a. If flex-basis is non auto and width/height are set, flex-basis will take precedence for determining the item's initial size, 
+b. if flex-basis is auto, width and height will be used.
  -->
 
 <!-- 
