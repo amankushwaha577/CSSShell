@@ -50,77 +50,42 @@ grid-template-columns: <track-size> <track-size> ...;
 -->
 
 <!-- 
-Example 1:
-.container {
-  display: grid;
-  grid-template-columns: 200px 150px 100px;
-}
+Example 1: 
+Pixels (px) are relative to the viewing device.
+.container {                                /* This creates three columns:       */
+  display: grid;                            /* The first column is 200px wide.   */
+  grid-template-columns: 200px 150px 100px; /* The second column is 150px wide.  */
+}                                           /* The third column is 100px wide.   */
 
-This creates three columns:
-
-The first column is 200px wide.
-The second column is 150px wide.
-The third column is 100px wide.
-
-enough space will remain permanently on right side.
--->
-
-
-<!-- 
+ 
 Example 2:
-Fractional Units (fr)
-The fr unit is useful for responsive layouts, as it divides available space proportionally.
+Fractional Units (fr) :The fr unit is useful for responsive layouts, as it divides available space proportionally.
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+.container {                                /* This creates three columns: */
+  display: grid;                            /* The first and third columns each take up one fraction of the space. */
+  grid-template-columns: 1fr 2fr 1fr;       /* The middle column takes up two fractions of the space. */
 }
 
-This creates three columns:
 
-The first and third columns each take up one fraction of the space.
-The middle column takes up two fractions of the space.
-
--->
-
-
-
-<!-- 
 Example 3:
-Repeat Notation
-The repeat() function is a shorthand for creating repeating columns.
+Repeat Notation : The repeat() function is a shorthand for creating repeating columns.
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.container {                                
+  display: grid;                            
+  grid-template-columns: repeat(3, 1fr);    /* This creates three equal-width columns, each taking up 1fr of the space. */
 }
 
-This creates three equal-width columns, each taking up 1fr of the space.
--->
 
-
-
-<!-- 
 Example 4 :
-Minmax Function
-The minmax() function allows you to set a minimum and maximum width for responsive columns.
+Minmax Function : The minmax() function allows you to set a minimum and maximum width for responsive columns.
 
-.container {
-  display: grid;
-  grid-template-columns: 100px minmax(150px, 1fr) 200px;
-}
-
-This creates three columns:
-
-The first column is fixed at 100px.
-The second column is at least 150px wide and grows to fill available space up to 1fr. (((max default initial)))
-The third column is fixed at 200px.
--->
+.container {                                /* This creates three columns: */
+  display: grid;                            /* The first column is fixed at 100px. */
+  grid-template-columns: 100px minmax(150px, 1fr) 200px; 
+                                            /* The second column is at least 150px wide and grows to fill available space up to 1fr. (((max default initial))) */
+}                                           /* The third column is fixed at 200px. */
 
 
-
-
-<!-- 
 Example 5 :
 Auto-fill and Auto-fit
 Using auto-fill or auto-fit with repeat() makes the grid more flexible.
