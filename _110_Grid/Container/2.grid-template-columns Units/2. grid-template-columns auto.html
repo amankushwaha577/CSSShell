@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>If the grid has extra space, auto distributes space evenly among columns, similar to fr.</h2>
+   <div class="grid-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+
+    <hr/>
+
+    <h2>if some columns have more content, they will be wider than columns with less content</h2>
+    <div class="grid-container">
+      <div class="item">Short</div>
+      <div class="item">A bit longer item</div>
+      <div class="item">Item 3</div>
+      <div class="item">Another long item that might stretch the column. </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- 
+The auto value in a CSS Grid context allows each column to be sized according to its content.
+grid-template-columns: auto auto auto auto;
+
+  A. There will be 4 columns all set to auto.
+  B. Each column will expand to fit its content.
+     If the grid has extra space, auto distributes space evenly among columns, similar to fr.
+     But because of default properties :
+     justify-items : stretch (Horizontal)  +  align-items : stretch (Vertical)
+     item will also stretch to fill complete cell.
+
+  C. If there's more content than the container can accommodate, columns will overflow (based on the container's overflow property).
+      
+  D. Equal Columns: If the content in each column is similar in width, the columns will visually appear as equal-sized. 
+     However, if some columns have more content, they will be wider than columns with less content.
+ -->
+
+<!-- 
+Notes :
+1. If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.
+   We can handle those rows using grid-auto-rows.
+2. ignore grid-auto-columns for now. columns dont create automatically generally
+   so using grid-template-columns: auto auto auto auto; there will always only 4 columns
+   no chance of creating 5th in normal UI cases. so no need of grid-auto-columns.
+-->
