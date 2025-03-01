@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Fill vs Auto-Fit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background: linear-gradient(to right, #fead99, #feb47b);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Auto-Fill */
+        .auto-fill {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+
+        /* Auto-Fit */
+        .auto-fit {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Auto-Fill (Creates Empty columns)</h2>
+    <div class="container auto-fill">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>Auto-Fit (Stretches Items)</h2>
+    <div class="container auto-fit">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+</body>
+</html>
+
+<!-- 
+1. Auto-Fill:
+-------------
+Auto-fill always tries to fill the row with as many 100px columns as possible.
+suppose if there aren’t enough items, empty columns will be created in that space.
+
+[🟦] [🟦] [🟦] [⬜] [⬜]  -> ✅  only 3 items +  empty columns are still reserved in the row.
+
+    a. If total width of container = 721px
+       Minimum width of a column = 100px
+       Number of columns a row can have = 721/100 = 7
+    b. Leftover space in container = 721 - (7 × 100) = 21px
+       Leftover space for each column = 21 ÷ 7 = 3
+    c. Now, Actual width of a column = 100 + 3 = 103px
+
+
+2. Auto-Fit:
+-------------
+Auto-Fit only creates columns for the available items.
+If there’s extra space, it stretches the existing items to fill it.
+
+[ 🟦  ]  [  🟦  ]  [  🟦  ]  -> ✅ No empty columns! Existing items stretch to occupy full space.
+
+    a. If total width of container = 721px
+       Minimum width of a column = 100px
+       Number of columns a row can have = 3 (fixed in case)
+    b. Leftover space in container = 721 - (3 × 100) = 421px
+       Leftover space for each column = 421 ÷ 3 = 141px
+    c. Now, Actual width of a column = 100 + 141 = 241px
+
+-->
