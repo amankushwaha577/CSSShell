@@ -19,8 +19,16 @@
             font-size: 20px;
             font-weight: bold;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
+        }
+
+        /* Normal */
+        .normalPx {
+            grid-template-columns: repeat(3, 400px);
+        }
+        .normalFr {
+            grid-template-columns: repeat(3, 1fr);
         }
 
         /* Auto-Fill */
@@ -35,6 +43,27 @@
     </style>
 </head>
 <body>
+    <h2>1. Normal PX (It Breaks screen on resizing : screen seems overflow outside the window)</h2>
+    <div class="container normalPx">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>2. Normal fr (Its Items seems small on small screen too huge on big screen)</h2>
+    <div class="container normalFr">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <!-- 
+    Both above creates 2 problems -
+    1. It Breaks screen on resizing.  
+    2. Items does't comes on new line on resizing. 
+
+    Solution: auto-fill | auto-fit
+    -->
+
     <h2>Auto-Fill (Creates Empty columns)</h2>
     <div class="container auto-fill">
         <div class="box">1</div>
