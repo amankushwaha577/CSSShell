@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto; /* 2 columns */
+            grid-template-rows: 400px; /* Fixed height for 1st row Next rows will be in auto */
+            width: 600px;              /* Fixed width for the container */
+            gap: 10px; 
+            background-color: #513737; 
+            padding: 10px; 
+        }
+
+        .item {
+            padding: 10px;
+            background-color: lightblue; 
+            border: 1px solid #00fb26;
+        }
+
+        /* Align items to the start of the grid cell */
+        .grid-container {
+            /* by default both are strretch */
+             /* align-items: start; Optional: Prevents vertical stretching */ 
+            justify-items: start; /* Optional: Prevents horizontal stretching */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Grid Stretching Example</h1>
+    <div class="grid-container">
+        <div class="item">takes contant width only</div>
+        <div class="item">But vertically is at default</div>
+        <div class="item">Item 3</div>
+        <div class="item">We stopped horizontal stretching (by justify-items: start)</div>
+    </div>
+
+</body>
+</html>
+
+
+<!-- 
+1. because of default properties :
+     justify-items : stretch (Horizontal)  +  align-items : stretch (Vertical)
+     item stretchs to fill complete cell ( Horizontally, Vertical ).
+2. Here we are using 
+   justify-items: start; | To Prevent horizontal stretching : Now item will not take complete column width they will take only whatever needed for content*/
+   align-items: start;   | To Prevent vertical stretching :   Now item will not take complete row height they will take only whatever needed for content*/  
+ -->
