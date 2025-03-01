@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto-Fill vs Auto-Fit</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        h2 {
-            margin-bottom: 10px;
-        }
-
         .container {
             display: grid;
             gap: 10px;
@@ -45,7 +35,6 @@
     </style>
 </head>
 <body>
-
     <h2>Auto-Fill (Creates Empty columns)</h2>
     <div class="container auto-fill">
         <div class="box">1</div>
@@ -69,7 +58,7 @@
 Auto-fill always tries to fill the row with as many 100px columns as possible.
 suppose if there aren’t enough items, empty columns will be created in that space.
 
-[🟦] [🟦] [🟦] [⬜] [⬜]  -> ✅  only 3 items +  empty columns are still reserved in the row.
+[🟦] [🟦] [🟦] [⬜] [⬜] [⬜] [⬜]  -> ✅  only 3 items +  empty columns are still created in the row.
 
     a. If total width of container = 721px
        Minimum width of a column = 100px
@@ -84,7 +73,7 @@ suppose if there aren’t enough items, empty columns will be created in that sp
 Auto-Fit only creates columns for the available items.
 If there’s extra space, it stretches the existing items to fill it.
 
-[ 🟦  ]  [  🟦  ]  [  🟦  ]  -> ✅ No empty columns! Existing items stretch to occupy full space.
+[   🟦   ]  [   🟦   ]  [    🟦    ]  -> ✅ No empty columns! Existing items stretch to occupy full space.
 
     a. If total width of container = 721px
        Minimum width of a column = 100px
