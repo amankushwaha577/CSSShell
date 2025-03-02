@@ -8,18 +8,25 @@
       .grid-container {
         display: grid;
         grid-template:
-          "header" 50px /* "header": This defines a row called header with a height of 50px. */
-          "main" 500px /* "main": This defines a row called main with a height of 500px. */
-          "footer" 30px /* "footer": This defines a row called footer with a height of 30px. */
-          / 200px; /* Single column with 200px width */
+          "header" 50px    /* "header": This defines a row called "header" with a height of 50px. */
+          "main" 500px     /* "main":   This defines a row called  "main"  with a height of 500px. */
+          "footer" 30px    /* "footer": This defines a row called "footer" with a height of 30px. */
+
+          / 200px;         /* Only Single column with 200px width */
+
         gap: 5px;
       }
 
       /* 
+        <-----200px------->
         |-----------------|
         |     header      |  50px height
         |-----------------|
+        |                 |
+        |                 |
         |      main       |  500px height
+        |                 |
+        |                 |
         |-----------------|
         |     footer      |  30px height
         |-----------------|
@@ -52,8 +59,8 @@
 <!-- The grid-template property is a shorthand property in CSS Grid used to define both the rows and columns of the grid layout,
   as well as the named grid areas (if applicable)
 
-  1. grid-template: <grid-template-areas> / <grid-template-columns>;
-  2. grid-template: <grid-template-rows> / <grid-template-columns>;
+  1. grid-template: <grid-template-rows> / <grid-template-columns>;
+  2. grid-template: <grid-template-areas> / <grid-template-columns>;
  -->
 
 <!-- 
@@ -84,6 +91,7 @@
                     / 1fr 2fr; /* Columns: 1 fraction and 2 fractions */
             }
     Grid Areas:
+        It have 3 Rows.
         Row 1: "header header" (header spans two columns).
         Row 2: "sidebar main" (sidebar takes the first column, main takes the second).
         Row 3: "footer footer" (footer spans two columns).
