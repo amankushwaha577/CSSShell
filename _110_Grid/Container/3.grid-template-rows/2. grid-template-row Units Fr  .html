@@ -9,41 +9,33 @@
         display: grid;
         grid-template-columns: auto auto; /* Two columns */
 
-        /* grid-template-rows: 1fr 3fr; */
-        /* 2nd row height = 3 X height of first row (ratio 1:3) [yes without defining container height it's happening]*/
+        grid-template-rows: 1fr 3fr;
+        /* 2nd row height = 3 X height of first row (ratio 1:3) 
+        [yes even without defining container height it will happen]*/
 
         /* grid-template-rows: 2fr 9fr; */
-        /*row1: row2 =  ratio 2:9 [yes without defining container height it's happening]*/
+        /*row1: row2 ::  ratio 2:9 [yes even without defining container height it will happen]*/
 
-        grid-template-rows: 1fr 3fr;
         height: 600px;   /* Yes With fixed height */
-        /* First row is 200px, second row is 400px    */
+                         /* First row is 200px, second row is 400px    */
 
         /* grid-template-rows: auto auto; */
 
-        width: 600px; /* Fixed width for the container */
-        gap: 10px; /* Space between items */
+        width: 600px; 
+        gap: 10px;
         background-color: #513737;
         padding: 10px;
       }
 
       .item {
         padding: 10px;
-        background-color: lightblue; /* Light blue background for items */
-        border: 1px solid #333; /* Border around items */
+        background-color: lightblue; 
+        border: 1px solid #333; 
       }
 
-      /* Here lets keep stretch propert to observe rows height */
-      /* .grid-container 
-      {
-        align-items: start;  Optional: Prevents vertical stretching 
-        justify-items: start;  Optional: Prevents horizontal stretching 
-      } 
-         */
     </style>
   </head>
   <body>
-    <h1>CSS Grid Stretching Example</h1>
     <div class="grid-container">
       <div class="item">Short</div>
       <div class="item">A bit longer item</div>
@@ -54,20 +46,10 @@
 </html>
 
 <!-- 
-The grid-template-rows property in CSS is used to define the row structure within a CSS Grid container, 
-setting the number and height of rows. This property gives precise control over the layout and distribution of rows within a grid, 
-enabling the creation of responsive and flexible layouts.
-
-grid-template-rows: row-size1 row-size2 row-size3 ...;
-
-
--------------------------------------------------
 Common Units and Functions for grid-template-rows  :
 _________________________________________________
 
 1. Fixed Size (e.g., px, em, %)
--------------------------------
-Defines rows with a fixed height.
 
 2.auto
 ------------------------------------------------------------
@@ -89,16 +71,12 @@ Example: grid-template-rows: auto auto;
 The fr (fractional) unit distributes space in proportion to the total available space within the grid container.
 
 Example: A). grid-template-rows: 1fr 2fr; + Without container height
-             creates two rows, with the second row twice as tall as the first, 
-             based on the available height in the container.
-
+             creates two rows, with the second row twice as tall as the first
 
               When grid-template-rows: 1fr 3fr; is applied without a container height, the following happens:
               a). since 1fr and 3fr imply a flexible unit, they will still try to respect the 1:2 ratio based on 
                   any available space in the container.
                   here, 2nd row height = 3 X height of first row ( Yes without any specific container height )
-
-
 
           B). grid-template-rows: 1fr 2fr; + explicit height 600px; is set on the container:
               1fr and 2fr now have a specific total height to work with (e.g., 600px).
@@ -116,8 +94,6 @@ Example: A). grid-template-rows: 1fr 2fr; + Without container height
         ║ Behavior with Defined Container Height     │ Each row fits content height + takes distributed container height     │ Distributes container height based on ratios (`1fr`, `2fr`, etc.)     ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
         ║ Example (2 Rows)                           │ `grid-template-rows: auto auto;`                                      │ `grid-template-rows: 1fr 2fr;`                                       ║
-        ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
-        ║ Common Use Cases                           │ Use when rows should match content height exactly                     │ Use when rows should take up proportional heights based on space     ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
         ║ Responsiveness                             │ Content-driven; adapts to content height                              │ Space-driven; adapts to container size and available space           ║
         ╟────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────╢
