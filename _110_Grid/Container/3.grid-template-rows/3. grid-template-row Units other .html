@@ -8,31 +8,25 @@
       .grid-container {
         display: grid;
         grid-template-columns: auto auto; /* Two columns */
-
-        height: 500px;   /* if it is there : 2nd row will occupy 100px + get remaining container height (450px) */
-        /*height: 500px; if it's not there : 2nd row will occupy 100px */
-
         grid-template-rows: 50px minmax(100px, auto);
+        /* 1st Row = 50px ||  2nd Row = 100px to auto based on container*/
 
-        width: 600px; /* Fixed width for the container */
-        gap: 10px; /* Space between items */
+        height: 500px;   
+        /* if it is there : 2nd row will occupy 100px + get remaining container height (450px) */
+        /*height: 500px; if it's not there : 2nd row will occupy 100px + than varry according to content */
+
+        width: 600px; 
+        gap: 10px;
         background-color: #513737;
         padding: 10px;
       }
 
       .item {
         padding: 10px;
-        background-color: lightblue; /* Light blue background for items */
-        border: 1px solid #333; /* Border around items */
+        background-color: lightblue;
+        border: 1px solid #333;
       }
 
-      /* Here lets keep stretch propert to observe rows height */
-      /* .grid-container 
-      {
-        align-items: start;  Optional: Prevents vertical stretching 
-        justify-items: start;  Optional: Prevents horizontal stretching 
-      } 
-         */
     </style>
   </head>
   <body>
@@ -47,14 +41,6 @@
 </html>
 
 <!-- 
-The grid-template-rows property in CSS is used to define the row structure within a CSS Grid container, 
-setting the number and height of rows. This property gives precise control over the layout and distribution of rows within a grid, 
-enabling the creation of responsive and flexible layouts.
-
-grid-template-rows: row-size1 row-size2 row-size3 ...;
-
-
--------------------------------------------------
 Common Units and Functions for grid-template-rows  :
 _________________________________________________
 
