@@ -7,13 +7,13 @@
     <style>
         .grid-container {
             display: grid;
-            grid-template-rows: 100px 200px auto;
             grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 200px auto;
             gap: 10px;
         }
 
         .item1 {
-            grid-row: 1 / 2; /* Starts at line 1, ends at line 2 */
+            grid-row: 1 / 2;      /* Starts at line 1, ends at line 2 */
         }
 
         .item2 {
@@ -21,15 +21,28 @@
         }
 
         .item3 {
-            grid-row: 1 / -1; /* Spans all rows */
+            grid-row: 1 / -1;     /* Spans all rows */
         }
     </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="item1" style="background-color: lightblue;">Item 1</div>
-        <div class="item2" style="background-color: lightcoral;">Item 2</div>
-        <div class="item3" style="background-color: lightgreen;">Item 3</div>
+        <div class="item1" style="background-color: lightblue;"> Item 1 : grid-row: 1 / 2 -> Starts at line 1, ends at line 2</div>
+        <div class="item2" style="background-color: lightcoral;">Item 2 : grid-row: 2 / span 2 -> Starts at line 2 and spans 2 rows</div>
+        <div class="item3" style="background-color: lightgreen;">Item 3 : grid-row: 1 / -1; -> Spans all rows<div>
     </div>
+
 </body>
 </html>
+
+<!-- 
+1. In this case 3rd column is created but not used.
+2. Check using chrome element hover.
+
+Items Filling Rules :
+--------------------
+1. Items are filled column wise Top -> Bottom
+2. if ->   column can't occupy that item, item will be pushed to another column  (Left to right)
+   again :
+   if next column can't occupy that item, item will be pushed to another column (Left to right)
+-->

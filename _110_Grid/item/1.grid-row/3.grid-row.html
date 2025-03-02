@@ -15,50 +15,55 @@
             padding: 10px;
         }
 
-        .item1 {
-            background-color: lightblue;
-            grid-row: 1 / 3; /* Starts at grid row line 1, ends at grid row line 3 */
-            /* Spans 2 rows: Row 1 (100px) + Row 2 (150px) */
-        }
-
-        .item2 {
-            background-color: lightcoral;
-            grid-row-start: 2; /* Starts at grid row line 2 */
-            grid-row-end: 4; /* Ends at grid row line 4 */
-            /* Spans 2 rows: Row 2 (150px) + Row 3 (50px) */
-        }
-
         .item3 {
-            background-color: lightgreen;
-            grid-row: 3 / span 2; /* Starts at grid row line 3, spans 2 rows */
-            /* Ends at grid row line 5 (Row 3 = 50px + Row 4 = 150px) */
+            background-color: lightblue;
+            grid-row: 1 / 3; 
         }
 
         .item4 {
-            background-color: lightgoldenrodyellow;
-            grid-row: -2 / -1; /* Starts at the second-to-last grid row line (-2), ends at the last line (-1) */
-            /* Spans 1 row: Row 4 (150px) */
+            background-color: lightcoral;
+            grid-row-start: 2; 
+            grid-row-end: 4; 
+        }
+
+        .item1 {
+            background-color: lightgreen;
+            grid-row: 3 / span 2; 
         }
 
         .item5 {
+            background-color: lightgoldenrodyellow;
+            grid-row: -2 / -1; 
+        }
+
+        .item2 {
             background-color: lightgray;
-            grid-row: 1 / -1; /* Starts at grid row line 1, ends at the last line (-1) */
-            /* Spans all rows: Row 1 (100px) + Row 2 (150px) + Row 3 (50px) + Row 4 (150px) */
+            grid-row: 1 / -1; 
         }
     </style>
 </head>
 <body>
     <h1>CSS Grid Combined Example</h1>
     <div class="grid-container">
-        <div class="item3">Item 3 (3 / span 2)</div> <!-- Starts at grid row line 3, spans 2 rows -->
-        <!-- Starts at second last row, ends at the last row -->
-        <div class="item5">Item 5 (1 / -1)</div>
-        <div class="item1">Item 1 (1 / 3)</div> 
-        <div class="item1">Item 1 (1 / 3)</div><!-- Starts at grid row line 1, ends at line 3 -->
-        <div class="item2">Item 2 (2 / 4)</div>
-        <div class="item4">Item 4 (-2 / -1)</div> <!-- Starts at grid row line 2, ends at line 4 -->
-        > <!-- Spans the entire grid from row line 1 to the last row line (-1) -->
+        <div class="item1">Item 1 (3 / span 2)</div> 
+        <div class="item2">Item 2 (1 / -1)</div>
+        <div class="item3">Item 3 (1 / 3)</div> 
+        <div class="item3">Item 3 (1 / 3)</div>
+        <div class="item4">Item 4 (2 / 4)</div>
+        <div class="item5">Item 5 (-2 / -1)</div> 
     </div>
 </body>
 </html>
 
+<!-- 
+Items Filling Rules :
+--------------------
+1. Items are filled column wise Top -> Bottom
+2. if ->   column can't occupy that item, item will be pushed to another column  (Left to right)
+   again :
+   if next column can't occupy that item, item will be pushed to another column (Left to right)
+
+3. Why item3 not in column1  :
+   because filling starts from Top-> Bottom
+   top space will be ignored after filling bottom space of column1
+-->
