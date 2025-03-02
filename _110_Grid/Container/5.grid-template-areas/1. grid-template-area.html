@@ -46,37 +46,33 @@
 </html>
 
 
-<!-- The grid-template-areas property is used in CSS Grid to define named grid areas for a more semantic 
- and visually structured layout. It works by assigning names to different parts of the grid layout, allowing you 
- to position items easily using the grid-area property. -->
+<!-- 
+In flexbox order property is used to order items. Same In Grid using grid-template-areas we can re arrange items.
+See, structure is defined by grid-template-columns, grid-template-rows you just need to fill this structure using grid-template-areas.
 
- <!-- How grid-template-areas Works 
-  -----------------------------------
-  
-  1. Assign Grid Items to Named Areas: -
+The grid-template-areas property is used to define named grid areas for a visually structured layout. 
+It works by assigning names to items easily using the grid-area property. 
+-->
+
+<!-- How grid-template-areas Works 
+
+1. Assign Grid Items to Named Areas: -
      Use the grid-area property in individual items to assign area name.
      Example : 
-                    .header {
-                    grid-area: header;
-                     }
-
-                      .sidebar {
-                          grid-area: sidebar;
-                      }
+              .header { grid-area: header; }
+              .sidebar { grid-area: sidebar; }
 
   2. Area Names Must Match :-
-     Each named area in grid-template-areas must reference a item.
+     Now use these named items in grid-template-areas.
 
-     Example :    
-                    grid-template-areas: 
-                            "header header"
-                            "sidebar main";
+     Example : grid-template-areas: "header header"  // Row 1
+                                    "sidebar main";  // Row 2
 
     A. Each string defines a row.
     B. Words in quotes represent named areas.
     C. (.) can be used for empty spaces.
 
-  3. No of columns in in string === No of columns in grid (Must).
+  3. Must : No of columns in in string === No of columns in grid.
 
      Example :  grid-template-areas:
                           "header header"
