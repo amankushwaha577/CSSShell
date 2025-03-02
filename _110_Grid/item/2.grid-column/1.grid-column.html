@@ -7,9 +7,11 @@
     <style>
         .grid-container {
             display: grid;
-            grid-template-rows: 100px 150px 50px ; /* Four rows with fixed heights */
+
+            grid-template-rows: 100px 150px 50px ; /* 3 rows with fixed heights */
             grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-            gap: 10px; /* Space between grid items */
+
+            gap: 10px;
             width: 600px;
             background-color: #f0f0f0;
             padding: 10px;
@@ -50,27 +52,38 @@
 <body>
     <h1>CSS Grid Columns Example</h1>
     <div class="grid-container">
-        <div class="item1">Item 1 (1 / 3)</div> <!-- Starts at grid column line 1, ends at column line 3 -->
-        <div class="item2">Item 2 (2 / 4)</div> <!-- Starts at grid column line 2, ends at column line 4 -->
-        <div class="item3">Item 3 (1 / span 2)</div> <!-- Starts at grid column line 1, spans 2 columns -->
-        <div class="item4">Item 4 (-2 / -1)</div> <!-- Starts at the second-to-last column, ends at the last column -->
-        <div class="item5">Item 5 (1 / -1)</div> <!-- Spans the entire grid from column line 1 to the last column line (-1) -->
+        <div class="item1">Item 1 (1 / 3)</div>     <!-- Starts at grid column line 1, ends at column line 3 -->
+        <div class="item2">Item 2 (2 / 4)</div>     <!-- Starts at grid column line 2, ends at column line 4 -->
+        <div class="item3">Item 3 (1 / span 2)</div><!-- Starts at grid column line 1, spans 2 columns -->
+        <div class="item4">Item 4 (-2 / -1)</div>   <!-- Starts at the second-to-last column, ends at the last column -->
+        <div class="item5">Item 5 (1 / -1)</div>    <!-- Spans the entire grid from column line 1 to the last column line (-1) -->
     </div>
 </body>
 </html>
+
+<!-- 
+Items Filling Rules :
+--------------------
+1. Items are filled row wise left -> right
+2. if ->   row can't occupy that item, item will be pushed to another row  (top to bottom)
+   again :
+   if next row can't occupy that item, item will be pushed to another column (top to bottom)
+
+3. Why item4 not in row1  :
+   because filling starts from left-> right
+   space will be ignored after filling bottom space of column1
+-->
 
 
 <!-- Key Properties for Grid Columns
  -------------------------------------
 
-1. grid-column-start:
-   Specifies the starting grid line of an item along the column (horizontal axis).
+1. grid-column-start: Specifies the starting grid line of an item along the column (horizontal axis).
 
    Ex: grid-column-start: 2;
        This places the item starting at the second grid line of the column.
 
-2. grid-column-end:
-   Specifies the ending grid line of an item along the column.
+2. grid-column-end:   Specifies the ending  grid  line of an item along the column (horizontal axis).
 
    Ex: grid-column-end: 4;
        This places the item's end at the fourth grid line of the column.
@@ -78,14 +91,5 @@
 3. Shorthand: grid-column
    Combines grid-column-start and grid-column-end into a single property.
    grid-column: <start-line> / <end-line>;
-
-   Ex: grid-column: 2 / 4;
-       This places the item starting at grid line 2 and ending at grid line 4.
-
-   Ex: grid-column: 1 / -1;
-       This spans the item from the first column to the last column.
-
-   Ex: grid-column: 2 / span 3;
-       This starts the item at column line 2 and spans 3 columns to the right.
 
  -->
