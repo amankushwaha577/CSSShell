@@ -42,26 +42,3 @@
     </div>
   </body>
 </html>
-
-
-<!-- 
-The display: grid; and display: inline-grid; properties in CSS are both used to create grid layouts, 
-but they differ in how the grid container is displayed within the document flow. Here’s a breakdown of their differences:
-
-1. display: grid; (like block)
-Block-Level Grid Container: When you set display: grid; on an element, it becomes a block-level grid container. This means it will occupy the full available width of its parent container, like a standard block element.
-Behavior: It behaves like a block element and breaks onto a new line. Other block elements (like divs) placed next to it will be pushed to the next line by default.
-Use Case: This is the most commonly used grid type, ideal when you want the grid to act as a full-width container. 
-
-2. display: inline-grid; (like inline-block)
-Inline-Level Grid Container: When you set display: inline-grid;, the grid container behaves as an inline element. This means it only takes up as much width as its content requires, similar to inline elements like <span>.
-Behavior: It does not break onto a new line, so other inline or inline-block elements can sit next to it.
-Use Case: Useful when you want the grid container to fit within the content flow without occupying the full width of its parent. This can be ideal for smaller grids, such as button groups or compact grid layouts within text.
-
-   inline-grid behaves more like inline-block rather than inline. Here’s why:
-   A. Width and Height Behavior: Similar to inline-block, inline-grid respects the width and height of the grid container and does not 
-   automatically expand to the full width of the parent. It will only take up as much space as its content or specified width requires.
-   B.Box Model Properties: inline-grid respects padding, margins, and border, just as inline-block does, so you can use these properties 
-   without affecting the line flow.
-
--->
