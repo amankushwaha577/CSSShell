@@ -4,12 +4,14 @@
     <style>
       .grid-container {
         display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(2, 200px);
+        
         /* justify-items: start;  */
         /* justify-items: end;  */
         justify-items: center; 
         /* justify-items: stretch;  */
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: repeat(2, 200px);
+        
         gap: 10px;
         background-color: #2196f3;
         padding: 10px;
@@ -20,14 +22,12 @@
         text-align: center;
         padding: 10px 10px;
         font-size: 20px;
-        width: 50px; /* To better visualize horizontal alignment */
+        width: 50px; 
       }
     </style>
   </head>
   <body>
     <h1>CSS Grid: Justify Items</h1>
-  
-
     <div class="grid-container">
       <div>1</div>
       <div>2</div>
@@ -40,23 +40,21 @@
 </html>
 
 
-<!-- In CSS Grid, align-items and justify-items are properties used to control the alignment of grid items within 
+<!-- In CSS Grid, align-items and justify-items are properties used to align grid items within 
  their respective grid cells, but they operate along different axes:
 
-1. align-items
-      Purpose: Aligns grid items along the block axis (vertical axis in a left-to-right writing mode).
-      Applies to: The content inside the grid cells vertically.
-      Common Values:
-      start: Aligns items to the top of the cell.
-      end: Aligns items to the bottom of the cell.
-      center: Centers items vertically within the cell.
+1. justify-items : Aligns grid items along the inline axis (horizontal) within cell.
+   --------------
+      start:  Aligns items to the left of the cell.
+      end:    Aligns items to the right of the cell.
+      center: Aligns items to the center of the cell.
+      stretch (default): Stretches items to fill the cell's width (if no width is set for the item).
+
+2. align-items : Aligns grid items along the block axis (vertical) within cell.
+   -------------
+      start:  Aligns items to the top of the cell.
+      end:    Aligns items to the bottom of the cell.
+      center: Aligns items to the center of the cell.
       stretch (default): Stretches items to fill the cell's height (if no height is set for the item).
 
-2. justify-items
-      Purpose: Aligns grid items along the inline axis (horizontal axis in a left-to-right writing mode).
-      Applies to: The content inside the grid cells horizontally.
-      Common Values:
-      start: Aligns items to the left of the cell.
-      end: Aligns items to the right of the cell.
-      center: Centers items horizontally within the cell.
-      stretch (default): Stretches items to fill the cell's width (if no width is set for the item). -->
+ -->
