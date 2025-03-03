@@ -30,7 +30,7 @@
             transform: translate(50px, 50px); 
         }
 
-        /* 2️⃣ Resize (scale)   : 👉 Makes the element 1.5x wider and 2x taller.*/
+        /* 2️⃣ Resize (scale)   : 👉 Makes the element 1.5x.*/
         .scale:hover {
             transform: scale(1.5);
         }
@@ -70,4 +70,39 @@
 
 <!-- The transform property in CSS allows you to apply 2D and 3D transformations to elements. 
      You can use it to translate (move), scale, rotate, and skew elements without affecting the surrounding layout.
-  -->
+
+
+📌 CSS Transform Properties Table 📌
+
+┌───────────────────┬───────────────────────────────┬──────────────────────────────────────────┐
+│ 🏷️ Property       │ 🖊️ Syntax                    │ 🔍 Description                          │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────┤
+│ 📍 Translate      │ transform: translate(x, y);   │ Moves the element along X and Y axes.    │
+│ ↔️ TranslateX     │ transform: translateX(x);    │ Moves the element **horizontally**.      │
+│ ↕️ TranslateY     │ transform: translateY(y);    │ Moves the element **vertically**.        │
+├──────────────────┼───────────────────────────────┼──────────────────────────────────────────┤
+│ 🔍 Scale        │ transform: scale(x, y);       │ Resizes the element (X and Y scaling).   │
+│ ➡️ ScaleX       │ transform: scaleX(x);        │ Scales only the **width**.               │
+│ ⬆️ ScaleY       │ transform: scaleY(y);        │ Scales only the **height**.              │
+├─────────────────┼───────────────────────────────┼──────────────────────────────────────────┤
+│ 🔄 Rotate        │ transform: rotate(angle);     │ Rotates the element by a specified angle.│
+│ 🔵 RotateX       │ transform: rotateX(angle);   │ Rotates around the **X-axis** (3D).      │
+│ 🔴 RotateY       │ transform: rotateY(angle);   │ Rotates around the **Y-axis** (3D).      │
+│ ⚫ RotateZ       │ transform: rotateZ(angle);   │ Rotates around the **Z-axis** (2D).      │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────┤
+│ 🏹 Skew          │ transform: skew(x-angle, y-angle); │ Skews (distorts) along X and Y axes.  │
+│ 📏 SkewX        │ transform: skewX(angle);      │ Skews only **horizontally**.             │
+│ 📐 SkewY        │ transform: skewY(angle);      │ Skews only **vertically**.               │
+├───────────────────┼───────────────────────────────┼──────────────────────────────────────────┤
+│ 🎭 Perspective   │ transform: perspective(n);   │ Sets the **depth** of a 3D element.      │
+│ 📊 Matrix       │ transform: matrix(a, b, c, d, e, f); │ Applies advanced transformation.   │
+└───────────────────┴───────────────────────────────┴──────────────────────────────────────────┘
+
+🎯 **Tip:** You can apply multiple transforms together:
+    transform: translate(50px, 50px) rotate(30deg) scale(1.2);
+    
+💡 **Use `transition` for smooth animations**:
+    transition: transform 0.5s ease-in-out;
+
+-->
+
