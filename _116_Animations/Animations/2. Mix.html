@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            border-radius: 8px;
+        }
+
+        /* 1. animation-name & animation-duration */
+        .animation-name-duration {
+            background-color: #3498db;
+            animation: moveRight 2s;
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(200px);
+            }
+        }
+
+        /* 2. animation-timing-function */
+        .timing-function {
+            background-color: #2ecc71;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* 3. animation-delay */
+        .delay {
+            background-color: #f39c12;
+            animation: fadeIn 2s ease-in 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* 4. animation-iteration-count */
+        .iteration-count {
+            background-color: #e74c3c;
+            animation: scaleUp 1s ease-in-out 3;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.5);
+            }
+        }
+
+        /* 5. animation-direction */
+        .direction {
+            background-color: #9b59b6;
+            animation: moveLeftRight 2s linear infinite alternate;
+        }
+
+        @keyframes moveLeftRight {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(150px);
+            }
+        }
+
+        /* 6. animation-fill-mode */
+        .fill-mode {
+            background-color: #34495e;
+            animation: changeColor 2s forwards;
+        }
+
+        @keyframes changeColor {
+            from {
+                background-color: #34495e;
+            }
+            to {
+                background-color: #1abc9c;
+            }
+        }
+
+        /* 7. animation-play-state (Paused/Running with JS) */
+        .play-state {
+            background-color: #d35400;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animation Examples</h1>
+    <p>Each box demonstrates a different CSS animation property.</p>
+
+    <div class="container">
+        <div class="box animation-name-duration">Name & Duration</div>
+        <div class="box timing-function">Timing Function</div>
+        <div class="box delay">Delay</div>
+        <div class="box iteration-count">Iteration Count</div>
+        <div class="box direction">Direction</div>
+        <div class="box fill-mode">Fill Mode</div>
+        <div class="box play-state" id="playPauseBox">Play State</div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="pauseAnimation()">Pause</button>
+        <button onclick="resumeAnimation()">Resume</button>
+    </div>
+
+    <script>
+        function pauseAnimation() {
+            document.getElementById('playPauseBox').style.animationPlayState = 'paused';
+        }
+
+        function resumeAnimation() {
+            document.getElementById('playPauseBox').style.animationPlayState = 'running';
+        }
+    </script>
+
+</body>
+</html>
