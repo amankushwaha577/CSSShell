@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Transition</title>
+    <style>
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+
+            transition: background-color 0.4s ease-in-out;
+            /* Give Transition in Element : When property's value will change happen(like hover) it will animate */
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Hover Me</button>
+</body>
+</html>
+
+<!-- 
+🔹 **CSS Transitions**:  
+------------------------
+1. Transition is used to change an element's property value **over a specified duration** 
+   when a triggering event occurs (like hover, focus, or active states). 
+2. It’s like a **smooth change** between two states when an action occurs.
+
+        selector {
+            transition: property duration timing-function delay;
+        } 
+
+A. property: Property to animate [opacity, background-color, transform].
+B. duration: Time in seconds (s) or milliseconds (ms) for the transition.
+
+C. timing-function: Defines the transition speed curve [ ease, linear, ease-in, ease-out, ease-in-out ].
+                    a). linear :	 Moves at a constant speed.
+                    b). ease-in:     Starts slow, then speeds up.
+                    c). ease-out:	 Starts fast, then slows down.
+                    d). ease   :     Starts slow, speeds up, then slows down. (Default)
+                    e). ease-in-out: Starts slow, speeds up, and slows down again.
+
+D. delay (optional): Time before the transition starts.
+
+
+Note : 🎨 Transitions are **easier to set up** than animations, but they are limited to **two states** (starting and ending). 
+-->

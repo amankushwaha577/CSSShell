@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size & Opacity Transition</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: green;
+            opacity: 1;
+            transition: width 0.5s ease, opacity 0.5s ease-in; /* We can separate transitions using comma. */
+            /* Give Transition in Element : When property's value will change happen(like hover) it will animate */
+        }
+
+        .box:hover {
+            width: 200px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

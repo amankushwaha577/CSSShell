@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Demo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* 1️⃣ Move (translate) : 👉 Moves the element 50px right and 100px down. */
+        .translate:hover {
+            transform: translate(50px, 50px); 
+        }
+
+        /* 2️⃣ Resize (scale)   : 👉 Makes the element 1.5x wider and 2x taller.*/
+        .scale:hover {
+            transform: scale(1.5);
+        }
+
+        /* 3️⃣ Rotate :          👉 Rotates the element 45 degrees clockwise.*/
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        /* 4️⃣ Skew  :    👉 Skews the element 20° along X and 10° along Y.*/
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+        }
+
+        /* 5️⃣ Multiple transforms : 👉 Moves, rotates, and scales the element in one go. */
+        .multiple:hover {
+            transform: translate(20px, 20px) rotate(30deg) scale(1.2);
+        }
+
+        /* 6️⃣ 3D Rotation : 👉 Rotates the element in 3D space.*/
+        .rotate3d:hover {
+            transform: rotateX(45deg) rotateY(30deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box translate">Translate</div>
+    <div class="box scale">Scale</div>
+    <div class="box rotate">Rotate</div>
+    <div class="box skew">Skew</div>
+    <div class="box multiple">Multiple</div>
+    <div class="box rotate3d">3D Rotate</div>
+
+</body>
+</html>
+
+<!-- The transform property in CSS allows you to apply 2D and 3D transformations to elements. 
+     You can use it to translate (move), scale, rotate, and skew elements without affecting the surrounding layout.
+  -->
