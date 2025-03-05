@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSL Color Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: hsl(0, 100%, 50%); /* Red */
+        }
+
+        p {
+            color: hsl(240, 100%, 50%); /* Blue */
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            background: hsl(120, 50%, 50%); /* Green */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HSL Color Example</h1>
+    <p>This text is blue.</p>
+    <div class="box">Green Box</div>
+
+</body>
+</html>
+
+<!-- 
+HSL is a color model used in CSS to define colors in a more intuitive way compared to RGB.
+color: hsl(hue, saturation, lightness);
+
+hue (0-360) → The color itself (e.g., red, blue, green).
+                0° = Red, 
+                120° = Green, 
+                240° = Blue
+
+saturation (0%-100%) → Intensity of the color.
+                       0% = Gray,
+                       100% = Actual color, 
+                       
+
+lightness (0%-100%) → Brightness of the color.
+                      0% = Black, 
+                      50% = Actual color, 
+                      100% = White
+
+Example :
+A. color: hsl(0, 100%, 50%);  /* Actual Pure Red */
+          To achieve actual color give 100% in saturation + 50% in lightness.
+ -->
