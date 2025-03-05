@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Linear Gradient */
+        .linear {
+            background: linear-gradient(to right, #5f92ff, #52ea00);
+        }
+
+        /* Radial Gradient */
+        .radial {
+            background: radial-gradient(circle, #41ff47, #642bff);
+        }
+
+        /* Conic Gradient */
+        .conic {
+            background: conic-gradient(red, yellow, green, blue);
+        }
+
+        /* Repeating Linear Gradient */
+        .repeating-linear {
+            background: repeating-linear-gradient(45deg, red, yellow 10%, blue 20%);
+        }
+
+        /* Repeating Radial Gradient */
+        .repeating-radial {
+            background: repeating-radial-gradient(circle, red, yellow 10%, blue 20%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Gradient Examples</h1>
+    
+    <div class="container">
+        <div class="box linear">Linear Gradient</div>
+        <div class="box radial">Radial Gradient</div>
+        <div class="box conic">Conic Gradient</div>
+        <div class="box repeating-linear">Repeating Linear Gradient</div>
+        <div class="box repeating-radial">Repeating Radial Gradient</div>
+    </div>
+
+</body>
+</html>
+
+
+<!--  
+  🌈 CSS Gradient Explained 🌈  : A gradient is a smooth transition between two or more colors.
+
+  ✅ 1. Linear Gradient  
+  ───────────────────────────  
+  🔹 A smooth transition between colors in a straight line.  
+  🔹 Syntax:  
+      background: linear-gradient(direction, color1, color2, ...);  
+  🔹 Example:  
+      .box { background: linear-gradient(to right, red, blue); }  
+  🔹 Directions:  
+      - `to right` → Left to Right  
+      - `to left` → Right to Left  
+      - `to top` → Bottom to Top  
+      - `to bottom` → Top to Bottom  
+      - `45deg` → Diagonal  
+
+  ✅ 2. Radial Gradient  
+  ───────────────────────────  
+  🔹 A gradient that radiates from a central point outward.  
+  🔹 Syntax:  
+      background: radial-gradient(shape size, color1, color2, ...);  
+  🔹 Example:  
+      .circle { background: radial-gradient(circle, red, yellow, blue); }  
+  🔹 Shapes:  
+      - `circle` → Perfect circle gradient  
+      - `ellipse` → Oval-shaped gradient  
+
+  ✅ 3. Conic Gradient  
+  ───────────────────────────  
+  🔹 Colors transition **around a point**, like a pie chart.  
+  🔹 Syntax:  
+      background: conic-gradient(from angle, color1, color2, ...);  
+  🔹 Example:  
+      .pie { background: conic-gradient(red, yellow, green, blue); }  
+  🔹 Good for **pie charts, circular color wheels, and unique designs**.  
+
+  ✅ 4. Repeating Gradients  
+  ───────────────────────────  
+  🔹 Used to create patterns with gradients.  
+  🔹 Types:  
+      - `repeating-linear-gradient()`  
+      - `repeating-radial-gradient()`  
+      - `repeating-conic-gradient()`  
+  🔹 Example:  
+      .stripes { background: repeating-linear-gradient(45deg, red, yellow 10%, blue 20%); }  
+  🔹 Creates striped patterns!  
+
+  📊 Gradient Summary  
+  ───────────────────────────  
+  | Gradient Type  | Description |
+  |---------------|-------------|
+  | `linear-gradient` | Smooth color transition in a straight line |
+  | `radial-gradient` | Circular/elliptical color transition |
+  | `conic-gradient` | Rotating color transition |
+  | `repeating-gradient` | Pattern-like repeated gradient |
+
+  🎨 Best Practices:  
+  - Use `linear-gradient` for **backgrounds, buttons, and smooth effects**.  
+  - Use `radial-gradient` for **highlight effects and backgrounds**.  
+  - Use `conic-gradient` for **pie charts or creative designs**.  
+
+  🚀 Happy Coding! 🎨  
+-->
