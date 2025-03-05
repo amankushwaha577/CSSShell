@@ -1,58 +1,185 @@
-<!--  
-  🌍📱💻 CSS Media Queries - Responsive Design 🚀
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Size Media Queries</title>
+    <style>
+        /* 🌎 Default Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 20px;
+        }
 
-  📌 What are Media Queries?  
-  ───────────────────────────  
+        h1 {
+            font-size: 2em;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: lightgray;
+        }
+
+        /* 📏 Small Screens (Phones) - max-width: 600px */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+            .box {
+                background: yellow;
+            }
+        }
+
+        /* 📱 Tablets (601px - 1024px) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            body {
+                background-color: lightgreen;
+            }
+            .box {
+                background: orange;
+            }
+        }
+
+        /* 💻 Laptops (1025px - 1440px) */
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            body {
+                background-color: lightcoral;
+            }
+            .box {
+                background: pink;
+            }
+        }
+
+        /* 🖥️ Large Screens (1441px and above) */
+        @media (min-width: 1441px) {
+            body {
+                background-color: purple;
+                color: white;
+            }
+            .box {
+                background: blue;
+                color: white;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Screen Size Media Query Example</h1>
+    <div class="box">Resize Me!</div>
+
+</body>
+</html>
+
+<!--  
+What are Media Queries?  
+──────────────────────────  
   🔹 Media queries allow CSS to apply styles based on different **screen sizes, resolutions, or device capabilities**.  
   🔹 They help make websites **responsive** and ensure they look great on **mobiles, tablets, and desktops**.  
 
-  🎯 How Do Media Queries Help?  
-  ───────────────────────────  
-  ✅ **Adapt Layouts** – Dynamically adjust styles based on screen width.  
-  ✅ **Improve UX** – Ensure content is readable and usable on all devices.  
-  ✅ **Reduce the Need for Separate Sites** – One design works everywhere.  
 
-  ✍️ Basic Syntax  
-  ───────────────────────────  
-  @media (max-width: 768px) {  
-      body { background-color: lightblue; }  
-  }  
-  🔹 This applies the `lightblue` background **only** when the screen width is **768px or smaller** (tablet/mobile).  
 
-  📏 Common Media Query Breakpoints  
-  ───────────────────────────  
-  | Device Type          | Breakpoint |
-  |----------------------|-----------|
-  | 📱 Extra Small (Phones) | max-width: 576px  |
-  | 📱 Small (Tablets)  | max-width: 768px  |
-  | 💻 Medium (Laptops)  | max-width: 1024px |
-  | 🖥️ Large (Desktops)  | max-width: 1200px |
+1️⃣ Basic Media Query Syntax : This is the default structure of a media query.
+-----------------------------
 
-  🛠 Example: Responsive Navbar  
-  ───────────────────────────  
-  .navbar { background-color: #333; padding: 20px; }  
+    @media media-type and (media-feature) {
+        /* The media-type is optional. If omitted, it defaults to all (applies to all devices). */
+        /* CSS styles */
+    }
 
-  /* 📱 On small screens, stack navbar items */
-  @media (max-width: 600px) {  
-      .navbar { flex-direction: column; }  
-  }  
+    @media screen and (max-width: 600px) {  ->  When the screen width is 600px or less, the background turns yellow.
+        body { background-color: yellow; } 
+    }
 
-  ⚡ Advanced Media Queries  
-  ───────────────────────────  
-  1️⃣ **Based on Device Orientation** 📱↔️  
-  @media (orientation: landscape) {  
-      body { background-color: lightgreen; }  
-  }  
 
-  2️⃣ **For High-Resolution Screens (Retina Displays)** 🖥️  
-  @media (min-resolution: 2dppx) {  
-      img { width: 200px; }  
-  }  
 
-  🚀 Conclusion  
-  ───────────────────────────  
-  ✅ Media queries **enhance responsive design** by adapting styles based on **screen width, resolution, and orientation**.  
-  ✅ They are **essential** for modern web development to ensure a seamless experience across all devices.  
+2️⃣ Media Query by Device Type : Targetes Different Devices
+------------------------------
 
-  🎨 Happy Coding! 🚀😃  
+    media-type |	Description
+    -------------------------------------------------
+    all	       | Applies to all devices (default).
+    screen	   | Targets screens (mobile, tablet, desktop).
+    print	   | Targets print preview and printing.
+
+    Example: Print Mode
+    -------------------
+    @media print {   ->  When printing, the background becomes white, and the font size changes to 12px.
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12px;
+         }
+    }
+
+
+
+
+3️⃣ Media Query by Screen Width : 📏 Responsive Breakpoints
+--------------------------------
+
+        /* Small screens (mobile) */
+        @media screen and (max-width: 600px) {
+            body { background-color: yellow; }
+        }
+
+        /* Tablets */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            body { background-color: lightgreen; }
+        }
+
+        /* Desktops */
+        @media screen and (min-width: 1025px) {
+            body { background-color: lightblue; }
+        }
+
+
+
+4️⃣ Media Query by Orientation :  📱 Portrait vs Landscape
+------------------------------
+
+        /* Portrait Mode */
+        @media screen and (orientation: portrait) {
+            body { background-color: pink; }
+        }
+
+        /* Landscape Mode */
+        @media screen and (orientation: landscape) {
+            body { background-color: lightgray; }
+        }
+
+
+
+5️⃣ Combining Multiple Conditions :  🎯 Using and, or, not
+---------------------------------
+
+        /* AND condition */
+        @media screen and (min-width: 600px) and (orientation: landscape) {
+            body { background-color: lightblue; }
+        }
+
+        /* OR condition */
+        @media screen and (max-width: 600px), (orientation: portrait) {
+            body { background-color: lightgreen; }
+        }
+
+        /* NOT condition */
+        @media not screen and (max-width: 600px) {
+            body { background-color: lightcoral; }
+        }
+
+
 -->
