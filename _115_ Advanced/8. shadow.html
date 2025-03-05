@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Effects</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #ffffff;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Text Shadow */
+      h1 {
+        font-size: 3rem;
+
+        /* Adds a shadow behind the text */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        /* 3px right, 3px down, 5px blur, black with 50% opacity */
+
+        margin-bottom: 40px;
+      }
+
+      /* Box Shadow */
+      .box1 {
+        width: 200px;
+        height: 100px;
+        background: #feb47b;
+
+        /* Creates an external shadow */
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        /* 10px right, 10px down, 20px blur, black with 50% opacity */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 40px;
+      }
+
+      /* Box Shadow */
+      .box2 {
+        width: 200px;
+        height: 100px;
+        background: #feb47b;
+
+        /* box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
+        box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        /* 5px spread makes the shadow larger */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 40px;
+      }
+
+      /* Inset Shadow */
+      .inset-box {
+        width: 200px;
+        height: 100px;
+        background: #fff;
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Shadow</h1>
+    <div class="box1">Box1 Shadow</div>
+    <div class="box2">Box2 Shadow</div>
+
+    <div class="inset-box">Inset Shadow</div>
+  </body>
+</html>
+
+<!-- 
+1. Box Shadow:    box-shadow: offsetX offsetY blur-radius spread-radius color;
+--------------
+               
+2. Text Shadow:  text-shadow: offsetX offsetY blur-radius color;
+--------------
+
+3. Inset Shadow (Inner Shadow):  For a shadow inside an element, use inset with box-shadow.
+------------------------------
+                 box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+-->
