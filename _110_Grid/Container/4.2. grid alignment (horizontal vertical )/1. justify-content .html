@@ -1,53 +1,108 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: 50px 50px 50px; /*Lets Make the grid width smaller than width of the container*/
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - justify-content Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 50px 50px 50px; /* Grid width smaller than container */
+      grid-template-rows: repeat(2, 50px);  /* 2 rows */
+      
+      /* Try changing these values */
+      justify-content: center; 
+      /* justify-content: start; */
+      /* justify-content: end; */
+      /* justify-content: stretch; */
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      /* justify-content: space-evenly; */
+      
+      gap: 10px;
+      background-color: #2196f3;
+      padding: 10px;
+      height: 200px; /* container taller & wider */
+    }
 
-
-        /* justify-content: start; */
-        /* justify-content: end; */
-        justify-content: center;
-
-        /* justify-content: stretch; */
-        /* If column width is already defined than it will not work. it act as justify-content: start; */
-
-        /* justify-content: space-between; */
-        /* justify-content: space-around; */
-        /* justify-content: space-evenly; */
-
-        
-        gap: 10px;
-        background-color: #2196f3;
-        padding: 10px;
-      }
-
-      .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="grid-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-    </div>
-  </body>
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Grid: justify-content</h1>
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+</body>
 </html>
+
+<!-- 
+justify-content → Aligns the ENTIRE grid (all columns + gaps) HORIZONTALLY inside the container.
+Only works when : when the grid’s total width is smaller than the container's width.
+
+Here grid = 3 columns × 2 rows = 6 items.
+
+Correct grid representation:
+-------------------------------
+Row 1: 🟦 🟦 🟦
+Row 2: 🟦 🟦 🟦
+
+Values:
+--------------------------------------------------
+
+1. justify-content: start (default) → Grid sticks LEFT
+   |🟦 🟦 🟦          |
+   |🟦 🟦 🟦          |
+
+2. justify-content: end → Grid sticks RIGHT
+   |          🟦 🟦 🟦|
+   |          🟦 🟦 🟦|
+
+3. justify-content: center → Grid centered
+   |     🟦 🟦 🟦     |
+   |     🟦 🟦 🟦     |
+
+4. justify-content: stretch → Grid stretches tracks to fill width
+   |🟦   🟦   🟦|
+   |🟦   🟦   🟦|
+   ⚠️ Only works if tracks are flexible (fr units).
+   With fixed px → behaves like start.
+
+5. justify-content: space-between → Equal space BETWEEN columns, none at edges
+    space-between (E = 0, between = B)
+    |[🟦]······[🟦]······[🟦]|   ← Row 1
+    |[🟦]······[🟦]······[🟦]|   ← Row 2
+
+6. justify-content: space-around → Equal space AROUND each column  
+    space-around (E = B/2) |     (Edge space ≈ half of the between-gap)
+    |··[🟦]······[🟦]······[🟦]··|   ← Row 1
+    |··[🟦]······[🟦]······[🟦]··|   ← Row 2
+
+
+7. justify-content: space-evenly → Equal space EVERYWHERE (edges & between)
+    space-evenly (E = B) |     (All gaps (edges + between) are equal)
+    |···[🟦]···[🟦]···[🟦]···|   ← Row 1
+    |···[🟦]···[🟦]···[🟦]···|   ← Row 2
+
+-->
+
 
 
 <!-- 
 In CSS Grid, justify-content aligns the entire grid horizontally within container, 
-Only works when : when the grid’s total width is smaller than the container's width.
+
 
 Note :This property is useful when you want to position the grid itself, not individual items within the grid.
 

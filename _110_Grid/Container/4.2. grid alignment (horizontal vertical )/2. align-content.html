@@ -1,53 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Grid - align-content Example</title>
-    <style>
-      .container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;  /* 2 columns */
+<!--
+align-content → Aligns the ENTIRE grid (all rows + gaps) VERTICALLY inside the container.
 
-        grid-template-rows: 100px 100px; /*Lets Make the grid height smaller than height of the container*/
-        height: 500px;   /* grid height 200px (100px row1 + 100px row2) < Container height 500px  */
+Here grid = 2 rows × 2 cols = 4 items.
 
-        /* align-content: start;   */
-        /* align-content: end;   */
-        align-content: center;     
+Correct grid representation:
+-------------------------------
+Row 1: 🟦 🟦
+Row 2: 🟦 🟦
 
-        /* align-content: stretch; */
-        /* If rows height is already defined than it will not work. it act as align-content: start; */
+Values:
+--------------------------------------------------
 
-        /* align-content: space-between;   */
-        /* align-content: space-around;   */
-        /* align-content: space-evenly; */
+1. align-content: start (default) → Grid sticks TOP
+   |🟦 🟦|
+   |🟦 🟦|
+   |     |  (empty space below)
 
-        background-color: #cec3c3;
-        gap: 10px;
-        border: 1px solid #ddd;
-      }
+2. align-content: end → Grid sticks BOTTOM
+   |     |  (empty space above)
+   |🟦 🟦|
+   |🟦 🟦|
 
-      .item {
-        background-color: #035623;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-weight: bold;
-        height: 100px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
-      <div class="item">4</div>
-    </div>
-  </body>
-</html>
+3. align-content: center → Grid centered vertically
+   |     |  (space above)
+   |🟦 🟦|
+   |🟦 🟦|
+   |     |  (space below)
+
+4. align-content: stretch → Grid stretches rows to fill container height
+   |🟦 🟦|
+   |🟦 🟦|
+   |🟦 🟦|
+   |🟦 🟦|
+   ⚠️ Only works if rows are flexible (fr units).
+   With fixed px → behaves like start.
+
+5. align-content: space-between → Equal space BETWEEN rows, none at edges
+   |🟦 🟦|
+   |     |  (gap)
+   |🟦 🟦|
+
+6. align-content: space-around → Equal space AROUND rows  
+   space-around (E = B/2) | (Edge space ≈ half of between-gap)
+   |     |  (half gap)
+   |🟦 🟦|
+   |     |  (full gap)
+   |🟦 🟦|
+   |     |  (half gap)
+
+7. align-content: space-evenly → Equal space EVERYWHERE (edges & between)
+   space-evenly (E = B) | (All gaps equal)
+   |     |  (gap)
+   |🟦 🟦|
+   |     |  (gap)
+   |🟦 🟦|
+   |     |  (gap)
+-->
+
 
 <!--
 In CSS Grid, align-content aligns the entire grid vertically within container, 
