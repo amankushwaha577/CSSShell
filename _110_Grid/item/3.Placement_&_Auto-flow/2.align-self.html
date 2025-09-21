@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - align-self Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      grid-template-rows: 150px;
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+      width: max-content;
+    }
+
+    .item {
+      background-color: lightgreen;
+      border: 2px solid #333;
+      width: 80px; /* smaller than column width so vertical alignment is visible */
+    }
+
+    .start   { align-self: start; }
+    .end     { align-self: end; }
+    .center  { align-self: center; }
+    .stretch { align-self: stretch; } /* default */
+  </style>
+</head>
+<body>
+  <h1>align-self Example</h1>
+  <div class="grid-container">
+    <div class="item start">start</div>
+    <div class="item end">end</div>
+    <div class="item center">center</div>
+    <div class="item stretch">stretch</div>
+  </div>
+</body>
+</html>
+
+<!-- 
+align-self → Aligns item VERTICALLY in its cell.
+Values:
+--------------------------------------
+1. start   → item sticks TOP
+   🟩
+   ⬜
+   ⬜
+
+2. end     → item sticks BOTTOM
+   ⬜
+   ⬜
+   🟩
+
+3. center  → item vertically CENTERED
+   ⬜
+   🟩
+   ⬜
+
+4. stretch (default) → fills full height
+   🟩
+   🟩
+   🟩
+-->

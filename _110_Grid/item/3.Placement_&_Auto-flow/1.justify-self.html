@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - justify-self Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 150px); /* 4 equal columns */
+      grid-template-rows: 150px; /* 1 row */
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+      width: max-content;
+    }
+
+    .item {
+      background-color: lightblue;
+      border: 2px solid #333;
+      height: 80px; /* smaller than row height so horizontal alignment is visible */
+    }
+
+    .start   { justify-self: start; }
+    .end     { justify-self: end; }
+    .center  { justify-self: center; }
+    .stretch { justify-self: stretch; } /* default */
+  </style>
+</head>
+<body>
+  <h1>justify-self Example</h1>
+  <div class="grid-container">
+    <div class="item start">start</div>
+    <div class="item end">end</div>
+    <div class="item center">center</div>
+    <div class="item stretch">stretch</div>
+  </div>
+</body>
+</html>
+
+<!-- 
+justify-self → Aligns item HORIZONTALLY in its cell.
+Values:
+--------------------------------------
+1. start   → item sticks LEFT
+   |🟦     |
+   
+2. end     → item sticks RIGHT
+   |     🟦|
+
+3. center  → item centered horizontally
+   |  🟦   |
+
+4. stretch (default) → fills full width
+   |🟦🟦🟦🟦|
+-->

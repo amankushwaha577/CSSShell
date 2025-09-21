@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - place-self Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      grid-template-rows: repeat(2, 150px);
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+      width: max-content;
+    }
+
+    .item {
+      background-color: lightcoral;
+      border: 2px solid #333;
+      width: 80px;
+      height: 80px;
+    }
+
+    .ps1 { place-self: start start; }     /* Top-left */
+    .ps2 { place-self: end end; }         /* Bottom-right */
+    .ps3 { place-self: center center; }   /* Center both */
+    .ps4 { place-self: stretch stretch; } /* Fill both */
+  </style>
+</head>
+<body>
+  <h1>place-self Example</h1>
+  <div class="grid-container">
+    <div class="item ps1">start/start</div>
+    <div class="item ps2">end/end</div>
+    <div class="item ps3">center/center</div>
+    <div class="item ps4">stretch/stretch</div>
+  </div>
+</body>
+</html>
+
+<!-- 
+place-self → Shorthand for align-self (vertical) + justify-self (horizontal).
+Syntax: place-self: <align-self> <justify-self>;
+
+Examples:
+--------------------------------------
+1. place-self: start start   → Top-left
+   🟥⬜⬜
+   ⬜⬜⬜
+   ⬜⬜⬜
+
+2. place-self: end end       → Bottom-right
+   ⬜⬜⬜
+   ⬜⬜⬜
+   ⬜⬜🟥
+
+3. place-self: center center → Perfect middle
+   ⬜⬜⬜
+   ⬜🟥⬜
+   ⬜⬜⬜
+
+4. place-self: stretch stretch → Fill cell both directions
+   🟥🟥🟥
+   🟥🟥🟥
+   🟥🟥🟥
+-->
