@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - place-items Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      grid-template-rows: repeat(2, 150px);
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+      width: max-content;
+
+      /* Try changing these values one by one */
+      place-items: center center; 
+      place-items: start start;
+      /* place-items: end end; */
+      /* place-items: stretch stretch; (default) */
+    }
+
+    .item {
+      background-color: lightseagreen;
+      border: 2px solid #333;
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <h1>place-items Example</h1>
+  <div class="grid-container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+</body>
+</html>
+
+<!-- 
+place-items → Shorthand for align-items (vertical) + justify-items (horizontal).
+It applies to ALL grid items at once.
+
+Syntax: place-items: <align-items> <justify-items>;
+
+Here is one cell representation::
+--------------------------------------------------
+
+1. place-items: start start   → Item goes TOP-LEFT
+   ┌─────────┐
+   |🟦 ⬜ ⬜|   ← top row
+   |⬜ ⬜ ⬜|
+   |⬜ ⬜ ⬜|
+   └─────────┘
+
+2. place-items: end end       → Item goes BOTTOM-RIGHT
+   ┌─────────┐
+   |⬜ ⬜ ⬜|
+   |⬜ ⬜ ⬜|
+   |⬜ ⬜ 🟦|   ← bottom row
+   └─────────┘
+
+3. place-items: center center → Item centered BOTH ways
+   ┌─────────┐
+   |⬜ ⬜ ⬜|
+   |⬜ 🟦 ⬜|   ← middle row + middle col
+   |⬜ ⬜ ⬜|
+   └─────────┘
+
+4. place-items: stretch stretch (default) → Item fills WHOLE cell
+   ┌───────┐
+   |🟦🟦🟦|
+   |🟦🟦🟦|
+   |🟦🟦🟦|
+   └───────┘
+-->

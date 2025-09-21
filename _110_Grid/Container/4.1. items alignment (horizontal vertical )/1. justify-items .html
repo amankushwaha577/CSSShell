@@ -1,43 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: repeat(2, 200px);
-        
-        /* justify-items: start;  */
-        /* justify-items: end;  */
-        justify-items: center; 
-        /* justify-items: stretch;  */
-        
-        gap: 10px;
-        background-color: #2196f3;
-        padding: 10px;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - justify-items Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: repeat(2, 200px);
+      
+      /* Try changing these values */
+      justify-items: center; 
+      /* justify-items: start;  */
+      /* justify-items: end;  */
+      /* justify-items: stretch; (default) */
+      
+      gap: 10px;
+      background-color: #2196f3;
+      padding: 10px;
+    }
 
-      .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        padding: 10px 10px;
-        font-size: 20px;
-        width: 50px; 
-      }
-    </style>
-  </head>
-  <body>
-    <h1>CSS Grid: Justify Items</h1>
-    <div class="grid-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-    </div>
-  </body>
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 10px 10px;
+      font-size: 20px;
+      width: 50px; /* smaller than cell width → horizontal alignment visible */
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Grid: justify-items</h1>
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+</body>
 </html>
+
+<!-- 
+justify-items → Controls HORIZONTAL alignment of ALL items inside their grid cell.
+
+Each cell here is drawn.
+
+Values:
+--------------------------------------------------
+
+1. justify-items: start   → Item sticks LEFT
+   ┌─────────┐
+   |🟦 ⬜ ⬜|
+   └─────────┘
+
+2. justify-items: end     → Item sticks RIGHT
+   ┌─────────┐
+   |⬜ ⬜ 🟦|
+   └─────────┘
+
+3. justify-items: center  → Item CENTERED
+   ┌─────────┐
+   |⬜ 🟦 ⬜|
+   └─────────┘
+
+4. justify-items: stretch (default) → Item fills FULL width
+   ┌─────────┐
+   |🟦🟦🟦  |
+   └─────────┘
+-->
+
 
 
 <!-- In CSS Grid, align-items and justify-items are properties used to align grid items within 
