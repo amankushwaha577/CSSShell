@@ -71,11 +71,29 @@ Ans.✅ The **method** attribute defines **how** the form data is sent to the se
     - Example:
       `<form action="/search" method="GET">`
 
+    <form action="/search" method="GET">
+    <input type="text" name="q" placeholder="Search...">
+    <button type="submit">Search</button>
+    </form>
+
+    👉 Submitting q=shoes will hit:
+    /search?q=shoes
+
+
 ✔️ **POST Method:** (`method="POST"`)
     - Sends data **securely in the request body**
     - Used for **login, signup, payments, and data submissions**
     - Example:
       `<form action="/submit" method="POST">`
+
+    <form action="/login" method="POST">
+    <input type="text" name="username" placeholder="Enter username">
+    <input type="password" name="password" placeholder="Enter password">
+    <button type="submit">Login</button>
+    </form>
+
+    👉 Data goes in request body, not in URL.
+
 
 🔥 **Rule of Thumb:**  
     - Use **GET** when retrieving data.  
