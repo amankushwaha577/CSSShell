@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background-size Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .box {
+      width: 150px;
+      height: 180px;
+      border: 2px solid #333;
+      background-image: url('https://picsum.photos/id/237/300/200'); /* sample image */
+      background-repeat: no-repeat;
+      /*Most important property */
+      background-position: center; 
+      background-color: white;
+      /* For Text only */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .contain { background-size: contain; }
+    .cover   { background-size: cover; }
+    .fill    { background-size: 100% 100%; } /* equivalent to "fill" */
+  </style>
+</head>
+<body>
+  <div class="box contain">contain</div>
+  <div class="box cover">cover</div>
+  <div class="box fill">fill</div>
+</body>
+</html>
+
 <!-- 
 📌 Understanding the `background-size` Property in CSS:
 
