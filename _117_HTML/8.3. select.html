@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Dropdown Examples</title>
+</head>
+<body>
+  <h2>1. Single Select Example</h2>
+  <form action="/submit" method="GET">
+    <label for="country">Choose a country:</label>
+    <select name="country" id="country">
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="Japan">Japan</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+
+  <h2>2. Single Select with Placeholder</h2>
+  <form action="/submit" method="GET">
+    <label for="city">Choose a city:</label>
+    <select name="city" id="city">
+      <option value="" disabled selected>-- Select a city --</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+
+  <h2>3. Multi-Select Example</h2>
+  <form action="/submit" method="GET">
+    <label for="fruits">Choose fruits:</label>
+    <select name="fruit" id="fruits" multiple>
+      <option value="Apple">Apple</option>
+      <option value="Mango">Mango</option>
+      <option value="Banana">Banana</option>
+      <option value="Orange">Orange</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+
+  <h2>4. Grouped Options (Optgroup)</h2>
+  <form action="/submit" method="GET">
+    <label for="car">Choose a car:</label>
+    <select name="car" id="car">
+      <optgroup label="German Cars">
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+      </optgroup>
+      <optgroup label="Japanese Cars">
+        <option value="Toyota">Toyota</option>
+        <option value="Honda">Honda</option>
+      </optgroup>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+<!--
+========================
+📌 NOTES (How <select> Works)
+========================
+
+1️⃣ BASIC SINGLE SELECT
+   - Only one option can be chosen.
+   - Example: If "USA" is selected → country=USA
+   - GET → /submit?country=USA
+   - POST → body: country=USA
+
+2️⃣ PLACEHOLDER OPTION
+   - Use <option disabled selected> as the first item.
+   - Forces user to make a choice.
+   - Example: "-- Select a city --" cannot be submitted.
+
+3️⃣ MULTI-SELECT
+   - Add "multiple" attribute → allows choosing many options.
+   - Example: If "Apple" + "Mango" are selected →
+     fruit=Apple&fruit=Mango
+
+4️⃣ OPTGROUP
+   - Groups options under a label for better UX.
+   - Example:
+     German Cars → BMW, Audi
+     Japanese Cars → Toyota, Honda
+
+5️⃣ COMPARISON
+   - Radio → one visible choice only.
+   - Checkbox → multiple visible choices.
+   - Select → dropdown (saves space), can be single or multiple.
+-->

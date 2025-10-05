@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Radio vs Checkbox Example</title>
+</head>
+<body>
+  <h2>Radio Button Example (Choose ONE)</h2>
+  
+  <!-- 
+    Explanation:
+    ✅ Radio buttons share the SAME "name" → only ONE option can be selected.
+    ✅ On submit:
+       If "Female" is selected → data sent = gender=Female
+       If "Male" is selected → data sent = gender=Male
+       If "Other" is selected → data sent = gender=Other
+
+    GET method → URL example:
+      /submit?gender=Female
+
+    POST method → Body example:
+      gender=Female
+  -->
+  <form action="/submit" method="GET">
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male"> Male<br>
+    <input type="radio" name="gender" value="Female"> Female<br>
+    <input type="radio" name="gender" value="Other"> Other<br>
+    <button type="submit">Submit (Radio)</button>
+  </form>
+
+  <hr>
+
+  <h2>Checkbox Example (Choose MANY)</h2>
+  
+  <!-- 
+    Explanation:
+    ✅ Each checkbox can be checked independently.
+    ✅ If multiple checkboxes with the SAME "name" are checked → multiple key-value pairs sent.
+    
+    Example selections:
+      ✔ Reading + Gaming
+      → data sent = hobby=Reading&hobby=Gaming
+    
+    GET method → URL example:
+      /submit?hobby=Reading&hobby=Gaming
+
+    POST method → Body example:
+      hobby=Reading&hobby=Gaming
+  -->
+  <form action="/submit" method="GET">
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobby" value="Reading"> Reading<br>
+    <input type="checkbox" name="hobby" value="Traveling"> Traveling<br>
+    <input type="checkbox" name="hobby" value="Gaming"> Gaming<br>
+    <button type="submit">Submit (Checkbox)</button>
+  </form>
+</body>
+</html>
+
+
+<!--
+========================
+📌 NOTES (Radio vs Checkbox)
+========================
+
+1️⃣ RADIO BUTTONS:
+   - All radio inputs in a group share the SAME "name".
+   - Only ONE option can be chosen per group.
+   - Example: If "Female" is selected → gender=Female
+   - GET → /submit?gender=Female
+   - POST → body: gender=Female
+
+2️⃣ CHECKBOXES:
+   - Each checkbox works independently (can select 0, 1, or many).
+   - If multiple with SAME name are checked → multiple key-value pairs are sent.
+   - Example: If "Reading" + "Gaming" are checked →
+     hobby=Reading&hobby=Gaming
+   - GET → /submit?hobby=Reading&hobby=Gaming
+   - POST → body: hobby=Reading&hobby=Gaming
+
+3️⃣ QUICK RULE:
+   - Use RADIO when you want only ONE choice (e.g., gender, payment method).
+   - Use CHECKBOX when you want MULTIPLE choices (e.g., hobbies, skills).
+
+🔥 TIP:
+   - Radio = "Pick one"
+   - Checkbox = "Pick many"
+-->
